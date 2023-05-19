@@ -19,9 +19,11 @@ datasource db {
 model Team {
   id         String       @id @default(cuid())
   name       String
-  members    User[]
+  members    User[]       
   code       String       @unique
   Submission Submission[]
+
+
 }
 
 model Submission {
