@@ -50,11 +50,11 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         where: {
           id: team.id,
         }
-      })
+      });
     }
 
     // Return userdata and team data
-    res.json({user: user, team: team});
+    res.json({user: user, team: team, teamDeleted: !team.members.length});
 
   } else {
     // Not Logged in
