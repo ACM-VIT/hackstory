@@ -43,16 +43,16 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
       },
     });
 
+    // delete team when last member leaves
     if(team.members.length === 0){
       await prisma.team.delete({
         where: {
-          id: team.id 
+          id: team.id,
         }
       })
     }
+    
 
-    // Have to yet implement delete team when last member leaves. 
-  
     res.json({user: user, team: team});
 
   } else {
