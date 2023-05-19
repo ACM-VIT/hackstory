@@ -1,4 +1,4 @@
-import type { Team, User } from '@prisma/client';
+import type { User } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Session } from 'next-auth';
 import { getSession } from 'next-auth/react';
@@ -29,6 +29,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
       return;
     }
 
+    // Remove member from team
     const team = await prisma.team.update({
       where: {
         id: user.teamId, 
@@ -51,11 +52,12 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         }
       })
     }
-    
 
+    // Return userdata and team data
     res.json({user: user, team: team});
 
   } else {
+    // Not Logged in
     res.status(401).send({ message: 'Unauthorized' });
   }
 }
