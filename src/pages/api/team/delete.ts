@@ -6,12 +6,12 @@ import { NextApiRequest, NextApiResponse } from "next";
 const prisma = new PrismaClient();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  //const session = await getServerSession(req, res, authOptions);
-  const session = "session";
+  const session = await getServerSession(req, res, authOptions);
+  
   if (session) {
     const { teamId } = req.body;
-   //const userId = session.user.id;
-   const userId = "clhtez2xz0006ld08a6tsn8y8"; //For testing
+    const userId = session.user.id;
+
 
     try {
       const team = await prisma.team.findUnique({
