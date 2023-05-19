@@ -29,7 +29,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
       return;
     }
 
-    const team: Team | null = await prisma.team.update({
+    const team = await prisma.team.update({
       where: {
         id: user.teamId, 
       },
@@ -38,8 +38,21 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
           disconnect: [{ id: user.id }],
         },
       },
+      include: {
+        members: true,
+      },
     });
-   
+
+    if(team.members.length === 0){
+      await prisma.team.delete({
+        where: {
+          id: team.id 
+        }
+      })
+    }
+
+    // Have to yet implement delete team when last member leaves. 
+  
     res.json({user: user, team: team});
 
   } else {
