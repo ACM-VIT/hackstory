@@ -18,7 +18,7 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
     const teamCode = req.body.teamCode;
     try {
       const team = await prisma.team.findUnique({
-        where: { id:  teamCode },
+        where: { code:  teamCode },
         include: { members: true },
       });
 
