@@ -1,17 +1,22 @@
 import { PrismaClient } from "@prisma/client";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "~/server/auth";
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const prisma = new PrismaClient();
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+interface ExtendedNextApiRequest extends NextApiRequest {
+  body: {
+    teamId: string;
+  };
+}
+
+const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
   const session = await getServerSession(req, res, authOptions);
 
   if (session) {
     const { teamId } = req.body;
-   const userId = session.user.id;
-
+    const userId = session.user.id;
 
     try {
       const team = await prisma.team.findUnique({
@@ -24,7 +29,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       }
 
       // Check if the current user is the team leader
-      if (team.members.some((member) => member.id === userId && member.leader)) {
+      if (
+        team.members.some((member) => member.id === userId && member.leader)
+      ) {
         // Delete the team
         await prisma.team.delete({
           where: { id: teamId },
@@ -40,7 +47,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         await prisma.user.update({
           where: { id: userId },
           data: { leader: false },
-        })
+        });
 
         return res.status(200).json("Team deleted successfully");
       }
@@ -55,3 +62,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(401).end();
   }
 };
+
+export default handler;
