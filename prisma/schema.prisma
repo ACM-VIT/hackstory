@@ -18,8 +18,8 @@ datasource db {
 
 model Team {
   id         String       @id @default(cuid())
-  name       String
-  members    User[]       
+  name       String       @unique
+  members    User[]
   code       String       @unique
   Submission Submission[]
 
@@ -30,7 +30,7 @@ model Submission {
   id          String   @id @default(cuid())
   submittedAt DateTime
   projectLink String
-  status      Role     @default(ROUND_1)
+  status      Round    @default(ROUND_1)
   feedback    String?
   team        Team     @relation(fields: [teamId], references: [id])
   teamId      String
@@ -38,7 +38,7 @@ model Submission {
   @@index([teamId])
 }
 
-enum Role {
+enum Round {
   ROUND_1
   ROUND_2
   ROUND_3
@@ -80,6 +80,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  leader        Boolean   @default(false)
   accounts      Account[]
   sessions      Session[]
   Team          Team?     @relation(fields: [teamId], references: [id])
