@@ -9,14 +9,15 @@ export default async function handler(
 ) {
   const session = await getServerSession(req, res, authOptions);
   if (session) {
-    const teamNames = await prisma.team.findMany({
+    const teams = await prisma.team.findMany({
       select: {
         name: true,
       },
     });
 
-    if (teamNames) {
-      return res.status(200).send(teamNames);
+    if (teams) {
+      const teamNames = teams.map((team) => team.name);
+      return res.status(200).json({ Teamnames: teamNames });
     } else {
       return res.status(404).json({ message: "No teams were found" });
     }
