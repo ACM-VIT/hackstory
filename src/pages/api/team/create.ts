@@ -13,28 +13,42 @@ export function generateCode(): string {
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  if(req.method === 'POST'){
   const prisma = new PrismaClient();
+  const {name} = req.body;
   const session = await getServerSession(req, res, authOptions);
   if (session) {
-    const { name } = req.body;
-    try {
-      const team_code = generateCode();
-      const newTeam = await prisma.team.create({
-        data: {
-          name: name,
-          code: team_code,
-        },
-      });
-      return res.status(200).json("new team created");
-    } catch (error) {
-      return res.status(401).json("forbidden");
+    const userId: string = session.user.id;
+    const data = await prisma.user.findUnique({ where: { id: userId } });
+  
+  if (data) {
+    if (!data.teamId) {
+      data.leader = true;
+      
+        const teamCode = generateCode();
+        const newTeam = await prisma.team.create({
+          data: {
+            name: name,
+            code: teamCode,
+          },
+        });
+        return res.status(200).json("New team created");
+      } 
+      else {
+        return res.status(400).json("User already has a team");
+      }
     }
-
+    else{
+      return res.status(400).json("user does not exist")
+    }
     console.log("Session", JSON.stringify(session, null, 2));
-  } else {
-    // Not Signed in
-    res.status(401);
   }
-  res.end();
-};
-
+  else {
+    // Not Signed in
+ return res.status(401).end();
+}
+}
+else{
+  res.status(500).json("send a different request")
+}
+}
