@@ -17,7 +17,7 @@ export default async function handler(
 
     if (teams) {
       const teamNames = teams.map((team) => team.name);
-      return res.status(200).json({ Teamnames: teamNames });
+      return res.status(200).json({ teamNames: teamNames });
     } else {
       return res.status(404).json({ message: "No teams were found" });
     }
