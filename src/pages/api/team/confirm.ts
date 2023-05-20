@@ -6,7 +6,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const prisma = new PrismaClient();
 interface ExtendedNextApiRequest extends NextApiRequest {
   body: {
-    teamId: string;
+    teamCode: string;
   };
 }
 
@@ -15,10 +15,10 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
   const session = await getServerSession(req, res, authOptions);
 
   if (session) {
-    const teamId = req.body.teamId;
+    const teamCode = req.body.teamCode;
     try {
       const team = await prisma.team.findUnique({
-        where: { id:  teamId },
+        where: { id:  teamCode },
         include: { members: true },
       });
 
@@ -31,7 +31,6 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
     
 
      catch (error) {
-      console.error("Error finding team:", error);
       return res.status(500).json({ message: "Internal Server error" });
     }
   } else {
