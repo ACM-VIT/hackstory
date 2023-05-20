@@ -1,7 +1,7 @@
 import About from '@/components/About/About'
 import Header from '@/components/Header/Header'
-import HeroContent from '@/components/Header/HeroContent/HeroContent'
-import Marquee from '@/components/Header/Marquee/Marquee'
+import HeroContent from '@/components/HeroContent/HeroContent'
+import Marquee from '@/components/Marquee/Marquee'
 import React from 'react'
 
 const Hero = () => {
