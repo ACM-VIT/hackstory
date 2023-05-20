@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "~/server/auth";
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export function generateCode(): string {
   let result = "";
@@ -12,7 +12,13 @@ export function generateCode(): string {
   return result;
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+interface ExtendedNextApiRequest extends NextApiRequest {
+  body: {
+    name: string;
+  };
+}
+
+const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const prisma = new PrismaClient();
     const { name } = req.body;
@@ -49,3 +55,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(405).json({ message: "method not allowed" });
   }
 };
+
+export default handler;
