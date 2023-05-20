@@ -14,10 +14,11 @@ export default async function handler (
         const curUrl = req.url;
         let teamCode : string | undefined;
         if (typeof curUrl === 'string') {
-            teamCode = curUrl.split('=')[1]; // getting teamID from url params (hard coded)
+            teamCode = curUrl.substring(curUrl.lastIndexOf('/') + 1); // getting teamCode from url
         }
+        console.log(teamCode);
 
-        // fetching info of team using the team ID
+        // fetching info of team using teamCode
         const teamInfo = await prisma.team.findFirst({
             // include only name from users column or all details of users?
             include: {
@@ -31,7 +32,6 @@ export default async function handler (
                 code : teamCode
             }
         })
-
         return res.send(teamInfo);
     } else {
         res.status(401);
