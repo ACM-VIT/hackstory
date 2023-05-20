@@ -22,6 +22,8 @@ model Team {
   members    User[]
   code       String       @unique
   Submission Submission[]
+
+
 }
 
 model Submission {
