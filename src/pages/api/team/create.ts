@@ -34,17 +34,18 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           });
           return res.status(200).send(newTeam);
         } else {
-          return res.status(400).json("User already has a team");
+          return res
+            .status(400)
+            .json({ message: "User is already part of a team" });
         }
       } else {
-        return res.status(400).json("user does not exist");
+        return res.status(404).json({ message: "User does not exist" });
       }
-      console.log("Session", JSON.stringify(session, null, 2));
     } else {
       // Not Signed in
-      return res.status(401).end();
+      return res.status(401).json({ message: "Unauthorized" });
     }
   } else {
-    res.status(500).json("send a different request");
+    res.status(405).json({ message: "method not allowed" });
   }
 };
