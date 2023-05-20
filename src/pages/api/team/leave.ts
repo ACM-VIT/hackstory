@@ -1,22 +1,21 @@
-import type { User } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Session } from 'next-auth';
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '~/server/auth';
 import { prisma } from '~/server/db';
 
-// POST /api/leaveTeam { email: <emailId>}
-// response: {user: <updatedUser>, team: <updatedTeam>}
+// GET /api/leaveTeam 
+// response: {user: <updatedUser>, team: <updatedTeam>, teamDeleted: <boolean>}
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {
 
-  const userEmail: string = req.body.email;
   const session: Session | null = await getServerSession(req, res, authOptions);
 
-  if (!session) {
+  if (session) {
 
-    const user: User | null = await prisma.user.findUnique({
+    // Fetch team based on id
+    const user = await prisma.user.findUnique({
       where: {
-        email: userEmail, 
+        id: session.user.id, 
       },
     });
 
