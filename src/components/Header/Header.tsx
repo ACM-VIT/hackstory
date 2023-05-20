@@ -6,7 +6,8 @@ const Header = () => {
       <div className="mx-auto px-8">
         <div className="flex justify-between items-center">
           <div>
-            <div className="mx-16 bg-white w-16 h-16 bg-neutral-200 text-neutral-200">hello</div>
+            {/* Test components added for now. To be changed later */}
+            <div className="mx-16 w-16 h-16 bg-neutral-300 text-neutral-300">hello</div>
           </div>
           <nav className='mx-8'>
             <ul className="flex space-x-12">

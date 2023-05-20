@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Hero from './Hero/Hero'
+import Landing from './Landing/Landing'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -10,7 +10,7 @@ export default function Home() {
     <main
       className={` min-h-screen min-w-screen bg-grey ${inter.className}`}
     >
-      <Hero />
+      <Landing />
     </main>
   )
 }
