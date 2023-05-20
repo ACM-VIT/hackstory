@@ -1,7 +1,8 @@
 import type { User } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Session } from 'next-auth';
-import { getSession } from 'next-auth/react';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '~/server/auth';
 import { prisma } from '~/server/db';
 
 // POST /api/leaveTeam { email: <emailId>}
@@ -9,7 +10,7 @@ import { prisma } from '~/server/db';
 export default async function handle(req: NextApiRequest, res: NextApiResponse) {
 
   const userEmail: string = req.body.email;
-  const session: Session | null = await getSession({ req })
+  const session: Session | null = await getServerSession(req, res, authOptions);
 
   if (!session) {
 
