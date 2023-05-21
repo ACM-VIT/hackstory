@@ -4,6 +4,8 @@ import HeroContent from "@/components/HeroContent/HeroContent";
 import Marquee from "@/components/Marquee/Marquee";
 import Clubs from "@/components/Clubs/Clubs";
 import React from "react";
+import TimelineComponent from "@/components/TimelineComponent/TimelineComponent";
+
 
 const Hero = () => {
 	return (
@@ -14,6 +16,7 @@ const Hero = () => {
 			<Marquee />
 			<About />
 			<Clubs />
+			<TimelineComponent />
 		</>
 	);
 };
