@@ -15,37 +15,37 @@ const Header = () => {
           <nav className='mr-32'>
             <ul className={`flex space-x-12 ${manrope.className}`}>
               <li>
-                <a href="#" className="text-white hover:text-gray-900">
-                  ABOUT HACK
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:text-gray-900">
-                  ABOUT CLUBS
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:text-gray-900">
-                  TIMELINE
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:text-gray-900">
-                  TRACKS
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:text-gray-900">
+                <a href="#" className="text-headerbutton hover:text-gray-900 font-extrabold">
                   PRIZES
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-gray-900">
-                 SPONSORS
+                <a href="#" className="text-headerbutton hover:text-gray-900 font-extrabold">
+                  TRACKS
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-gray-900">
+                <a href="#" className="text-headerbutton hover:text-gray-900 font-extrabold">
+                  TIMELINE
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-headerbutton hover:text-gray-900 font-extrabold">
+                  ABOUT HACK
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-headerbutton hover:text-gray-900 font-extrabold">
+                  SPONSORS
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-headerbutton hover:text-gray-900 font-extrabold">
+                 ABOUT CLUBS
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-headerbutton hover:text-gray-900 font-extrabold">
                   FAQs
                 </a>
               </li>

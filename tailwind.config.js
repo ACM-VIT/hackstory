@@ -22,6 +22,8 @@ module.exports = {
         background: '#1C1C1C',
         marquee: '#D0D5FF',
         timelineheading: '#FFF6E8',
+        yellow: '#FABF29',
+        headerbutton: '#A7A9BE',
       },
       animation: {
         marquee: 'marquee 22s linear infinite',
