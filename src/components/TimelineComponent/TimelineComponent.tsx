@@ -6,38 +6,100 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
-export default function AlternateTimeline() { 
+export default function AlternateTimeline() {
   return (
-      <Timeline>
-        <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
+    <Timeline position="alternate">
+      <TimelineItem>
+        <TimelineSeparator >
+        <hr />
+          <TimelineConnector />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent >Hello</TimelineContent>
- 
+        <TimelineContent>
+          Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator >
+          <TimelineDot />
+          <TimelineConnector />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator >
+          <TimelineDot />
+          <TimelineConnector />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator >
+          <TimelineDot />
+          <TimelineConnector />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator >
+          <TimelineDot />
+          <TimelineConnector />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent >Code</TimelineContent>
+        <TimelineContent> Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent >Sleep</TimelineContent>
+        <TimelineContent>
+        Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot />
         </TimelineSeparator>
-        <TimelineContent >Repeat</TimelineContent>
+        <TimelineContent>
+        Workshop 1
+          <p>4th February</p>
+          4:00pm
+        </TimelineContent>
       </TimelineItem>
     </Timeline>
-    
   );
 }

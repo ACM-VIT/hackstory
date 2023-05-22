@@ -17,6 +17,7 @@ const Hero = () => {
 			<About />
 			<Clubs />
 			<TimelineComponent />
+			
 		</>
 	);
 };

@@ -4,11 +4,11 @@ const HeroContent = () => {
   return (
     <div className='flex flex-col justify-center items-center'>
         <div className='gap-x-2 mt-40'>
-            <p className='text-white text-2xl font-semibold'>5th -7th June</p>
+            <p className='text-white text-2xl font-semibold'>JUNE 5th-7th 2023</p>
             <h1 className='text-white text-[86px] font-extrabold'>HACK STORY</h1>
         </div>
         <div className='mt-8'>
-            <p className='text-center text-white text-2xl font-semibold'>Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi eget laoreet magna. <br></br>Quisque vitae sapien</p>
+            <p className='text-center text-white text-2xl font-semibold'>Hack your way through the world,<br></br>where innovation writes the next chapter!</p>
         </div>
         {/* Test components added for now. To be changed later */}
         <div className='flex flex-row mt-12'>

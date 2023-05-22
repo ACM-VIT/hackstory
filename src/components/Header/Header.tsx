@@ -13,22 +13,37 @@ const Header = () => {
             <ul className="flex space-x-12">
               <li>
                 <a href="#" className="text-white hover:text-gray-900">
-                  Lorem Ipsum
+                  ABOUT HACK
                 </a>
               </li>
               <li>
                 <a href="#" className="text-white hover:text-gray-900">
-                  Lorem Ipsum
+                  ABOUT CLUBS
                 </a>
               </li>
               <li>
                 <a href="#" className="text-white hover:text-gray-900">
-                  Lorem Ipsum
+                  TIMELINE
                 </a>
               </li>
               <li>
                 <a href="#" className="text-white hover:text-gray-900">
-                  Lorem Ipsum
+                  TRACKS
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-white hover:text-gray-900">
+                  PRIZES
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-white hover:text-gray-900">
+                 SPONSORS
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-white hover:text-gray-900">
+                  FAQs
                 </a>
               </li>
             </ul>
