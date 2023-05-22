@@ -10,6 +10,17 @@ module.exports = {
       backgroundColor: {
         grey: '#9A9A9A',
         ribbon: '#B8B7B7',
+        logo: '#5738AF',
+        background: '#1C1C1C',
+        marquee: '#D0D5FF',
+        cross: '#2E2E2E',
+      },
+      colors:{
+        grey: '#9A9A9A',
+        ribbon: '#B8B7B7',
+        logo: '#5738AF',
+        background: '#1C1C1C',
+        marquee: '#D0D5FF',
       },
       animation: {
         marquee: 'marquee 22s linear infinite',

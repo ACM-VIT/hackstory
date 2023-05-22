@@ -4,20 +4,20 @@ import HeroContent from "@/components/HeroContent/HeroContent";
 import Marquee from "@/components/Marquee/Marquee";
 import Clubs from "@/components/Clubs/Clubs";
 import React from "react";
-import TimelineComponent from "@/components/TimelineComponent/TimelineComponent";
+// import TimelineComponent from "@/components/TimelineComponent/TimelineComponent";
 
 
 const Hero = () => {
 	return (
-		<>
+		<div className="overflow-hidden">
 			{/* Header, content for the Hero Section and Marquee added below */}
 			<Header />
 			<HeroContent />
 			<Marquee />
 			<About />
 			<Clubs />
-			<TimelineComponent />
-		</>
+			{/* <TimelineComponent /> */}
+		</div>
 	);
 };
 
