@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import HeroContent from "@/components/HeroContent/HeroContent";
 import Marquee from "@/components/Marquee/Marquee";
 import Clubs from "@/components/Clubs/Clubs";
+import TimelineComponent from "@/components/TimelineComponent/TimelineComponent";
 import React from "react";
 // import TimelineComponent from "@/components/TimelineComponent/TimelineComponent";
 
@@ -16,7 +17,7 @@ const Hero = () => {
 			<Marquee />
 			<About />
 			<Clubs />
-			{/* <TimelineComponent /> */}
+			<TimelineComponent />
 		</div>
 	);
 };
