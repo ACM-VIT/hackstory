@@ -5,3 +5,23 @@
 html {
   user-select: none;
 }
+<<<<<<< HEAD
+=======
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#D0D5FF;
+  ;
+  color:#121212;
+  ;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #D0D5FF;
+}
+
+>>>>>>> 7eb681ef69d863c8535b9ececdc78e926f63736c

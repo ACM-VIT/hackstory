@@ -18,20 +18,10 @@ const HeroContent = () => {
         </div>
         {/* Test components added for now. To be changed later */}
         <div className='flex flex-row mt-12'>
-            <div>
-                <div className="mx-8 bg-neutral-300 w-16 h-16 text-neutral-300">hello</div>
-            </div>
-            <div>
-                <div className="mx-8 bg-neutral-300 w-16 h-16 text-neutral-300">hello</div>
-            </div>
-            <div>
-                <div className="mx-8 bg-neutral-300 w-16 h-16 text-neutral-300">hello</div>
-            </div>
-            <div>
-                <div className="mx-8 bg-neutral-300 w-16 h-16 text-neutral-300">hello</div>
-            </div>
-        </div>
+         <a className="button"> REGISTER NOW </a>
+         
     </div>
+    </div> 
   )
 }
 
