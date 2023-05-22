@@ -16,7 +16,7 @@ export const ClubDrop = () => {
 					<span className={"" + (open ? "" : "hidden")}>-</span>
 				</div>
 				{open && (
-					<p className="pt-8">
+					<p className="pt-8 mr-20">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Atque ab odit distinctio. Nihil tempore molestias
 						assumenda error eos illo repellendus!

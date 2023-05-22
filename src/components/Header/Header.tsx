@@ -1,4 +1,8 @@
 import React from 'react';
+import { Manrope } from 'next/font/google';
+
+const manrope = Manrope({ subsets: ['latin'] })
+
 
 const Header = () => {
   return (
@@ -6,11 +10,10 @@ const Header = () => {
       <div className="mx-auto px-8">
         <div className="flex justify-between items-center">
           <div>
-            {/* Test components added for now. To be changed later */}
-            <div className="mx-16 w-16 h-16 bg-neutral-300 text-neutral-300">hello</div>
+            <div className="flex items-center justify-center font-black ml-36 w-16 h-16 text-logo text-5xl">HS</div>
           </div>
-          <nav className='mx-8'>
-            <ul className="flex space-x-12">
+          <nav className='mr-32'>
+            <ul className={`flex space-x-12 ${manrope.className}`}>
               <li>
                 <a href="#" className="text-white hover:text-gray-900">
                   ABOUT HACK
