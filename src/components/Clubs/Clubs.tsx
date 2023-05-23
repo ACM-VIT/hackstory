@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { ClubDrop } from "@/components/Clubs/ClubDrop";
-import { Oswald } from "next/font/google";
+import { Oswald, Barlow } from "next/font/google";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -14,7 +14,7 @@ const Clubs = () => {
 
 	return (
 		<div className="min-h-[60vh] w-80% flex justify-center mt-[15vh] mb-[15vh]">
-			<div className="container text-center flex flex-initial gap-[5vw]">
+			<div className="container text-center flex gap-[5vw] ">
 				<div
 					className={`${oswald.className} self-start justify-self-center basis-1/2`}
 				>
@@ -57,18 +57,31 @@ const Clubs = () => {
 				</div>
 				<div className="basis-1/2 space-y-6">
 					<div onClick={() => setKey1(!key1)}>
-						<ClubDrop title="COMPUTER SOCIETY OF INDIA" num={1} />
+						<ClubDrop
+							title="COMPUTER SOCIETY OF INDIA"
+							num={1}
+							text="Computer Society of India (CSI) is a non-profit, student-led organization which aims to foster a culture of innovation and creation. It is a close-knit community which has some of the best designers, developers, and tech enthusiasts who work together to organize a variety of events, workshops, hackathons, and competitions to push technology forward. When we build, it matters."
+						/>
 					</div>
 					<div onClick={() => setKey2(!key2)}>
-						<ClubDrop title="DEBATE SOCIETY" num={2} />
+						<ClubDrop
+							title="DEBATE SOCIETY"
+							num={2}
+							text="The Debate Society, VIT is an organisation involved in parliamentary debating at the national and international level. We aim to promote a culture of social awareness, open minded thinking, and curiosity within the student community. VIT Debate Society holds debate tournaments which have both national and international participation."
+						/>
 					</div>
 					<div onClick={() => setKey3(!key3)}>
-						<ClubDrop title="BULLS AND BEARS" num={3} />
+						<ClubDrop
+							title="BULLS AND BEARS"
+							num={3}
+							text="Bulls and Bears VIT is the finance club of VIT with the sole aim of enhancing the financial knowledge of its members and, furthermore, the students in all spheres of finance, ranging from personal finances to stock trading. We aim to advocate financial freedom and provide the knowledge necessary to attain it."
+						/>
 					</div>
 					<div onClick={() => setKey4(!key4)}>
 						<ClubDrop
 							title="ASSOCIATION OF COMPUTING MACHINERY"
 							num={4}
+							text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo praesentium nulla ea accusamus atque voluptatem necessitatibus magni modi ducimus? Dolore."
 						/>
 					</div>
 				</div>
