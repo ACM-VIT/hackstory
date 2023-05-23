@@ -10,7 +10,7 @@ const TimelineComponent = () => {
     <div>
         <div className='text-white flex-row'>
             <div>
-                <h1 className={`${oswald.className} text-4xl font-extrabold text-timelineheader ml-48`}>TIMELINE FOR HACKATHON</h1>
+                <h1 className={`${oswald.className} text-timelineheading text-4xl font-extrabold text-timelineheader ml-48`}>TIMELINE FOR HACKATHON</h1>
                 <p className={`${manrope.className} ml-72 mt-2 text-marquee text-2xl`}>SAVE YOUR DATES!</p>
             </div>
             

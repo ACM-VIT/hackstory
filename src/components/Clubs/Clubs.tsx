@@ -6,7 +6,7 @@ const oswald = Oswald({ subsets: ["latin"] });
 
 const Clubs = () => {
 	return (
-		<div className="min-h-[60vh] w-80% flex justify-center mt-[25vh] mb-[25vh]">
+		<div className="min-h-[60vh] w-80% flex justify-center mt-[15vh] mb-[15vh]">
 			<div className="container text-center flex flex-initial gap-[5vw]">
 				<div
 					className={`${oswald.className} self-start justify-self-center basis-1/2`}
