@@ -22,6 +22,6 @@ export default async function handler(
       return res.status(404).json({ message: "No teams were found" });
     }
   } else {
-    return res.status(401).json({ message: "User not in session" });
+    return res.status(401).json({ message: "Unauthorized" });
   }
 }
