@@ -25,7 +25,7 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
       });
 
       if (!team) {
-        return res.status(404).json("Team doesn't exist");
+        return res.status(404).json({ message: "Team doesn't exist" });
       }
 
       // Check if the current user is the team leader
