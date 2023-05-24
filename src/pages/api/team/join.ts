@@ -47,6 +47,8 @@ export default async function joinhandler(
         },
       });
 
+      console.log(team);
+
       if (!team) {
         return res.status(404).json({
           message: "Team not found",
@@ -59,7 +61,7 @@ export default async function joinhandler(
         });
       }
 
-      await prisma.team.update({
+      const updatedTeam = await prisma.team.update({
         where: {
           id: team.id,
         },
@@ -70,11 +72,14 @@ export default async function joinhandler(
             },
           },
         },
+        include: {
+          members: true,
+        },
       });
 
       return res.status(200).json({
         message: "Successfully joined team",
-        team: team,
+        team: updatedTeam,
       });
     } else {
       // Not Logged in
