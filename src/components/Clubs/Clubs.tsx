@@ -13,7 +13,7 @@ const Clubs = () => {
 	// useEffect(() => {}, [key1, key2, key3, key4]);
 
 	return (
-		<div className="min-h-[60vh] w-80% flex justify-center mt-[15vh] mb-[15vh]">
+		<div className="min-h-[60vh] w-80% flex justify-center mt-[10vh] mb-[10vh]">
 			<div className="container text-center flex gap-[5vw] ">
 				<div
 					className={`${oswald.className} self-start justify-self-center basis-1/2`}

@@ -19,7 +19,6 @@ const HeroContent = () => {
         {/* Test components added for now. To be changed later */}
         <div className='flex flex-row mt-12'>
          <a className='bg-marquee px-3 py-4 rounded-md font-extrabold cursor-pointer'>REGISTER NOW </a>
-         
     </div>
     </div> 
   )
