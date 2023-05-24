@@ -10,8 +10,8 @@ const HeroContent = () => {
   return (
     <div className='flex flex-col justify-center items-center'>
         <div className='gap-x-2 mt-40'>
-            <p className={`text-timelineheading text-2xl font-semibold ${manrope.className}`}>JUNE 5TH-7TH 2023</p>
-            <h1 className={`text-yellow text-[86px] font-normal ${alfaSlabOne.className }`}>HACK STORY</h1>
+            <p className={`text-timelineheading text-2xl  font-semibold ${manrope.className}`}>JUNE 5TH-7TH 2023</p>
+            <h1 className={`text-yellow text-[40px] lg:text-[86px] font-normal ${alfaSlabOne.className }`}>HACK STORY</h1>
         </div>
         <div className='mt-8'>
             <p className={`text-center text-timelineheading text-lg font-semibold ${manrope.className}`}>Hack your way through the world,where innovation writes the next<br></br>chapter!</p>
