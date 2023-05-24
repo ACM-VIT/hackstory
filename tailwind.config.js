@@ -14,6 +14,7 @@ module.exports = {
         background: '#1C1C1C',
         marquee: '#D0D5FF',
         cross: '#2E2E2E',
+        tracks: '#E8E8EE',
       },
       colors:{
         grey: '#9A9A9A',
@@ -24,6 +25,8 @@ module.exports = {
         timelineheading: '#FFF6E8',
         yellow: '#FABF29',
         headerbutton: '#A7A9BE',
+        tracks: '#E8E8EE',
+        trackstext: '#A7A9BE',
       },
       animation: {
         marquee: 'marquee 22s linear infinite',
@@ -31,12 +34,12 @@ module.exports = {
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' },
         },
         marquee2: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0%)' },
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       },
     },
