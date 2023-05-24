@@ -10,8 +10,8 @@ const TimelineComponent = () => {
     <div>
         <div className='text-white flex-row'>
             <div>
-                <h1 className={`${oswald.className} text-timelineheading text-4xl font-extrabold text-timelineheader ml-48`}>TIMELINE FOR HACKATHON</h1>
-                <p className={`${manrope.className} ml-72 mt-2 text-marquee text-2xl`}>SAVE YOUR DATES!</p>
+                <h1 className={`${oswald.className} text-timelineheading text-4xl font-extrabold text-timelineheader text-center lg:text-left lg:ml-48`}>TIMELINE FOR HACKATHON</h1>
+                <p className={`${manrope.className} lg:ml-72 mt-2 text-marquee text-center lg:text-left text-2xl`}>SAVE YOUR DATES!</p>
             </div>
             
         </div>
@@ -27,8 +27,8 @@ const TimelineComponent = () => {
                 <div className="absolute md:visible invisible md:w-24 md:ml-20 lg:ml-28 mt-2 lg:w-32 h-1 bg-white "></div>
             </div>
             <div className="col-span-4 w-full h-full ">
-                <div className="w-full h-full md:pl-16">
-                <h1 className="text-white text-2xl font-medium py-2 text-left font-bold">Discover.JS</h1>
+                <div className="w-full h-full md:pl-16 md:pr-16">
+                <h1 className="text-white text-2xl font-medium py-2 text-left text-bold">Discover.JS</h1>
                     <p className="text-white sm:text-base text-xs text-left">Take the first steps of your Javascript journey. We'll teach you all about the basics of the language.</p>
                     <p className="text-white sm:text-base text-xs text-left pt-5 font-medium">8th February 2023</p>
                     <div className="flex flex-col lg:flex-row">   
@@ -41,7 +41,7 @@ const TimelineComponent = () => {
 
         <div className="col-span-4 w-full h-full ">
             <div className="w-full h-full p-2 md:px-16">
-                <h1 className="text-white text-2xl font-medium py-2 text-right font-bold">What's Next?</h1>
+                <h1 className="text-white text-2xl font-medium py-2 text-right text-bold">What's Next?</h1>
                     <p className="text-white sm:text-base text-xs text-right">Introduction to Next.js, a modern framework used to build web applications.</p>
                     <p className="text-white sm:text-base text-xs text-right pt-5">11th February 2023</p>
                     <div className="flex flex-col lg:flex-row items-end justify-end">   
@@ -73,7 +73,7 @@ const TimelineComponent = () => {
             </div>
             <div className="col-span-4 w-full h-full pb-20">
                 <div className="w-full h-full p-2 md:pl-16">
-                <h1 className="text-white text-2xl font-medium py-2 text-left font-bold">What's Next? 2.0</h1>
+                <h1 className="text-white text-2xl font-medium py-2 text-left text-bold">What's Next? 2.0</h1>
                     <p className="text-white sm:text-base text-xs text-left">The workshop series concludes with a hands-on guided project.</p>
                     <p className="text-white sm:text-base text-xs text-left pt-5">15th February 2023</p>
                     <div className="flex flex-col lg:flex-row">   
