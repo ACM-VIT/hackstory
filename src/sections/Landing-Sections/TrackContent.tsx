@@ -11,11 +11,11 @@ const TrackContent = () => {
   return (
     <>
       <div
-        className={`text-fontColor1 mb-10 mt-[20rem] text-center text-3xl font-extrabold lg:text-4xl `}
+        className={`mb-10 mt-[20rem] bg-red-700 text-center text-3xl font-extrabold text-fontColor1 lg:text-4xl `}
       >
         CHECK OUT THE TRACKS
       </div>
-      <div className="mt-[5rem]">
+      <div className="mt-[5rem] bg-red-400">
         {tracks.map((track, index) => (
           <div
             key={index}

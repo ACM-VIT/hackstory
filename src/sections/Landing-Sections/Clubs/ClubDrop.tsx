@@ -13,10 +13,10 @@ const ClubDrop = ({ title, num, text }: Props) => {
 
   return (
     <div>
-      <div className="text-left">
+      <div className=" text-left">
         <div
           className={
-            "flex items-center justify-between border-b pb-2 text-2xl font-semibold " +
+            "flex  cursor-pointer items-center justify-between border-b pb-2 text-2xl font-semibold" +
             (open ? "" : "border-[#A7A9BE] text-[#A7A9BE]") +
             (num == 1 && open ? "border-[#A7A9BE] text-[#FFCCDE]" : "") +
             (num == 2 && open ? "border-[#A7A9BE] text-[#007656]" : "") +

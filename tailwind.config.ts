@@ -24,20 +24,20 @@ module.exports = {
         tracks: "#E8E8EE",
         trackstext: "#A7A9BE",
       },
-      animation: {
-        marquee: "marquee 22s linear infinite",
-        marquee2: "marquee2 22s linear infinite",
-      },
-      keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0%)" },
-        },
-        marquee2: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(100%)" },
-        },
-      },
+      // animation: {
+      //   marquee: "marquee 22s linear infinite",
+      //   marquee2: "marquee2 22s linear infinite",
+      // },
+      // keyframes: {
+      //   marquee: {
+      //     "0%": { transform: "translateX(-100%)" },
+      //     "100%": { transform: "translateX(0%)" },
+      //   },
+      //   marquee2: {
+      //     "0%": { transform: "translateX(0%)" },
+      //     "100%": { transform: "translateX(100%)" },
+      //   },
+      // },
     },
   },
   plugins: [require("tailwindcss-scrollbar")],

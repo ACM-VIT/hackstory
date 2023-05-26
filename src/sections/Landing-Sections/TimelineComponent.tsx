@@ -2,7 +2,7 @@ import React from "react";
 
 const TimelineComponent = () => {
   return (
-    <>
+    <div className="bg-lime-600">
       <div className="m-auto flex h-max w-1/2 flex-col items-start justify-center  text-white">
         <div
           className={`text-timelineheader h-12 text-center text-4xl font-extrabold`}
@@ -114,7 +114,7 @@ const TimelineComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

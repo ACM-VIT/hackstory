@@ -6,6 +6,7 @@ import Clubs from "@/sections/Landing-Sections/Clubs";
 import TimelineComponent from "@/sections/Landing-Sections/TimelineComponent";
 import React from "react";
 import TrackContent from "@/sections/Landing-Sections/TrackContent";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (

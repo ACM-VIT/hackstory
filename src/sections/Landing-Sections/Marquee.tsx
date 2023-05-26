@@ -1,138 +1,46 @@
 import React from "react";
-import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
-const Marquee = () => {
+const InfiniteMarquee: React.FC = () => {
+  const array = [1, 2, 3, 4, 5, 6];
   return (
-    <>
-      <div className="font-marquee relative z-10 mt-[10rem] flex w-[110%] -translate-x-10 -rotate-[4deg] overflow-x-hidden bg-logo max-lg:mt-[5rem]">
-        <div className="flex animate-marquee whitespace-nowrap py-4 text-marquee lg:py-8">
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base`}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base`}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base`}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base`}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:gap-x-3 lg:text-base `}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-        </div>
-        <div className="font-marquee absolute top-0 flex animate-marquee2 whitespace-nowrap py-4 text-marquee lg:py-8">
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base `}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base `}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base `}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base `}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-          <span
-            className={`ml-3 flex flex h-full flex-row items-center justify-around gap-x-6 text-center text-2xl font-bold lg:text-base `}
-          >
-            <p className="lg:ml-3">FOR YOURS TO BUILD</p>
-            <Image
-              width={10000}
-              height={10000}
-              alt="/"
-              src="/marquee-icon.svg"
-              className="mr-6 h-10 w-10 lg:mx-6"
-            />
-          </span>
-        </div>
+    <div className="relative flex h-[50vh] w-[200vw] -translate-x-32 items-center justify-around ">
+      <div className="z-10  -rotate-3">
+        <Marquee
+          // className="h-[16vh]  rotate-12 bg-logo"
+          speed={40} // Adjust the speed as needed
+          gradient={false} // Disable gradient if not required
+        >
+          {array.map((el) => {
+            return (
+              <div
+                key={el}
+                className="flex h-[16vh] items-center justify-center gap-x-14 bg-logo px-10"
+              >
+                <p className="flex h-[100%] w-full items-center justify-around bg-logo text-4xl">
+                  FOR YOURS TO BUILD
+                </p>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="bg-logo"
+                >
+                  <path
+                    d="M8.05577 0.576162L8.15555 0.652576L9.97836 2.23639L12.5571 2.05607C13.0687 2.02029 13.5172 2.37591 13.6095 2.86801L13.6244 2.98388L13.8047 5.56258L15.6268 7.14723C16.0115 7.48169 16.0788 8.0456 15.8019 8.45822L15.7254 8.558L14.1416 10.3798L14.3219 12.9595C14.3577 13.4711 14.0021 13.9197 13.51 14.012L13.3941 14.0268L10.8144 14.2072L9.23079 16.0292C8.89633 16.414 8.33241 16.4812 7.9198 16.2043L7.82002 16.1279L5.9972 14.5441L3.4185 14.7244C2.90691 14.7602 2.45834 14.4046 2.36603 13.9125L2.35118 13.7966L2.17086 11.2179L0.348776 9.63324C-0.0359764 9.29878 -0.103206 8.73486 0.173711 8.32225L0.250125 8.22247L1.83387 6.39866L1.65362 3.82095C1.61784 3.30937 1.97346 2.8608 2.46556 2.76848L2.58142 2.75363L5.15913 2.57338L6.74478 0.751227C7.07924 0.366475 7.64315 0.299245 8.05577 0.576162Z"
+                    fill="#D0D5FF"
+                  />
+                </svg>
+              </div>
+            );
+          })}
+        </Marquee>
       </div>
-      <div className="z-1 w-contain mt-[-65px] h-full w-[110%] -translate-x-10 rotate-[6deg] bg-cross py-6 lg:py-12"></div>
-    </>
+      <div className="absolute top-[16vh] h-[16vh] w-[200vw] rotate-3 bg-blue-500"></div>
+    </div>
   );
 };
 
-export default Marquee;
+export default InfiniteMarquee;
