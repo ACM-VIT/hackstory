@@ -18,7 +18,7 @@ module.exports = {
         logo: "#5738AF",
         background: "#1C1C1C",
         marquee: "#D0D5FF",
-        timelineheading: "#FFF6E8",
+        fontColor1: "#FFF6E8",
         yellow: "#FABF29",
         headerbutton: "#A7A9BE",
         tracks: "#E8E8EE",

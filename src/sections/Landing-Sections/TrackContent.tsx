@@ -11,7 +11,7 @@ const TrackContent = () => {
   return (
     <>
       <div
-        className={`text-timelineheading mb-10 mt-[20rem] lg:text-4xl text-3xl font-extrabold text-center `}
+        className={`text-fontColor1 mb-10 mt-[20rem] text-center text-3xl font-extrabold lg:text-4xl `}
       >
         CHECK OUT THE TRACKS
       </div>
@@ -19,19 +19,19 @@ const TrackContent = () => {
         {tracks.map((track, index) => (
           <div
             key={index}
-            className="ml-[4rem] mr-[4rem] lg:ml-[20rem] lg:mr-[20rem] border-b border-tracks flex flex-col pb-8 pt-4 gap-y-8 mb-10"
+            className="mb-10 ml-[4rem] mr-[4rem] flex flex-col gap-y-8 border-b border-tracks pb-8 pt-4 lg:ml-[20rem] lg:mr-[20rem]"
           >
-            <p className={`text-tracks lg:text-3xl text-2xl font-extrabold `}>
+            <p className={`text-2xl font-extrabold text-tracks lg:text-3xl `}>
               {track}
             </p>
-            <div className="flex flex-col lg:flex-row gap-x-5 gap-y-2">
-              <a className="cursor-pointer bg-tracks p-2 rounded-md max-w-[6rem]">
+            <div className="flex flex-col gap-x-5 gap-y-2 lg:flex-row">
+              <a className="max-w-[6rem] cursor-pointer rounded-md bg-tracks p-2">
                 WordGame
               </a>
               <p className="p-2 text-trackstext">Word1</p>
-              <p className="p-2 text-trackstext hidden lg:visible">|</p>
+              <p className="hidden p-2 text-trackstext lg:visible">|</p>
               <p className="p-2 text-trackstext">Word2</p>
-              <p className="p-2 text-trackstext hidden lg:visible">|</p>
+              <p className="hidden p-2 text-trackstext lg:visible">|</p>
               <p className="p-2 text-trackstext">Word 3</p>
             </div>
           </div>
