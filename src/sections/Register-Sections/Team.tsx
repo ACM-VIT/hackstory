@@ -4,42 +4,38 @@ import { useRouter } from "next/router";
 import Toaster from "@/utils/toaster";
 
 const Team = () => {
-  const [teamName, setTeamName] = useState("")
-  const [teamCode, setTeamCode] = useState("")
+  const [teamName, setTeamName] = useState("");
+  const [teamCode, setTeamCode] = useState("");
 
-  const router = useRouter()
+  const router = useRouter();
 
-  const handleCreate = async ()=>{
-    const toaster = Toaster.startLoad()
-    const URL = `http://localhost:3000/api/team/create`
-
-    const res = await postHandler(URL, {
-      name:teamName
-    })
-
-    if(res.status===1){
-      Toaster.stopLoad(toaster, "Team Joined", 1)
-      router.push('/team')
-    }
-
-    else Toaster.stopLoad(toaster, res.data.message, 0)
-  }
-
-  const handleJoin = async ()=>{
-    const toaster = Toaster.startLoad()
-    const URL = `http://localhost:3000/api/team/join`
+  const handleCreate = async () => {
+    const toaster = Toaster.startLoad();
+    const URL = `http://localhost:3000/api/team/create`;
 
     const res = await postHandler(URL, {
-      teamCode:teamCode
-    })
+      name: teamName,
+    });
 
-    if(res.status===1){
-      Toaster.stopLoad(toaster, "Team Joined", 1)
-      router.push('/team')
-    }
+    if (res.status === 1) {
+      Toaster.stopLoad(toaster, "Team Joined", 1);
+      router.push("/team");
+    } else Toaster.stopLoad(toaster, res.data.message, 0);
+  };
 
-    else Toaster.stopLoad(toaster, res.data.message, 0)
-  }
+  const handleJoin = async () => {
+    const toaster = Toaster.startLoad();
+    const URL = `http://localhost:3000/api/team/join`;
+
+    const res = await postHandler(URL, {
+      teamCode: teamCode,
+    });
+
+    if (res.status === 1) {
+      Toaster.stopLoad(toaster, "Team Joined", 1);
+      router.push("/team");
+    } else Toaster.stopLoad(toaster, res.data.message, 0);
+  };
 
   return (
     <>
@@ -54,7 +50,7 @@ const Team = () => {
               type="text"
               placeholder="What will be your team called?"
               value={teamName}
-              onChange={(el)=>setTeamName(el.target.value)}
+              onChange={(el) => setTeamName(el.target.value)}
             />
           </div>
           <button
@@ -74,7 +70,7 @@ const Team = () => {
               type="password"
               placeholder="Enter the team's code"
               value={teamCode}
-              onChange={(el)=>setTeamCode(el.target.value)}
+              onChange={(el) => setTeamCode(el.target.value)}
             />
           </div>
           <button
