@@ -10,11 +10,11 @@ const Clubs = () => {
   // useEffect(() => {}, [key1, key2, key3, key4]);
 
   return (
-    <div className="min-h-[60vh] w-80% flex justify-center mt-[10vh] mb-[10vh]">
-      <div className="container text-center flex gap-[5vw] ">
-        <div className={`self-start justify-self-center basis-1/2`}>
-          <div className="flex justify-center pl-4 text-[#FFF6E8] text-center">
-            <h1 className="text-4xl max-w-[25vw] text-left leading-[3.5rem] font-semibold">
+    <div className=" w-80% mb-[10vh] mt-[10vh] flex justify-center">
+      <div className="container flex gap-[5vw] text-center ">
+        <div className={`basis-1/2 self-start justify-self-center`}>
+          <div className="flex justify-center pl-4 text-center text-[#FFF6E8]">
+            <h1 className="max-w-[25vw] text-left text-4xl font-semibold leading-[3.5rem]">
               <span className={"" + (key1 ? "text-[#FFCCDE]" : "")}>
                 FOUR{" "}
                 <span className={"" + (key4 ? "text-[#F54E26]" : "")}>

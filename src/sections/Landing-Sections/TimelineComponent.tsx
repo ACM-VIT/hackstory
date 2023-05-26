@@ -2,116 +2,111 @@ import React from "react";
 
 const TimelineComponent = () => {
   return (
-    <div>
-      <div className="text-white flex-row">
-        <div>
-          <h1
-            className={`text-timelineheading text-4xl font-extrabold text-timelineheader text-center lg:text-left lg:ml-48`}
-          >
-            TIMELINE FOR HACKATHON
-          </h1>
-          <p
-            className={`lg:ml-72 mt-2 text-marquee text-center lg:text-left text-2xl`}
-          >
-            SAVE YOUR DATES!
-          </p>
+    <>
+      <div className="m-auto flex h-max w-1/2 flex-col items-start justify-center  text-white">
+        <div
+          className={`text-timelineheader h-12 text-center text-4xl font-extrabold`}
+        >
+          TIMELINE FOR HACKATHON
+        </div>
+        <div className={`mt-2 text-center text-2xl text-marquee  lg:text-left`}>
+          SAVE YOUR DATES!
         </div>
       </div>
       <div
         id="timeline"
-        className="mt-20 max-w-7xl mx-auto w-full grid grid-cols-9 pt-10 px-2"
+        className="mx-auto mt-20 grid w-full max-w-7xl grid-cols-9 px-2 pt-10"
       >
-        <div className="col-span-4 w-full h-full ">
-          <div className="sm:w-full w-0"></div>
+        <div className="col-span-4 h-full w-full ">
+          <div className="w-0 sm:w-full"></div>
         </div>
-        <div className="relative col-span-1 w-full h-full flex justify-center mt-3">
+        <div className="relative col-span-1 mt-3 flex h-full w-full justify-center">
           <div className="h-full w-1 bg-white"></div>
-          <div className="absolute w-5 h-5 transform rotate-45 bg-white z-10"></div>
-          <div className="absolute w-6 h-6 transform rotate-45 bg-pink z-5 -mt-[2px] blur-sm"></div>
-          <div className="absolute md:visible invisible md:w-24 md:ml-20 lg:ml-28 mt-2 lg:w-32 h-1 bg-white "></div>
+          <div className="absolute z-10 h-5 w-5 rotate-45 transform bg-white"></div>
+          <div className="bg-pink z-5 absolute -mt-[2px] h-6 w-6 rotate-45 transform blur-sm"></div>
+          <div className="invisible absolute mt-2 h-1 bg-white md:visible md:ml-20 md:w-24 lg:ml-28 lg:w-32 "></div>
         </div>
-        <div className="col-span-4 w-full h-full ">
-          <div className="w-full h-full md:pl-16 md:pr-16">
-            <h1 className="text-white text-2xl font-medium py-2 text-left text-bold">
+        <div className="col-span-4 h-full w-full ">
+          <div className="h-full w-full md:pl-16 md:pr-16">
+            <h1 className="text-bold py-2 text-left text-2xl font-medium text-white">
               Discover.JS
             </h1>
-            <p className="text-white sm:text-base text-xs text-left">
-              Take the first steps of your Javascript journey. We'll teach you
-              all about the basics of the language.
+            <p className="text-left text-xs text-white sm:text-base">
+              Take the first steps of your Javascript journey. We&apos;ll teach
+              you all about the basics of the language.
             </p>
-            <p className="text-white sm:text-base text-xs text-left pt-5 font-medium">
+            <p className="pt-5 text-left text-xs font-medium text-white sm:text-base">
               8th February 2023
             </p>
             <div className="flex flex-col lg:flex-row">
-              <p className="text-white sm:text-base text-xs text-left pt-2">
+              <p className="pt-2 text-left text-xs text-white sm:text-base">
                 Venue: SJT 621,
               </p>
-              <p className="text-white sm:text-base text-xs text-left pt-2">
-                {" "}
+              <p className="pt-2 text-left text-xs text-white sm:text-base">
                 11:30 a.m. - 1:30 p.m.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="col-span-4 w-full h-full ">
-          <div className="w-full h-full p-2 md:px-16">
-            <h1 className="text-white text-2xl font-medium py-2 text-right text-bold">
-              What's Next?
+        <div className="col-span-4 h-full w-full ">
+          <div className="h-full w-full p-2 md:px-16">
+            <h1 className="text-bold py-2 text-right text-2xl font-medium text-white">
+              What&apos;s Next?
             </h1>
-            <p className="text-white sm:text-base text-xs text-right">
+            <p className="text-right text-xs text-white sm:text-base">
               Introduction to Next.js, a modern framework used to build web
               applications.
             </p>
-            <p className="text-white sm:text-base text-xs text-right pt-5">
+            <p className="pt-5 text-right text-xs text-white sm:text-base">
               11th February 2023
             </p>
-            <div className="flex flex-col lg:flex-row items-end justify-end">
-              <p className="text-white sm:text-base text-xs pt-2">
+            <div className="flex flex-col items-end justify-end lg:flex-row">
+              <p className="pt-2 text-xs text-white sm:text-base">
                 Venue: SJT 307,
               </p>
-              <p className="text-white sm:text-base text-xs pt-2">
+              <p className="pt-2 text-xs text-white sm:text-base">
                 {" "}
                 10:00 a.m. - 4:00 p.m.
               </p>
             </div>
           </div>
         </div>
-        <div className="relative col-span-1 w-full h-full flex justify-center">
-          <div className="absolute md:visible invisible md:w-24 md:mr-20 lg:mr-28 mt-7 lg:w-32 h-1 bg-white"></div>
+        <div className="relative col-span-1 flex h-full w-full justify-center">
+          <div className="invisible absolute mt-7 h-1 bg-white md:visible md:mr-20 md:w-24 lg:mr-28 lg:w-32"></div>
           <div className="h-full w-1 bg-white"></div>
-          <div className="absolute w-5 h-5 transform rotate-45 bg-white z-10 mt-5"></div>
-          <div className="absolute w-6 h-6 transform rotate-45 bg-blue z-5 mt-[18px] blur-sm"></div>
+          <div className="absolute z-10 mt-5 h-5 w-5 rotate-45 transform bg-white"></div>
+          <div className="bg-blue z-5 absolute mt-[18px] h-6 w-6 rotate-45 transform blur-sm"></div>
         </div>
-        <div className="col-span-4 w-full h-full">
-          <div className="sm:w-full md:pl-28 lg:pl-56 flex justify-end pt-24 sm:pt-0"></div>
+        <div className="col-span-4 h-full w-full">
+          <div className="flex justify-end pt-24 sm:w-full sm:pt-0 md:pl-28 lg:pl-56"></div>
         </div>
 
         <div className="col-span-4 w-full pt-20">
-          <div className="sm:w-full w-0"></div>
+          <div className="w-0 sm:w-full"></div>
         </div>
-        <div className="relative col-span-1 w-full h-full flex justify-center">
+        <div className="relative col-span-1 flex h-full w-full justify-center">
           <div className="h-full w-1 bg-white"></div>
-          <div className="absolute w-5 h-5 transform rotate-45 bg-white z-10 mt-5"></div>
-          <div className="absolute md:visible invisible md:w-24 md:ml-20 lg:ml-28 mt-7 lg:w-32 h-1 bg-white"></div>
-          <div className="absolute w-6 h-6 transform rotate-45 bg-purple z-5 mt-[18px] blur-sm"></div>
+          <div className="absolute z-10 mt-5 h-5 w-5 rotate-45 transform bg-white"></div>
+          <div className="invisible absolute mt-7 h-1 bg-white md:visible md:ml-20 md:w-24 lg:ml-28 lg:w-32"></div>
+          <div className="bg-purple z-5 absolute mt-[18px] h-6 w-6 rotate-45 transform blur-sm"></div>
         </div>
-        <div className="col-span-4 w-full h-full pb-20">
-          <div className="w-full h-full p-2 md:pl-16">
-            <h1 className="text-white text-2xl font-medium py-2 text-left text-bold">
-              What's Next? 2.0
+        <div className="col-span-4 h-full w-full pb-20">
+          <div className="h-full w-full p-2 md:pl-16">
+            <h1 className="text-bold py-2 text-left text-2xl font-medium text-white">
+              What&apos;s Next? 2.0
             </h1>
-            <p className="text-white sm:text-base text-xs text-left">
+            <p className="text-left text-xs text-white sm:text-base">
               The workshop series concludes with a hands-on guided project.
             </p>
-            <p className="text-white sm:text-base text-xs text-left pt-5">
+            <p className="pt-5 text-left text-xs text-white sm:text-base">
               15th February 2023
             </p>
             <div className="flex flex-col lg:flex-row">
-              <p className="text-white sm:text-base text-xs text-left pt-2">
+              <p className="pt-2 text-left text-xs text-white sm:text-base">
                 Venue: SJT 621,
               </p>
-              <p className="text-white sm:text-base text-xs text-left pt-2">
+              <p className="pt-2 text-left text-xs text-white sm:text-base">
                 {" "}
                 11:30 a.m. - 1:30 p.m.
               </p>
@@ -119,7 +114,7 @@ const TimelineComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -9,7 +9,7 @@ import TrackContent from "@/sections/Landing-Sections/TrackContent";
 
 const Home = () => {
   return (
-    <div className="overflow-x-hidden bg-background">
+    <>
       <Header />
       <HeroContent />
       <Marquee />
@@ -17,7 +17,7 @@ const Home = () => {
       <Clubs />
       <TimelineComponent />
       <TrackContent />
-    </div>
+    </>
   );
 };
 
