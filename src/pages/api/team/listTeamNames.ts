@@ -1,7 +1,7 @@
-import { prisma } from "~/server/db";
+import { prisma } from "@/server/db";
 import { type NextApiRequest, type NextApiResponse } from "next";
 import { getServerSession } from "next-auth";
-import { authOptions } from "~/server/auth";
+import { authOptions } from "@/server/auth";
 
 export default async function handler(
   req: NextApiRequest,

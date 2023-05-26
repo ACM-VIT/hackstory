@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "~/server/auth";
+import { authOptions } from "@/server/auth";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export function generateCode(): string {

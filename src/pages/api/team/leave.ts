@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { type Session } from 'next-auth';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '~/server/auth';
-import { prisma } from '~/server/db';
+import { authOptions } from '@/server/auth';
+import { prisma } from '@/server/db';
 
 // GET /api/leaveTeam 
 // response: {user: <updatedUser>, team: <updatedTeam>, teamDeleted: <boolean>}
