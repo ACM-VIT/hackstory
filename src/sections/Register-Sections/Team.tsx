@@ -2,6 +2,7 @@ import postHandler from "@/handlers/postHandler";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Toaster from "@/utils/toaster";
+import { DEV_BASE_URL } from "@/constants";
 
 const Team = () => {
   const [teamName, setTeamName] = useState("")
@@ -11,7 +12,7 @@ const Team = () => {
 
   const handleCreate = async ()=>{
     const toaster = Toaster.startLoad()
-    const URL = `http://localhost:3000/api/team/create`
+    const URL = `${DEV_BASE_URL}/api/team/create`
 
     const res = await postHandler(URL, {
       name:teamName
@@ -27,7 +28,7 @@ const Team = () => {
 
   const handleJoin = async ()=>{
     const toaster = Toaster.startLoad()
-    const URL = `http://localhost:3000/api/team/join`
+    const URL = `${DEV_BASE_URL}/api/team/join`
 
     const res = await postHandler(URL, {
       teamCode:teamCode

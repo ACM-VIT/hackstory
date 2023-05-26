@@ -1,6 +1,19 @@
 import React from "react";
 
-const ViewTeam = ({team}) => {
+interface Member {
+  name: string;
+}
+interface Team {
+  name: string;
+  members: Member[];
+  code: string;
+}
+
+interface Props {
+  team: Team;
+}
+
+const ViewTeam = ({ team }: Props) => {
   return (
     <>
       <div className="flex h-[80vh] flex-col items-center justify-center text-fontColor1">
@@ -12,13 +25,16 @@ const ViewTeam = ({team}) => {
             Share this code to invite : {team.code}
           </div>
           <div className="flex h-[60%] w-full flex-col items-center justify-center">
-            {
-              team.members.map(member=>{
-                return   <div key={member} className="flex h-[25%] w-full items-center justify-start">
-                {member.name}
-              </div>
-              })
-            }
+            {team.members.map((member) => {
+              return (
+                <div
+                  key={member.name}
+                  className="flex h-[25%] w-full items-center justify-start"
+                >
+                  {member.name}
+                </div>
+              );
+            })}
           </div>
           <div className="flex h-[15%] w-[50%] items-center justify-around">
             <button
