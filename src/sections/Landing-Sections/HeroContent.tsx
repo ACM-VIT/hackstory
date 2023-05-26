@@ -29,7 +29,7 @@ const HeroContent = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-teal-500 px-16 pt-32 max-md:pt-16">
+    <div className="flex flex-col items-center justify-center  px-16 pt-32 max-md:pt-16">
       <div className="">
         <div
           className={`text-timelineheading text-md font-semibold md:text-xl lg:text-2xl`}
@@ -41,12 +41,6 @@ const HeroContent = () => {
         >
           HACK STORY
         </div>
-      </div>
-      <div
-        className={`text-timelineheading text-center text-sm font-semibold md:text-lg lg:text-xl`}
-      >
-        Hack your way through the world,where innovation writes the next
-        chapter!
       </div>
       <div
         className={`text-timelineheading text-center text-sm font-semibold md:text-lg lg:text-xl`}

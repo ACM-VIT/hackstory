@@ -49,13 +49,15 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
           data: { leader: false },
         });
 
-        return res.status(200).json("Team deleted successfully");
+        return res.status(200).json({ message: "Team deleted successfully" });
       }
 
-      return res.status(403).json("Only the team leader can delete the team");
+      return res
+        .status(403)
+        .json({ message: "Only the team leader can delete the team" });
     } catch (error) {
       console.error("Error deleting team:", error);
-      return res.status(500).json("Internal server error");
+      return res.status(500).json({ message: "Internal server error" });
     }
   } else {
     // Not Signed in

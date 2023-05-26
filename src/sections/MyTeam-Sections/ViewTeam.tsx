@@ -18,20 +18,19 @@ interface Props {
 }
 
 const ViewTeam = ({ team }: Props) => {
+  const router = useRouter();
 
-  const router = useRouter()
-
-  const handleLeave = async () =>{
-    const toaster = Toaster.startLoad("Leaving the Team.")
-    const URL = `${DEV_BASE_URL}/api/team/leave`
-    const res= await getHandler(URL);
-    if(res.statusCode===200){
-      Toaster.stopLoad(toaster, "Successfully left the Team", 1)
-      router.push('/team/join')
-    }else{
-      Toaster.stopLoad(toaster, res.data, 0)
+  const handleLeave = async () => {
+    const toaster = Toaster.startLoad("Leaving the Team.");
+    const URL = `${DEV_BASE_URL}/api/team/leave`;
+    const res = await getHandler(URL);
+    if (res.statusCode === 200) {
+      Toaster.stopLoad(toaster, "Successfully left the Team", 1);
+      router.push("/team/join");
+    } else {
+      Toaster.stopLoad(toaster, res.data.message, 0);
     }
-  }
+  };
 
   return (
     <>
