@@ -10,9 +10,15 @@ const Team = () => {
 
   const router = useRouter();
 
-  const handleCreate = async ()=>{
-    const toaster = Toaster.startLoad()
-    const URL = `${DEV_BASE_URL}/api/team/create`
+  const handleCreate = async () => {
+    if (teamName.trim() === "") {
+      Toaster.error("Team name cannot be empty");
+      return;
+    }
+
+    const toaster = Toaster.startLoad();
+
+    const URL = `${DEV_BASE_URL}/api/team/create`;
 
     const res = await postHandler(URL, {
       name: teamName,
@@ -24,9 +30,9 @@ const Team = () => {
     } else Toaster.stopLoad(toaster, res.data.message, 0);
   };
 
-  const handleJoin = async ()=>{
-    const toaster = Toaster.startLoad()
-    const URL = `${DEV_BASE_URL}/api/team/join`
+  const handleJoin = async () => {
+    const toaster = Toaster.startLoad();
+    const URL = `${DEV_BASE_URL}/api/team/join`;
 
     const res = await postHandler(URL, {
       teamCode: teamCode,
@@ -51,7 +57,7 @@ const Team = () => {
               type="text"
               placeholder="What will be your team called?"
               value={teamName}
-              onChange={(el)=>setTeamName(el.target.value)}
+              onChange={(el) => setTeamName(el.target.value)}
               autoComplete="new-password"
             />
           </div>
@@ -68,12 +74,12 @@ const Team = () => {
           </div>
           <div className=" w-[60%]">
             <input
-              className="w-full rounded uppercase border-2 border-gray-200 bg-gray-200 px-3 py-3  text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
+              className="w-full rounded border-2 border-gray-200 bg-gray-200 px-3 py-3 uppercase  text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
               type="text"
               placeholder="Enter the team code"
               value={teamCode}
-              onChange={(el)=>setTeamCode(el.target.value)}
-            autoComplete="new-password"
+              onChange={(el) => setTeamCode(el.target.value)}
+              autoComplete="new-password"
             />
           </div>
           <button
