@@ -5,42 +5,38 @@ import Toaster from "@/utils/toaster";
 import { DEV_BASE_URL } from "@/constants";
 
 const Team = () => {
-  const [teamName, setTeamName] = useState("")
-  const [teamCode, setTeamCode] = useState("")
+  const [teamName, setTeamName] = useState("");
+  const [teamCode, setTeamCode] = useState("");
 
-  const router = useRouter()
+  const router = useRouter();
 
   const handleCreate = async ()=>{
     const toaster = Toaster.startLoad()
     const URL = `${DEV_BASE_URL}/api/team/create`
 
     const res = await postHandler(URL, {
-      name:teamName
-    })
+      name: teamName,
+    });
 
-    if(res.status===1){
-      Toaster.stopLoad(toaster, "Team Joined", 1)
-      router.push('/team')
-    }
-
-    else Toaster.stopLoad(toaster, res.data.message, 0)
-  }
+    if (res.status === 1) {
+      Toaster.stopLoad(toaster, "Team Joined", 1);
+      router.push("/team");
+    } else Toaster.stopLoad(toaster, res.data.message, 0);
+  };
 
   const handleJoin = async ()=>{
     const toaster = Toaster.startLoad()
     const URL = `${DEV_BASE_URL}/api/team/join`
 
     const res = await postHandler(URL, {
-      teamCode:teamCode
-    })
+      teamCode: teamCode,
+    });
 
-    if(res.status===1){
-      Toaster.stopLoad(toaster, "Team Joined", 1)
-      router.push('/team')
-    }
-
-    else Toaster.stopLoad(toaster, res.data.message, 0)
-  }
+    if (res.status === 1) {
+      Toaster.stopLoad(toaster, "Team Joined", 1);
+      router.push("/team");
+    } else Toaster.stopLoad(toaster, res.data.message, 0);
+  };
 
   return (
     <>
