@@ -56,6 +56,7 @@ const Team = () => {
               placeholder="What will be your team called?"
               value={teamName}
               onChange={(el)=>setTeamName(el.target.value)}
+              autoComplete="new-password"
             />
           </div>
           <button
@@ -76,6 +77,7 @@ const Team = () => {
               placeholder="Enter the team's code"
               value={teamCode}
               onChange={(el)=>setTeamCode(el.target.value)}
+            autoComplete="new-password"
             />
           </div>
           <button

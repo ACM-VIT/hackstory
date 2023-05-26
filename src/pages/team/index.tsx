@@ -5,7 +5,7 @@ import getHandler from "@/handlers/getHandler";
 import { useRouter } from "next/router";
 import { GetServerSidePropsContext } from "next";
 import { getSession } from "next-auth/react";
-import Loader from "@/components/Common/loader";
+import Loader from "@/components/Common/Loader";
 import Toaster from "@/utils/toaster";
 import { DEV_BASE_URL } from "@/constants";
 
