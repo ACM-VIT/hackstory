@@ -1,9 +1,32 @@
 import { useSession, signIn } from "next-auth/react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { DEV_BASE_URL } from "@/constants";
+import getHandler from "@/handlers/getHandler";
+import { useRouter } from "next/router";
 
 const HeroContent = () => {
   const { data: session } = useSession();
+  const [isPartOfTeam, setIsPartOfTeam] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    // just check if the isn't getting overloaded with the request of team check.
+    if (session) {
+      const URL = `${DEV_BASE_URL}/api/team/getTeamDetails`;
+      getHandler(URL).then((res) => {
+        if (res.statusCode == 200) {
+          setIsPartOfTeam(true);
+        }
+      });
+    }
+  }, [session]);
+
+  const handleClick = () => {
+    if (isPartOfTeam) router.push("/team");
+    else router.push("/team/join");
+  };
 
   return (
     <div className="flex flex-col items-center justify-center bg-teal-500 px-16 pt-32 max-md:pt-16">
@@ -25,14 +48,20 @@ const HeroContent = () => {
         Hack your way through the world,where innovation writes the next
         chapter!
       </div>
+      <div
+        className={`text-timelineheading text-center text-sm font-semibold md:text-lg lg:text-xl`}
+      >
+        Hack your way through the world,where innovation writes the next
+        chapter!
+      </div>
 
       {session ? (
-        <Link
-          href={"/team"}
+        <div
           className="mt-12 flex w-48 cursor-pointer items-center justify-center rounded-md bg-marquee px-3 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px]"
+          onClick={handleClick}
         >
-          VIEW TEAM
-        </Link>
+          JOIN TEAM
+        </div>
       ) : (
         <div
           className="mt-12 flex cursor-pointer flex-row rounded-md bg-marquee px-3 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px]"
