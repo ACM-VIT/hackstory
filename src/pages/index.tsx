@@ -1,24 +1,24 @@
-import About from "@/components/About";
-import Header from "@/components/Header";
-import HeroContent from "@/components/HeroContent";
-import Marquee from "@/components/Marquee";
-import Clubs from "@/components/Clubs";
-import TimelineComponent from "@/components/TimelineComponent";
+import About from "@/sections/Landing-Sections/About";
+import Header from "@/components/Common/Header";
+import HeroContent from "@/sections/Landing-Sections/HeroContent";
+import Marquee from "@/sections/Landing-Sections/Marquee";
+import Clubs from "@/sections/Landing-Sections/Clubs";
+import TimelineComponent from "@/sections/Landing-Sections/TimelineComponent";
 import React from "react";
-import TrackContent from "@/components/TrackContent";
+import TrackContent from "@/sections/Landing-Sections/TrackContent";
 
 const Home = () => {
-	return (
-		<div className="bg-background overflow-x-hidden">
-			<Header />
-			<HeroContent />
-			<Marquee />
-			<About />
-			<Clubs />
-			<TimelineComponent />
-			<TrackContent />
-		</div>
-	);
+  return (
+    <div className="overflow-x-hidden bg-background">
+      <Header />
+      <HeroContent />
+      <Marquee />
+      <About />
+      <Clubs />
+      <TimelineComponent />
+      <TrackContent />
+    </div>
+  );
 };
 
 export default Home;
