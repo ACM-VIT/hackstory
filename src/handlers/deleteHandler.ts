@@ -1,19 +1,15 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
 
-const getHandlers = async (URL: string, protect: boolean) => {
+const deleteHandler = async (URL: string) => {
     const headers = {
         'Content-Type': 'application/json',
-        Authorization: '',
-        'ngrok-skip-browser-warning': true,
     };
-    if (protect) headers.Authorization = `Bearer ${Cookies.get('token')}`;
-    const response: any = {
+    const response:any = {
         status: 0,
         data: '',
     };
     await axios
-        .get(URL, { headers })
+        .delete(URL, { headers })
         .then((res) => {
             response.status = 1;
             response.data = res.data;
@@ -25,4 +21,4 @@ const getHandlers = async (URL: string, protect: boolean) => {
     return response;
 };
 
-export default getHandlers;
+export default deleteHandler;

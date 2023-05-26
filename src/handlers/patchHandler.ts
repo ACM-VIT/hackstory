@@ -1,12 +1,10 @@
 import axios from "axios";
-import Cookies from "js-cookie";
 
-const patchHandlers = async (URL:string, formData:object, protect:boolean, type:string='application/json') => {
+const patchHandler = async (URL:string, formData:object, type:string='application/json') => {
     const headers = {
         'Content-Type': type,
         Authorization: '',
     };
-  if (protect) headers.Authorization = `Bearer ${Cookies.get("token")}`;
   const response:any = {
     status: 0,
     data:{},
@@ -25,4 +23,4 @@ const patchHandlers = async (URL:string, formData:object, protect:boolean, type:
   return response;
 };
 
-export default patchHandlers;
+export default patchHandler;

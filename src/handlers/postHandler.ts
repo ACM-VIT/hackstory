@@ -1,17 +1,21 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
 
-const deleteHandlers = async (URL: string) => {
+const postHandler = async (
+    URL: string,
+    formData: object,
+    type: string = 'application/json'
+) => {
     const headers = {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${Cookies.get('token')}`,
+        'Content-Type': type,
+        Authorization: '',
     };
-    const response:any = {
+    const response: any = {
         status: 0,
-        data: '',
+        data: {},
     };
+
     await axios
-        .delete(URL, { headers })
+        .post(URL, formData, { headers })
         .then((res) => {
             response.status = 1;
             response.data = res.data;
@@ -23,4 +27,4 @@ const deleteHandlers = async (URL: string) => {
     return response;
 };
 
-export default deleteHandlers;
+export default postHandler;

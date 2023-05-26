@@ -1,24 +1,17 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
 
-const postHandlers = async (
-    URL: string,
-    formData: object,
-    protect: boolean,
-    type: string = 'application/json'
-) => {
+const getHandler = async (URL: string) => {
     const headers = {
-        'Content-Type': type,
+        'Content-Type': 'application/json',
         Authorization: '',
+        'ngrok-skip-browser-warning': true,
     };
-    if (protect) headers.Authorization = `Bearer ${Cookies.get('token')}`;
     const response: any = {
         status: 0,
-        data: {},
+        data: '',
     };
-
     await axios
-        .post(URL, formData, { headers })
+        .get(URL, { headers })
         .then((res) => {
             response.status = 1;
             response.data = res.data;
@@ -30,4 +23,4 @@ const postHandlers = async (
     return response;
 };
 
-export default postHandlers;
+export default getHandler;
