@@ -68,9 +68,9 @@ const Team = () => {
           </div>
           <div className=" w-[60%]">
             <input
-              className="w-full rounded border-2 border-gray-200 bg-gray-200 px-3 py-3  text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
-              type="password"
-              placeholder="Enter the team's code"
+              className="w-full rounded uppercase border-2 border-gray-200 bg-gray-200 px-3 py-3  text-gray-700 focus:border-purple-500 focus:bg-white focus:outline-none"
+              type="text"
+              placeholder="Enter the team code"
               value={teamCode}
               onChange={(el)=>setTeamCode(el.target.value)}
             autoComplete="new-password"
