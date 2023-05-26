@@ -7,7 +7,7 @@ const oswald = Oswald({subsets:['latin']})
 const Marquee = () => {
   return (
     <>
-      <div className="-translate-x-10 w-[110%] z-10 bg-logo relative flex overflow-x-hidden font-marquee mt-[21rem] lg:mt-[23rem] -rotate-[4deg]">
+      <div className="-translate-x-10 w-[110%] z-10 bg-logo relative flex overflow-x-hidden font-marquee mt-[21rem] lg:mt-[26rem] -rotate-[4deg]">
         <div className="text-marquee lg:py-8 py-4 flex animate-marquee whitespace-nowrap">
           <span className={`lg:text-4xl font-bold text-2xl gap-x-6 ml-3 flex flex-row ${oswald.className}`}>
             <p className='lg:ml-3'>FOR YOURS TO BUILD</p>
