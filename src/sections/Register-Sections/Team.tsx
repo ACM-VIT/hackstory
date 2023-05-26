@@ -1,6 +1,7 @@
 import postHandler from "@/handlers/postHandler";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Toaster from "@/utils/toaster";
 
 const Team = () => {
   const [teamName, setTeamName] = useState("")
@@ -9,17 +10,35 @@ const Team = () => {
   const router = useRouter()
 
   const handleCreate = async ()=>{
+    const toaster = Toaster.startLoad()
     const URL = `http://localhost:3000/api/team/create`
 
     const res = await postHandler(URL, {
       name:teamName
     })
 
-    if(res.status===1) router.push('/team')
+    if(res.status===1){
+      Toaster.stopLoad(toaster, "Team Joined", 1)
+      router.push('/team')
+    }
+
+    else Toaster.stopLoad(toaster, res.data.message, 0)
   }
 
   const handleJoin = async ()=>{
-    console.log(teamCode)
+    const toaster = Toaster.startLoad()
+    const URL = `http://localhost:3000/api/team/join`
+
+    const res = await postHandler(URL, {
+      teamCode:teamCode
+    })
+
+    if(res.status===1){
+      Toaster.stopLoad(toaster, "Team Joined", 1)
+      router.push('/team')
+    }
+
+    else Toaster.stopLoad(toaster, res.data.message, 0)
   }
 
   return (

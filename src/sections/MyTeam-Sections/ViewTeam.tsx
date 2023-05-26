@@ -1,29 +1,24 @@
 import React from "react";
 
-const ViewTeam = () => {
+const ViewTeam = ({team}) => {
   return (
     <>
       <div className="flex h-[80vh] flex-col items-center justify-center text-fontColor1">
         <div className="flex h-full w-[90%] flex-col items-center justify-center lg:w-[50%]">
           <div className="flex h-[15%] items-center justify-around text-center text-5xl">
-            TEAMNAME
+            {team.name}
           </div>
           <div className="flex h-[10%] w-full items-center justify-center border-b-2 text-center text-xl">
-            Share this code to invite : AIOSDJASIODJ
+            Share this code to invite : {team.code}
           </div>
           <div className="flex h-[60%] w-full flex-col items-center justify-center">
-            <div className="flex h-[25%] w-full items-center justify-start">
-              Shreyas
-            </div>
-            <div className="flex h-[25%] w-full items-center justify-start">
-              Shreyas
-            </div>
-            <div className="flex h-[25%] w-full items-center justify-start">
-              Shreyas
-            </div>
-            <div className="flex h-[25%] w-full items-center justify-start">
-              Invite a member !
-            </div>
+            {
+              team.members.map(member=>{
+                return   <div key={member} className="flex h-[25%] w-full items-center justify-start">
+                {member.name}
+              </div>
+              })
+            }
           </div>
           <div className="flex h-[15%] w-[50%] items-center justify-around">
             <button

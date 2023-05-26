@@ -12,6 +12,7 @@ const Index = () => {
     getHandler("http://localhost:3000/api/team/getTeamDetails")
       .then((res) => {
         if(res.statusCode==400) router.push('/team/join')
+        setTeam(res.data)
         console.log(res);
       })
       .catch((err) => {
@@ -22,7 +23,7 @@ const Index = () => {
   return (
     <>
       <Header />
-      <ViewTeam />
+      <ViewTeam team={team}/>
     </>
   );
 };
