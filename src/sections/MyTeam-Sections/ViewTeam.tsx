@@ -34,8 +34,8 @@ const ViewTeam = ({ team }: Props) => {
 
   return (
     <>
-      <div className="flex h-[80vh] flex-col items-center justify-center text-fontColor1">
-        <div className="flex h-full w-[90%] flex-col items-center justify-center lg:w-[50%]">
+      <div className="flex h-[90vh] flex-col items-center justify-center text-fontColor1">
+        <div className="flex h-[80%] w-[90%] flex-col items-center justify-center lg:w-[50%]">
           <div className="flex h-[15%] items-center justify-around text-center text-5xl">
             {team.name}
           </div>

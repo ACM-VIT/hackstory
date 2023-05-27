@@ -37,7 +37,7 @@ const Team = () => {
     }
 
     const toaster = Toaster.startLoad();
-    
+
     const URL = `${DEV_BASE_URL}/api/team/join`;
 
     const res = await postHandler(URL, {
@@ -52,13 +52,13 @@ const Team = () => {
 
   return (
     <>
-      <div className="flex h-[80vh] flex-col items-center justify-around text-fontColor1 lg:flex-row">
+      <div className="flex h-[90vh] flex-col items-center justify-around text-fontColor1 lg:flex-row">
         <form
           onSubmit={(el) => {
             el.preventDefault();
             handleCreate();
           }}
-          className="flex  h-full w-full flex-col items-center justify-center gap-y-3 max-lg:border-b-[1px] lg:w-1/2 lg:border-r-[1px]"
+          className="flex  h-[80%] w-full flex-col items-center justify-center gap-y-3 max-lg:border-b-[1px] lg:w-1/2 lg:border-r-[1px]"
         >
           <div className=" flex h-[6rem] items-center justify-start text-3xl lg:h-[3rem] lg:w-[60%] ">
             Create your own Team !
@@ -82,7 +82,7 @@ const Team = () => {
             el.preventDefault();
             handleJoin();
           }}
-          className="flex h-full w-full flex-col items-center justify-center gap-y-3 max-lg:border-t-[1px] lg:w-1/2 "
+          className="flex h-[80%] w-full flex-col items-center justify-center gap-y-3 max-lg:border-t-[1px] lg:w-1/2 "
         >
           <div className=" flex h-[6rem] items-center justify-start text-3xl lg:h-[3rem] lg:w-[60%] ">
             Join a team !
