@@ -31,7 +31,13 @@ const Team = () => {
   };
 
   const handleJoin = async () => {
+    if (teamCode.trim() === "") {
+      Toaster.error("Team code cannot be empty");
+      return;
+    }
+
     const toaster = Toaster.startLoad();
+    
     const URL = `${DEV_BASE_URL}/api/team/join`;
 
     const res = await postHandler(URL, {
@@ -47,7 +53,13 @@ const Team = () => {
   return (
     <>
       <div className="flex h-[80vh] flex-col items-center justify-around text-fontColor1 lg:flex-row">
-        <div className="flex  h-full w-full flex-col items-center justify-center gap-y-3 max-lg:border-b-[1px] lg:w-1/2 lg:border-r-[1px]">
+        <form
+          onSubmit={(el) => {
+            el.preventDefault();
+            handleCreate();
+          }}
+          className="flex  h-full w-full flex-col items-center justify-center gap-y-3 max-lg:border-b-[1px] lg:w-1/2 lg:border-r-[1px]"
+        >
           <div className=" flex h-[6rem] items-center justify-start text-3xl lg:h-[3rem] lg:w-[60%] ">
             Create your own Team !
           </div>
@@ -61,14 +73,17 @@ const Team = () => {
               autoComplete="new-password"
             />
           </div>
-          <button
-            className="focus:shadow-outline w-[60%] rounded bg-purple-500 px-4 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none"
-            onClick={handleCreate}
-          >
+          <button className="focus:shadow-outline w-[60%] rounded bg-purple-500 px-4 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none">
             Create !
           </button>
-        </div>
-        <div className="flex h-full w-full flex-col items-center justify-center gap-y-3 max-lg:border-t-[1px] lg:w-1/2 ">
+        </form>
+        <form
+          onSubmit={(el) => {
+            el.preventDefault();
+            handleJoin();
+          }}
+          className="flex h-full w-full flex-col items-center justify-center gap-y-3 max-lg:border-t-[1px] lg:w-1/2 "
+        >
           <div className=" flex h-[6rem] items-center justify-start text-3xl lg:h-[3rem] lg:w-[60%] ">
             Join a team !
           </div>
@@ -82,13 +97,10 @@ const Team = () => {
               autoComplete="new-password"
             />
           </div>
-          <button
-            className="focus:shadow-outline w-[60%] rounded bg-purple-500 px-4 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none"
-            onClick={handleJoin}
-          >
+          <button className="focus:shadow-outline w-[60%] rounded bg-purple-500 px-4 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none">
             Join !
           </button>
-        </div>
+        </form>
       </div>
     </>
   );
