@@ -25,7 +25,7 @@ const TrackContent = () => {
               {track}
             </p>
             <div className="flex flex-col gap-x-5 gap-y-2 lg:flex-row">
-              <a className="max-w-[6rem] cursor-pointer rounded-md bg-tracks p-2">
+              <a className="max-w-[8rem] cursor-pointer bg-yellow rounded-[30px] px-4 py-2">
                 WordGame
               </a>
               <p className="p-2 text-trackstext">Word1</p>
