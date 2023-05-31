@@ -11,6 +11,7 @@ import React from "react";
 import TrackContent from "@/sections/Landing-Sections/TrackContent";
 import Footer from "@/components/Common/Footer";
 import Marquee2 from "@/sections/Landing-Sections/Marquee/MarqueeTimeline";
+import Clock from "@/sections/Landing-Sections/Clock";
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
       <Prizes />
       <Partnership />
       <FAQs />
+      <Clock/>
       <Footer />
     </div>
   );

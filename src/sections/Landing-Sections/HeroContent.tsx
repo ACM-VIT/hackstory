@@ -36,10 +36,10 @@ const HeroContent = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center  px-16 pt-32 max-md:pt-16">
+    <div className="flex pt-36 flex-col items-center justify-center  px-16 max-md:pt-16">
       <div className="">
         <div
-          className={`text-timelineheading text-md font-semibold md:text-xl lg:text-2xl ${manrope.className} text-tracks`}
+          className={`text-timelineheading text-md font-bold md:text-xl lg:text-2xl ${manrope.className} text-tracks`}
         >
           JUNE 5TH-7TH 2023
         </div>

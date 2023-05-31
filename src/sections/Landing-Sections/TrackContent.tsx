@@ -11,7 +11,7 @@ const TrackContent = () => {
   return (
     <>
       <div
-        className={` flex h-60 mt-25vh items-center justify-around  text-center text-3xl font-extrabold text-fontColor1 lg:text-4xl `}
+        className={` flex h-60 mt-25vh text-tracks items-center justify-around  text-center text-3xl font-extrabold text-fontColor1 lg:text-4xl `}
       >
         CHECK OUT THE TRACKS
       </div>
