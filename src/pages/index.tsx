@@ -8,6 +8,7 @@ import Prizes from "@/sections/Landing-Sections/Prizes";
 import Partnership from "@/sections/Landing-Sections/Partnership";
 import React from "react";
 import TrackContent from "@/sections/Landing-Sections/TrackContent";
+import Footer from "@/sections/Landing-Sections/FooterContent";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       <TrackContent />
       <Prizes />
       <Partnership />
+      <Footer />
     </div>
   );
 };
