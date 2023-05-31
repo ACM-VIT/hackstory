@@ -35,7 +35,7 @@ const FAQPage = () => {
       },
   ];
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index:any) => {
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
@@ -44,8 +44,8 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="container mx-auto py-8 pb-8 pl-8">
-      <h1 className="text-5xl font-bold  mb-4 text-fontColor1">FREQUENTLY ASKED QUESTIONS</h1>
+    <div className="container mx-auto py-20 pb-8 pl-8">
+      <h1 className="text-5xl font-bold  mb-4 text-[#FFF6E8]">FREQUENTLY ASKED QUESTIONS</h1>
       <div className="mt-20">
         {faqs.map((faq, index) => (
           <div key={index} className="border-t border-b border-gray-300 border-opacity-10 rounded py-6 px-4">
