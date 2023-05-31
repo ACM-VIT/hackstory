@@ -1,8 +1,8 @@
 import { Oswald, Manrope } from "next/font/google";
 import React from "react";
 
-const oswald = Oswald({subsets:['latin']})
-const manrope = Manrope({subsets:['latin']})
+const oswald = Oswald({ subsets: ['latin'] })
+const manrope = Manrope({ subsets: ['latin'] })
 
 const TimelineComponent = () => {
   return (
@@ -26,7 +26,7 @@ const TimelineComponent = () => {
         </div>
         <div className="relative col-span-1 mt-3 flex h-full w-full justify-center">
           <div className="h-full w-1 bg-[#FFCCDE]"></div>
-          
+
           <div className="invisible absolute mt-[54px] h-1 bg-[#FFCCDE] md:visible md:ml-20 md:w-24 lg:ml-36 lg:w-16 "></div>
         </div>
         <div className="col-span-4 h-full w-full ">
@@ -35,10 +35,10 @@ const TimelineComponent = () => {
               Workshop Name
             </h1>
             <p className="text-left text-xl text-[#E8E8EE] sm:text-base flex items-center">
-              June 5th 2023 <p className="text-4xl mx-4">|</p> 4:00 pm - 7:00 pm
+              June 5th 2023 <span className="text-4xl mx-4">|</span> 4:00 pm - 7:00 pm
             </p>
             <p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </div>
@@ -48,10 +48,10 @@ const TimelineComponent = () => {
               Workshop Name
             </h1>
             <p className="text-left text-xl text-[#E8E8EE] sm:text-base flex justify-start">
-              June 5th 2023 <p className="4xl mx-4">|</p> 4:00 pm - 7:00 pm
+              June 5th 2023 <span className="4xl mx-4">|</span> 4:00 pm - 7:00 pm
             </p>
             <p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ const TimelineComponent = () => {
               June 5th 2023 | 4:00 pm - 7:00 pm
             </p>
             <p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </div>
