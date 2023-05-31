@@ -54,7 +54,7 @@ const FAQPage = () => {
               onClick={() => toggleAccordion(index)}
             >
               <span className="font-semibold text-white text-lg">{faq.question}</span>
-              <span>{activeIndex === index ? '-' : '+'}</span>
+              <span className="text-white text-lg">{activeIndex === index ? '-' : '+'}</span>
             </button>
             {activeIndex === index && (
                 <div className={`mt-2 pt-2`}>

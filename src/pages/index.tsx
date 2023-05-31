@@ -9,7 +9,7 @@ import Partnership from "@/sections/Landing-Sections/Partnership";
 import FAQs from "@/sections/Landing-Sections/FAQs";
 import React from "react";
 import TrackContent from "@/sections/Landing-Sections/TrackContent";
-import Footer from "@/sections/Landing-Sections/FooterContent";
+import Footer from "@/components/Common/Footer";
 
 
 const Home = () => {
@@ -24,8 +24,8 @@ const Home = () => {
       <TrackContent />
       <Prizes />
       <Partnership />
-      <Footer />
       <FAQs />
+      <Footer />
     </div>
   );
 };
