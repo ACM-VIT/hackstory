@@ -8,7 +8,7 @@ const InfiniteMarquee: React.FC = () => {
   let array = [1,2,3,4,5];
 
   return (
-    <div className="relative mt-[28vh] flex h-[50vh] w-[110%] -translate-x-32 items-center justify-around max-lg:h-[40vh]">
+    <div className="relative mt-[22vh] flex h-[50vh] w-[110%] -translate-x-32 items-center justify-around max-lg:h-[40vh]">
       <div className="z-10 -rotate-3">
         <Marquee
           className="bg-logo"
@@ -44,14 +44,14 @@ const InfiniteMarquee: React.FC = () => {
             return (
               <div
                 key={el}
-                className="absolute top-0 flex h-[11vh] items-center justify-center gap-x-28 bg-logo px-10 max-lg:h-[8vh] whitespace-nowrap"
+                className="absolute top-0 flex h-[14vh] items-center justify-center gap-x-28 bg-logo px-10 max-lg:h-[8vh] whitespace-nowrap"
               >
                 <div className={`flex h-[100%] w-full items-center justify-around bg-logo text-marquee font-extrabold text-4xl max-lg:text-2xl ${oswald.className}`}>
                   FOR YOURS TO BUILD
                 </div>
                 <svg
-                  width="30"
-                  height="30"
+                  width="40"
+                  height="40"
                   viewBox="0 0 16 17"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const InfiniteMarquee: React.FC = () => {
           })}
         </Marquee>
       </div>
-      <div className="z-1 absolute top-[18vh] h-[11vh] w-[110%] rotate-3 bg-cross max-lg:h-[8vh]"></div>
+      <div className="z-1 absolute top-[18vh] h-[14vh] w-[110%] rotate-3 bg-cross max-lg:h-[8vh]"></div>
     </div>
   );
 };
