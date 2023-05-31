@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Header />
       <HeroContent />
       <Marquee />
@@ -18,7 +18,7 @@ const Home = () => {
       <Clubs />
       <TimelineComponent />
       <TrackContent />
-    </>
+    </div>
   );
 };
 
