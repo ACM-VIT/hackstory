@@ -12,6 +12,7 @@ import TrackContent from "@/sections/Landing-Sections/TrackContent";
 import Footer from "@/components/Common/Footer";
 import Marquee2 from "@/sections/Landing-Sections/Marquee/MarqueeTimeline";
 import Clock from "@/sections/Landing-Sections/Clock";
+import Register from "@/sections/Landing-Sections/Registration";
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       <TimelineComponent />
       <Marquee2 />
       <TrackContent />
+      <Register />
       <Prizes />
       <Partnership />
       <FAQs />
