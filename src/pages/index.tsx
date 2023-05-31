@@ -9,7 +9,8 @@ import Partnership from "@/sections/Landing-Sections/Partnership";
 import FAQs from "@/sections/Landing-Sections/FAQs";
 import React from "react";
 import TrackContent from "@/sections/Landing-Sections/TrackContent";
-import { motion } from "framer-motion";
+import Footer from "@/sections/Landing-Sections/FooterContent";
+
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <TrackContent />
       <Prizes />
       <Partnership />
+      <Footer />
       <FAQs />
     </div>
   );

@@ -1,15 +1,18 @@
+import { Oswald } from "next/font/google";
 import React from "react";
+
+const oswald = Oswald({subsets:['latin']})
 
 const TimelineComponent = () => {
   return (
     <>
-      <div className="m-auto flex h-max w-1/2 flex-col items-start justify-center  text-white">
+      <div className="m-auto flex h-max w-1/2 flex-col justify-center  text-white">
         <div
-          className={`text-timelineheader h-12 text-center text-4xl font-extrabold`}
+          className={`text-timelineheader h-12 text-center text-5xl font-extrabold text-[#FFF6E8] ${oswald.className}`}
         >
           TIMELINE FOR HACKATHON
         </div>
-        <div className={`mt-2 text-center text-2xl text-marquee  lg:text-left`}>
+        <div className={`mt-4 text-center text-3xl font-bold text-[#FFCCDE] ${oswald.className}`}>
           SAVE YOUR DATES!
         </div>
       </div>
@@ -22,9 +25,8 @@ const TimelineComponent = () => {
         </div>
         <div className="relative col-span-1 mt-3 flex h-full w-full justify-center">
           <div className="h-full w-1 bg-white"></div>
-          <div className="absolute z-10 h-5 w-5 rotate-45 transform bg-white"></div>
-          <div className="bg-pink z-5 absolute -mt-[2px] h-6 w-6 rotate-45 transform blur-sm"></div>
-          <div className="invisible absolute mt-2 h-1 bg-white md:visible md:ml-20 md:w-24 lg:ml-28 lg:w-32 "></div>
+          
+          <div className="invisible absolute mt-2 h-1 bg-white md:visible md:ml-20 md:w-24 lg:ml-36 lg:w-16 "></div>
         </div>
         <div className="col-span-4 h-full w-full ">
           <div className="h-full w-full md:pl-16 md:pr-16">
@@ -48,7 +50,6 @@ const TimelineComponent = () => {
             </div>
           </div>
         </div>
-
         <div className="col-span-4 h-full w-full ">
           <div className="h-full w-full p-2 md:px-16">
             <h1 className="text-bold py-2 text-right text-2xl font-medium text-white">
@@ -75,8 +76,6 @@ const TimelineComponent = () => {
         <div className="relative col-span-1 flex h-full w-full justify-center">
           <div className="invisible absolute mt-7 h-1 bg-white md:visible md:mr-20 md:w-24 lg:mr-28 lg:w-32"></div>
           <div className="h-full w-1 bg-white"></div>
-          <div className="absolute z-10 mt-5 h-5 w-5 rotate-45 transform bg-white"></div>
-          <div className="bg-blue z-5 absolute mt-[18px] h-6 w-6 rotate-45 transform blur-sm"></div>
         </div>
         <div className="col-span-4 h-full w-full">
           <div className="flex justify-end pt-24 sm:w-full sm:pt-0 md:pl-28 lg:pl-56"></div>
@@ -87,9 +86,7 @@ const TimelineComponent = () => {
         </div>
         <div className="relative col-span-1 flex h-full w-full justify-center">
           <div className="h-full w-1 bg-white"></div>
-          <div className="absolute z-10 mt-5 h-5 w-5 rotate-45 transform bg-white"></div>
           <div className="invisible absolute mt-7 h-1 bg-white md:visible md:ml-20 md:w-24 lg:ml-28 lg:w-32"></div>
-          <div className="bg-purple z-5 absolute mt-[18px] h-6 w-6 rotate-45 transform blur-sm"></div>
         </div>
         <div className="col-span-4 h-full w-full pb-20">
           <div className="h-full w-full p-2 md:pl-16">

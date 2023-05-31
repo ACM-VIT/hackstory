@@ -8,7 +8,7 @@ const InfiniteMarquee: React.FC = () => {
   let array = [1,2,3,4,5];
 
   return (
-    <div className="relative mt-[28vh] flex h-[50vh] w-[110%] -translate-x-32 items-center justify-around max-lg:h-[40vh]">
+    <div className="relative mt-[22vh] flex h-[50vh] w-[110%] -translate-x-32 items-center justify-around max-lg:h-[40vh]">
       <div className="z-10 -rotate-3">
         <Marquee
           className="bg-logo"
@@ -50,8 +50,8 @@ const InfiniteMarquee: React.FC = () => {
                   FOR YOURS TO BUILD
                 </div>
                 <svg
-                  width="30"
-                  height="30"
+                  width="40"
+                  height="40"
                   viewBox="0 0 16 17"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
