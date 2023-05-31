@@ -25,8 +25,8 @@ const Footer = () => {
             <text className={`text-white font-bold text-[1.5rem] lg:text-[2rem] gap-6 ${oswald.className}`}>
             STAY UPDATED!
             </text>
-            <div className="text-[#A7A9BE] flex text-xl pt-8">
-              <a href="#" className={`text-black bg-[#FABF29] font-bold rounded-full text-center px-6 py-5 ${manrope.className}`}>JOIN DISCORD</a>
+            <div className="text-[#A7A9BE] flex md:text-xl text-base pt-8">
+              <a href="#" className={`text-black bg-[#FABF29] font-bold rounded-full text-center sm:px-6 sm:py-5 py-2 px-3 ${manrope.className}`}>JOIN DISCORD</a>
             </div >
           </div>
 

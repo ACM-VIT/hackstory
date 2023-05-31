@@ -36,8 +36,8 @@ const HeroContent = () => {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center px-16  pt-36 max-md:pt-16">
-			<div className="">
+		<div className="flex flex-col items-center justify-center px-16 gap-y-6  pt-36 max-md:pt-16">
+			<div className="flex flex-col gap-y-4">
 				<div
 					className={`text-timelineheading text-md font-bold md:text-xl lg:text-2xl ${manrope.className} text-tracks max-lg:text-center`}
 				>
@@ -49,13 +49,12 @@ const HeroContent = () => {
 					HACK STORY
 				</div>
 			</div>
-			<div
-				className={`text-timelineheading text-center text-sm font-semibold md:text-lg lg:text-xl ${manrope.className} text-tracks`}
-			>
-				Hack your way through the world,where innovation writes the next
-				<br></br>
+			<div className={`text-timelineheading text-center text-sm font-semibold md:text-lg lg:text-xl ${manrope.className} text-[#E8E8EE]`}>
+				Hack your way through the world, where innovation writes the next&nbsp;
+				<br className="hidden sm:block" />
 				chapter!
 			</div>
+
 
 			{session ? (
 				<div

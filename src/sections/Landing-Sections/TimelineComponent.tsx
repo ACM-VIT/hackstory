@@ -10,12 +10,12 @@ const TimelineComponent = () => {
 		<>
 			<div className="m-auto flex h-max flex-col justify-center text-white  lg:w-1/2">
 				<div
-					className={`text-timelineheader text-center text-5xl font-extrabold text-[#FFF6E8] lg:h-12 ${oswald.className}`}
+					className={`text-timelineheader text-center md:text-5xl text-3xl font-extrabold text-[#FFF6E8] lg:h-12 ${oswald.className}`}
 				>
 					TIMELINE FOR HACKATHON
 				</div>
 				<div
-					className={`mt-4 text-center text-3xl font-bold text-[#FFCCDE] ${oswald.className}`}
+					className={`mt-4 text-center md:text-3xl text-2xl font-bold text-[#FFCCDE] ${oswald.className}`}
 				>
 					SAVE YOUR DATES!
 				</div>
@@ -61,7 +61,7 @@ const TimelineComponent = () => {
 							</defs>
 						</svg>
 					</div>
-					<div className="invisible absolute mt-12 bg-inherit md:visible md:ml-20 md:w-24 lg:ml-36 lg:w-16 ">
+					<div className="invisible absolute mt-[54px] bg-inherit md:visible md:ml-20 md:w-24 lg:ml-36 lg:w-16 ">
 						<svg
 							width="64"
 							height="18"
@@ -98,11 +98,16 @@ const TimelineComponent = () => {
 						<h1 className="text-bold py-2 text-left text-2xl font-bold text-[#A7A9BE]">
 							Workshop Name
 						</h1>
-						<p className="flex items-center text-left text-xl text-[#E8E8EE] sm:text-base">
-							June 5th 2023{" "}
-							<span className="mx-4 text-4xl">|</span> 4:00 pm -
-							7:00 pm
-						</p>
+						<div className="flex sm:items-center sm:flex-row flex-col">
+							<p className="text-left text-[#E8E8EE] text-base sm:mr-2">
+								June 5th 2023
+							</p>
+							<span className="text-4xl hidden md:block text-[#E8E8EE]">|</span>
+							<p className="sm:ml-2 text-left text-[#E8E8EE] text-base">
+								 4:00 pm - 7:00 pm
+							</p>
+						</div>
+						
 						<p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
@@ -112,14 +117,19 @@ const TimelineComponent = () => {
 				</div>
 				<div className="col-span-4 h-full w-full ">
 					<div className="h-full w-full p-2 md:px-16">
-						<h1 className="text-bold py-2 text-left text-2xl font-bold text-[#A7A9BE]">
+						<h1 className="text-bold py-2 text-right text-2xl font-bold text-[#A7A9BE]">
 							Workshop Name
 						</h1>
-						<p className="flex justify-start text-left text-xl text-[#E8E8EE] sm:text-base">
-							June 5th 2023 <span className="4xl mx-4">|</span>{" "}
-							4:00 pm - 7:00 pm
-						</p>
-						<p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
+						<div className="flex sm:items-center sm:flex-row flex-col justify-end">
+							<p className="text-right text-[#E8E8EE] text-base sm:mr-2">
+								June 5th 2023
+							</p>
+							<span className="text-4xl hidden md:block text-[#E8E8EE]">|</span>
+							<p className="sm:ml-2 text-right text-[#E8E8EE] text-base">
+								 4:00 pm - 7:00 pm
+							</p>
+						</div>
+						<p className="pt-5 text-right text-xs font-medium text-[#E8E8EE] sm:text-base">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua.
@@ -127,7 +137,7 @@ const TimelineComponent = () => {
 					</div>
 				</div>
 				<div className="relative col-span-1 flex h-full w-full justify-center">
-					<div className="invisible absolute mt-14 bg-inherit md:visible md:mr-20 md:w-24 lg:mr-36 lg:w-16">
+					<div className="invisible absolute mt-[68px] bg-inherit md:visible md:mr-20 md:w-24 lg:mr-36 lg:w-16">
 						<svg
 							width="64"
 							height="18"
@@ -233,7 +243,7 @@ const TimelineComponent = () => {
 							</defs>
 						</svg>
 					</div>
-					<div className="invisible absolute mt-14 h-1 bg-inherit md:visible md:ml-20 md:w-24 lg:ml-36 lg:w-16">
+					<div className="invisible absolute mt-[66px] h-1 bg-inherit md:visible md:ml-20 md:w-24 lg:ml-36 lg:w-16">
 						<svg
 							width="64"
 							height="18"
@@ -270,9 +280,15 @@ const TimelineComponent = () => {
 						<h1 className="text-bold py-2 text-left text-2xl font-bold text-[#A7A9BE]">
 							Workshop Name
 						</h1>
-						<p className="text-left text-xl text-[#E8E8EE] sm:text-base">
-							June 5th 2023 | 4:00 pm - 7:00 pm
-						</p>
+						<div className="flex sm:items-center sm:flex-row flex-col">
+							<p className="text-left text-[#E8E8EE] text-base sm:mr-2">
+								June 5th 2023
+							</p>
+							<span className="text-4xl hidden md:block text-[#E8E8EE]">|</span>
+							<p className="sm:ml-2 text-left text-[#E8E8EE] text-base">
+								 4:00 pm - 7:00 pm
+							</p>
+						</div>
 						<p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
@@ -282,14 +298,19 @@ const TimelineComponent = () => {
 				</div>
 				<div className="col-span-4 h-full w-full ">
 					<div className="h-full w-full p-2 md:px-16">
-						<h1 className="text-bold py-2 text-left text-2xl font-bold text-[#A7A9BE]">
+						<h1 className="text-bold py-2 text-right text-2xl font-bold text-[#A7A9BE]">
 							Workshop Name
 						</h1>
-						<p className="flex justify-start text-left text-xl text-[#E8E8EE] sm:text-base">
-							June 5th 2023 <span className="4xl mx-4">|</span>{" "}
-							4:00 pm - 7:00 pm
-						</p>
-						<p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
+						<div className="flex sm:items-center sm:flex-row flex-col justify-end">
+							<p className="text-right text-[#E8E8EE] text-base sm:mr-2">
+								June 5th 2023
+							</p>
+							<span className="text-4xl hidden md:block text-[#E8E8EE]">|</span>
+							<p className="sm:ml-2 text-right text-[#E8E8EE] text-base">
+								 4:00 pm - 7:00 pm
+							</p>
+						</div>
+						<p className="pt-5 text-right text-xs font-medium text-[#E8E8EE] sm:text-base">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua.
@@ -297,7 +318,7 @@ const TimelineComponent = () => {
 					</div>
 				</div>
 				<div className="relative col-span-1 flex h-full w-full justify-center">
-					<div className="invisible absolute mt-14 bg-inherit md:visible md:mr-20 md:w-24 lg:mr-36 lg:w-16">
+					<div className="invisible absolute mt-[66px] bg-inherit md:visible md:mr-20 md:w-24 lg:mr-36 lg:w-16">
 						<svg
 							width="64"
 							height="18"

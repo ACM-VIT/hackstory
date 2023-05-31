@@ -1,6 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ClubDrop from "./ClubDrop";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({subsets:['latin']})
 
 const Clubs = () => {
 	const [key1, setKey1] = useState(false);
@@ -44,7 +47,7 @@ const Clubs = () => {
 					className={`max-w-[60vw] self-center justify-self-center text-center lg:max-w-[35vw] lg:self-start lg:justify-self-start`}
 				>
 					<div className=" flex justify-center  text-center text-[#FFF6E8]">
-						<h1 className=" text-left text-4xl font-semibold leading-[3.5rem]">
+						<h1 className={`text-left sm:text-4xl text-3xl font-semibold leading-[3.5rem] ${oswald.className}`}>
 							<span
 								className={"" + (key1 ? "text-[#FFCCDE]" : "")}
 							>

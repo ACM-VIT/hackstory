@@ -8,11 +8,11 @@ const InfiniteMarquee: React.FC = () => {
 	let array = [1, 2, 3, 4, 5];
 
 	return (
-		<div className="relative mt-[20vh] flex h-[50vh] w-[200rem] -translate-x-32 items-center justify-around max-lg:mt-0 max-lg:h-[40vh]">
+		<div className="lg:mt-[12vh] mt-[16vh] md:mt-[0vh] relative] flex h-[50vh] w-[200rem] -translate-x-32 items-center justify-around">
 			<div className="z-10 -rotate-3">
 				<Marquee
 					className="bg-logo"
-					speed={150} // Adjust the speed as needed
+					speed={50} // Adjust the speed as needed
 					gradient={false} // Disable gradient if not required
 				>
 					{array.map((el) => {
@@ -71,7 +71,7 @@ const InfiniteMarquee: React.FC = () => {
 					})}
 				</Marquee>
 			</div>
-			<div className="z-1 absolute top-[24vh] h-[14vh] w-[200rem] rotate-3 bg-cross max-lg:h-[8vh]"></div>
+			<div className="z-1 absolute lg:top-[24vh] top-[32vh] md:top-[34vh] h-[14vh] w-[200rem] rotate-3 bg-cross max-lg:h-[8vh]"></div>
 		</div>
 	);
 };

@@ -1,6 +1,8 @@
 import { Oswald } from "next/font/google";
 import React from "react";
 
+const oswald = Oswald({subsets:['latin']})
+
 const TrackContent = () => {
 	const tracks = [
 		"FINTECH",
@@ -12,7 +14,7 @@ const TrackContent = () => {
 		<div className=" max-lg:flex max-lg:items-center max-lg:justify-center">
 			<div className="max-lg:w-[80vw]">
 				<div
-					className={` mt-25vh text-fontColor1 flex h-60 items-center justify-around  text-center text-3xl font-extrabold text-tracks  lg:text-4xl`}
+					className={` mt-25vh text-fontColor1 flex h-60 items-center justify-around  text-center text-3xl font-extrabold text-tracks  lg:text-4xl ${oswald.className}`}
 				>
 					CHECK OUT THE TRACKS
 				</div>
@@ -23,12 +25,12 @@ const TrackContent = () => {
 							className="mb-10 ml-[4rem] mr-[4rem] flex flex-col gap-y-8 border-b border-tracks pb-8 pt-4 lg:ml-[20rem] lg:mr-[20rem]"
 						>
 							<p
-								className={`text-2xl font-extrabold text-tracks max-lg:text-center lg:text-3xl`}
+								className={`text-2xl font-extrabold text-tracks max-lg:text-center lg:text-3xl ${oswald.className}`}
 							>
-								{track}
+								{track} 
 							</p>
 							<div className="flex flex-col gap-x-5 gap-y-2 max-md:items-center md:flex-row">
-								<a className="max-w-[6rem] cursor-pointer rounded-md bg-tracks p-2">
+								<a className="max-w-[8rem] cursor-pointer bg-yellow px-4 py-2 rounded-[30px]">
 									WordGame
 								</a>
 								<p className="p-2 text-trackstext">Word1</p>

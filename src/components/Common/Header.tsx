@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   return (
-    <div className="mx-auto px-8 py-10 border-b-[1px] border-[#2E2E2E]">
+    <div className="mx-auto px-8 py-10 lg:border-b-[1px] border-[#2E2E2E]">
       <div className="flex flex-col justify-center lg:flex-row lg:items-center">
         <div className="flex flex-row items-center">
           {isMenuOpen ? (

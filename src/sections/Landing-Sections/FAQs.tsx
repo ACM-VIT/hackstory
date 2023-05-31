@@ -1,5 +1,8 @@
+import { Oswald } from "next/font/google";
 import React from "react";
 import { useState } from "react";
+
+const oswald = Oswald({subsets:['latin']})
 
 const FAQPage = () => {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -47,7 +50,7 @@ const FAQPage = () => {
 	return (
 		<div className="flex w-[100vw] items-center justify-center lg:py-20 lg:pb-8 lg:pl-8 ">
 			<div className="w-[80vw]">
-				<h1 className="mb-4 text-center text-5xl font-bold text-[#FFF6E8]  max-lg:text-4xl">
+				<h1 className={`mb-4 text-center text-5xl font-bold text-[#FFF6E8]  max-lg:text-4xl ${oswald.className}`}>
 					FREQUENTLY ASKED QUESTIONS
 				</h1>
 				<div className="mt-20 max-lg:mt-16">
@@ -60,7 +63,7 @@ const FAQPage = () => {
 								className="flex w-full justify-between focus:outline-none"
 								onClick={() => toggleAccordion(index)}
 							>
-								<span className="text-left text-lg font-semibold text-white">
+								<span className="text-left sm:text-lg text-base font-semibold pr-4 text-white">
 									{faq.question}
 								</span>
 								<span className="text-lg text-white">

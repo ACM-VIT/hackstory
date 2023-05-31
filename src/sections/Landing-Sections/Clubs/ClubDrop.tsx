@@ -1,6 +1,9 @@
+import { Oswald } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 import { useState, useEffect } from "react";
+
+const oswald = Oswald({subsets: ['latin']})
 
 interface Props {
 	title: string;
@@ -24,7 +27,7 @@ const ClubDrop = ({ title, num, text, open }: Props) => {
 			<div className=" text-left">
 				<div
 					className={
-						"flex  cursor-pointer items-center justify-between border-b pb-2 text-2xl font-semibold" +
+						"flex  cursor-pointer items-center justify-between border-b pb-2 font-semibold" +
 						(open ? "" : "border-[#A7A9BE] text-[#A7A9BE]") +
 						(num == 1 && open
 							? "border-[#A7A9BE] text-[#FFCCDE]"
@@ -41,7 +44,7 @@ const ClubDrop = ({ title, num, text, open }: Props) => {
 					}
 					onClick={() => (open = !open)}
 				>
-					<h3 className="max-w-[80%]">{title}</h3>
+					<h3 className={`max-w-[80%] text-xl sm:text-2xl ${oswald.className} font-bold`}>{title}</h3>
 					<div className="">
 						<Image
 							width={10000}
