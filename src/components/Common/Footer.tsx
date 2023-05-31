@@ -1,39 +1,40 @@
+import { Oswald,Manrope } from "next/font/google";
 import React from "react";
+const oswald = Oswald({subsets: ['latin']});
+const manrope = Manrope({subsets: ['latin']})
 
 const Footer = () => {
   return (
-    <div>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <div className=" mt-12 justify-around flex">
-        <div className="">
-            <text className="text-white font-bold text-[1rem] md:text-[1.5rem] lg:text-[2rem] gap-6">
-            VISIT
+      <div className="gap-y-8 mt-12 justify-around flex flex-col sm:flex-row border-t-[1px] border-gray-700 pt-12 mb-12 lg:items-stretch items-stretch">
+        <div className="ml-8">
+            <text className={`text-white font-bold text-[1.5rem] lg:text-[2rem] gap-6  ${oswald.className}`}>
+              VISIT
             </text>
-            <div className="text-[#A7A9BE] flex flex-col pt-8 text-left text-[1.5rem] font-semibold gap-1">
-            <a href="#">PRIZES</a>
-            <a href="#">TRACKS</a>
-            <a href="#">TIMELINE</a>
-            <a href="#">ABOUT HACK</a>
-            <a href="#">SPONSORS</a>
-            <a href="#">ABOUT CLUBS</a>
-            <a href="#">FAQs</a>
+            <div className={`text-[#A7A9BE] flex flex-col pt-8 text-left text-[1rem] font-semibold gap-1 ${manrope.className}`}>
+              <a href="#">PRIZES</a>
+              <a href="#">TRACKS</a>
+              <a href="#">TIMELINE</a>
+              <a href="#">ABOUT HACK</a>
+              <a href="#">SPONSORS</a>
+              <a href="#">ABOUT CLUBS</a>
+              <a href="#">FAQs</a>
             </div >
-          </div>
+        </div>
 
-          <div className="">
-            <text className="text-white font-bold text-[1rem] md:text-[1.5rem] lg:text-[2rem] gap-6">
+          <div className="flex sm:items-center flex-col ml-8">
+            <text className={`text-white font-bold text-[1.5rem] lg:text-[2rem] gap-6 ${oswald.className}`}>
             STAY UPDATED!
             </text>
-            <div className="text-[#A7A9BE] flex flex-col text-left text-[1.5rem] pt-8">
-            <a href="#" className="text-black bg-[#FABF29] font-semibold rounded-full text-center px-6 py-5 mr-5">JOIN DISCORD</a>
+            <div className="text-[#A7A9BE] flex text-xl pt-8">
+              <a href="#" className={`text-black bg-[#FABF29] font-bold rounded-full text-center px-6 py-5 ${manrope.className}`}>JOIN DISCORD</a>
             </div >
           </div>
 
-          <div className="">
-            <text className="text-white font-bold text-[1rem] md:text-[1.5rem] lg:text-[2rem] gap-6">
+          <div className="ml-8">
+            <text className={`text-white font-bold text-[1.5rem] lg:text-[2rem] gap-6 ${oswald.className}`}>
             FOLLOW US ON
             </text>
-            <div className="flex flex-col text-right text-[1.25rem] font-normal gap-1 pt-8 text-[#A7A9BE] hover:underline">
+            <div className={`flex flex-col text-left sm:text-right text-[1.rem] font-normal gap-1 pt-8 text-[#A7A9BE] hover:underline ${manrope.className}`}>
             <a href="#">csivit.com</a>
             <a href="#">csivit.com</a>
             <a href="#">csivit.com</a>
@@ -41,7 +42,6 @@ const Footer = () => {
             </div >
           </div>
       </div> 
-     </div>
   );
 };
 
