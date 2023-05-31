@@ -38,11 +38,13 @@ const Clubs = () => {
 	};
 
 	return (
-		<div className=" w-80% mb-[25vh] mt-[25vh] flex justify-center">
-			<div className="container flex gap-[5vw] text-center ">
-				<div className={`basis-1/2 self-start justify-self-center`}>
-					<div className="flex justify-center pl-4 text-center text-[#FFF6E8]">
-						<h1 className="max-w-[25vw] text-left text-4xl font-semibold leading-[3.5rem]">
+		<div className="mb-[25vh] mt-[25vh] flex  justify-center">
+			<div className="container flex w-[80vw] justify-between gap-[5vw] text-center max-lg:flex-col max-lg:gap-[5vh]">
+				<div
+					className={`max-w-[60vw] self-center justify-self-center text-center lg:max-w-[35vw] lg:self-start lg:justify-self-start`}
+				>
+					<div className=" flex justify-center  text-center text-[#FFF6E8]">
+						<h1 className=" text-left text-4xl font-semibold leading-[3.5rem]">
 							<span
 								className={"" + (key1 ? "text-[#FFCCDE]" : "")}
 							>
@@ -78,7 +80,7 @@ const Clubs = () => {
 						</h1>
 					</div>
 				</div>
-				<div className="basis-1/2 space-y-6">
+				<div className="space-y-6  lg:w-[40vw]">
 					<div onClick={handleToggleKey1}>
 						<ClubDrop
 							title="COMPUTER SOCIETY OF INDIA"
