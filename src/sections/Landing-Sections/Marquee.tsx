@@ -44,7 +44,7 @@ const InfiniteMarquee: React.FC = () => {
             return (
               <div
                 key={el}
-                className="absolute top-0 flex h-[14vh] items-center justify-center gap-x-28 bg-logo px-10 max-lg:h-[8vh] whitespace-nowrap"
+                className="absolute top-0 flex h-[11vh] items-center justify-center gap-x-28 bg-logo px-10 max-lg:h-[8vh] whitespace-nowrap"
               >
                 <div className={`flex h-[100%] w-full items-center justify-around bg-logo text-marquee font-extrabold text-4xl max-lg:text-2xl ${oswald.className}`}>
                   FOR YOURS TO BUILD
@@ -67,7 +67,7 @@ const InfiniteMarquee: React.FC = () => {
           })}
         </Marquee>
       </div>
-      <div className="z-1 absolute top-[18vh] h-[14vh] w-[110%] rotate-3 bg-cross max-lg:h-[8vh]"></div>
+      <div className="z-1 absolute top-[18vh] h-[11vh] w-[110%] rotate-3 bg-cross max-lg:h-[8vh]"></div>
     </div>
   );
 };

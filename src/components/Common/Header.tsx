@@ -8,12 +8,9 @@ const Header = () => {
   };
 
   return (
-    <div className="mx-auto px-8 py-3">
-      <div className="flex flex-col justify-between lg:flex-row lg:items-center">
-        <div className="flex flex-row items-center justify-between">
-          <div className="flex h-10 w-10 items-center justify-center text-2xl font-black text-logo lg:ml-[3rem]">
-            HS
-          </div>
+    <div className="mx-auto px-8 py-10 border-b-[1px] border-[#2E2E2E]">
+      <div className="flex flex-col justify-center lg:flex-row lg:items-center">
+        <div className="flex flex-row items-center">
           {isMenuOpen ? (
             <svg
               className="lg:hidden"
