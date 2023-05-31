@@ -53,8 +53,16 @@ const Header = () => {
           >
             <li>
               <a
+                href="/"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+              >
+                HOME
+              </a>
+            </li>
+            <li>
+              <a
                 href="#"
-                className="text-sm font-extrabold text-headerbutton hover:text-gray-900"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
               >
                 PRIZES
               </a>
@@ -62,7 +70,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-sm font-extrabold text-headerbutton hover:text-gray-900"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
               >
                 TRACKS
               </a>
@@ -70,7 +78,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-sm font-extrabold text-headerbutton hover:text-gray-900"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
               >
                 TIMELINE
               </a>
@@ -78,7 +86,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-sm font-extrabold text-headerbutton hover:text-gray-900"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
               >
                 ABOUT HACK
               </a>
@@ -86,7 +94,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-sm font-extrabold text-headerbutton hover:text-gray-900"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
               >
                 SPONSORS
               </a>
@@ -94,7 +102,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-sm font-extrabold text-headerbutton hover:text-gray-900"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
               >
                 ABOUT CLUBS
               </a>
@@ -102,7 +110,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-sm font-extrabold text-headerbutton hover:text-gray-900"
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
               >
                 FAQs
               </a>

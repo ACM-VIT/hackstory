@@ -59,7 +59,7 @@ const HeroContent = () => {
 
       {session ? (
         <div
-          className="mt-12 flex w-48 cursor-pointer items-center justify-center rounded-md bg-marquee px-3 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px]"
+          className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
           onClick={handleClick}
         >
           JOIN TEAM
