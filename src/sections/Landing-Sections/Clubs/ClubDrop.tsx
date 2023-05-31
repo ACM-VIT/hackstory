@@ -6,7 +6,7 @@ interface Props {
 	title: string;
 	num: number;
 	text: string;
-	temp: boolean;
+	open: boolean;
 }
 
 const ClubDrop = ({ title, num, text, open }: Props) => {
