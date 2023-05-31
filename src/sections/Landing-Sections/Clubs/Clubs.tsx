@@ -80,7 +80,7 @@ const Clubs = () => {
 						</h1>
 					</div>
 				</div>
-				<div className="space-y-6  lg:w-[40vw]">
+				<div className="space-y-6 max-lg:mt-6 lg:w-[40vw]">
 					<div onClick={handleToggleKey1}>
 						<ClubDrop
 							title="COMPUTER SOCIETY OF INDIA"

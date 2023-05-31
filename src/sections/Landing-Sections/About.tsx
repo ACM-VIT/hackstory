@@ -5,8 +5,8 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 const About = () => {
 	return (
-		<div className="mt-9 flex w-full flex-col items-center justify-center gap-20 max-lg:flex  max-lg:items-center max-lg:justify-center md:gap-28 lg:gap-20">
-			<div className="max-lg:w-[80vw] max-lg:space-y-12">
+		<div className="mt-20 flex w-full flex-col items-center justify-center gap-20 max-lg:flex  max-lg:items-center max-lg:justify-center md:gap-28 lg:gap-20">
+			<div className="space-y-12 max-lg:w-[80vw]">
 				<div
 					className={`flex flex-col text-center text-[1.5rem] font-bold leading-[2.5rem] text-white md:text-[2rem] md:leading-[3rem] lg:text-[2.5rem] lg:leading-[3.75rem] ${oswald.className}`}
 				>
