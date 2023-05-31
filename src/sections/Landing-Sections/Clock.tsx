@@ -17,7 +17,7 @@ function Clock() {
 			<div className="flex h-full w-4/5 items-center justify-center gap-y-6 rounded-2xl bg-[#2E2E2E] p-[10vh] max-lg:flex-col max-lg:py-[5vh]">
 				<div className="text-2xl font-bold text-[#FFF6E8] max-lg:text-center lg:w-3/5">
 					<p>
-						Don't miss an opportunity to win big with <br></br>
+						Don&apos;t miss an opportunity to win big with <br></br>
 						HackStory Hackathon
 					</p>
 					<div

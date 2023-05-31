@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -52,12 +53,12 @@ const Header = () => {
             className={`mt-4 flex flex-col items-center gap-y-4 lg:mt-0 lg:flex-row lg:space-x-12`}
           >
             <li>
-              <a
-                href="/"
-                className="text-l font-extrabold text-headerbutton hover:text-gray-900"
-              >
-                HOME
-              </a>
+              <Link href="/" 
+                className="text-l font-extrabold text-headerbutton hover:text-gray-900">
+              
+                HOME</Link>
+                
+              
             </li>
             <li>
               <a
