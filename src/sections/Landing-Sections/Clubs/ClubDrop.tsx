@@ -32,7 +32,7 @@ const ClubDrop = ({ title, num, text }: Props) => {
               height={10000}
               src="/plus-icon.svg"
               alt="plus-icon"
-              className={`h-10 w-10 ${open ? "hidden" : ""}`}
+              className={`h-8 w-8 ${open ? "hidden" : ""}`}
             />
 
             <span className={"" + (open ? "" : "hidden")}>
@@ -41,7 +41,7 @@ const ClubDrop = ({ title, num, text }: Props) => {
                 height={10000}
                 src="/minus-icon.svg"
                 alt="plus-icon"
-                className={`h-10 w-10 ${!open ? "hidden" : ""}`}
+                className={`h-8 w-8 ${!open ? "hidden" : ""}`}
               />
             </span>
           </div>
