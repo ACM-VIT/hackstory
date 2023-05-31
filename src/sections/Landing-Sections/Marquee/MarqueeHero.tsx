@@ -8,7 +8,7 @@ const InfiniteMarquee: React.FC = () => {
   let array = [1,2,3,4,5];
 
   return (
-    <div className="relative mt-[22vh] flex h-[50vh] w-[110%] -translate-x-32 items-center justify-around max-lg:h-[40vh]">
+    <div className="relative mt-[20vh] flex h-[50vh] w-[200rem] -translate-x-32 items-center justify-around max-lg:h-[40vh]">
       <div className="z-10 -rotate-3">
         <Marquee
           className="bg-logo"
@@ -67,7 +67,7 @@ const InfiniteMarquee: React.FC = () => {
           })}
         </Marquee>
       </div>
-      <div className="z-1 absolute top-[18vh] h-[14vh] w-[110%] rotate-3 bg-cross max-lg:h-[8vh]"></div>
+      <div className="z-1 absolute top-[24vh] h-[14vh] w-[200rem] rotate-3 bg-cross max-lg:h-[8vh]"></div>
     </div>
   );
 };
