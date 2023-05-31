@@ -41,14 +41,14 @@ const ClubDrop = ({ title, num, text, open }: Props) => {
 					}
 					onClick={() => (open = !open)}
 				>
-					<h3>{title}</h3>
+					<h3 className="max-w-[80%]">{title}</h3>
 					<div className="">
 						<Image
 							width={10000}
 							height={10000}
 							src="/plus-icon.svg"
 							alt="plus-icon"
-							className={`h-8 w-8 ${open ? "hidden" : ""}`}
+							className={`w-[28px] ${open ? "hidden" : ""}`}
 						/>
 
 						<span className={"" + (open ? "" : "hidden")}>
@@ -57,7 +57,7 @@ const ClubDrop = ({ title, num, text, open }: Props) => {
 								height={10000}
 								src="/minus-icon.svg"
 								alt="plus-icon"
-								className={`h-8 w-8 ${!open ? "hidden" : ""}`}
+								className={`w-[28px] ${!open ? "hidden" : ""}`}
 							/>
 						</span>
 					</div>
