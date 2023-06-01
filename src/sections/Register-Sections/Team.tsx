@@ -86,7 +86,6 @@ const Registration = () => {
 
   return (
     <>
-      <Header />
       <div className="flex flex-col h-contain mt-[10%] gap-y-12">
         <div className="flex flex-col">
           <h1 className={`text-white lg:text-5xl text-3xl font-bold sm:text-center text-left pb-2 px-12 ${oswald.className}`}>
