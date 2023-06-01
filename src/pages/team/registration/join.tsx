@@ -52,7 +52,7 @@ const join = () => {
                     <form
                     onSubmit={(el) => {
                         el.preventDefault();
-                        handleCreate();
+                        handleJoin();
                       }}
                     >
                         <div className={`sm:ml-16 ml-4 ${manrope.className} font-bold pt-[2rem] text-xl`}>
