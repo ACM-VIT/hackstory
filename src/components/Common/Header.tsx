@@ -91,7 +91,7 @@ const Header = () => {
 				>
 					<motion.ul
 						variants={navVariants}
-						className={`mt-4 flex flex-col items-center gap-y-4 lg:mt-0 lg:flex-row lg:space-x-12`}
+						className={`mt-4 flex flex-col items-center gap-y-4 lg:mt-0 lg:flex-row lg:hidden lg:space-x-12`}
 					>
 						<motion.li
 							variants={liVariants}
@@ -137,17 +137,7 @@ const Header = () => {
 								TIMELINE
 							</a>
 						</motion.li>
-						<motion.li
-							variants={liVariants}
-							whileTap={{ scale: 0.95 }}
-						>
-							<a
-								href="#about"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
-							>
-								ABOUT HACK
-							</a>
-						</motion.li>
+						
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}

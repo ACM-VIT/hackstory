@@ -57,20 +57,30 @@ const HeroContent = () => {
 
 
 			{session ? (
-				<div
-					className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
-					onClick={handleClick}
-				>
-					JOIN TEAM
-				</div>
-			) : (
+				isPartOfTeam ? (
+					<div
+						className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
+						onClick={handleClick}
+					>
+						VIEW TEAM
+					</div>
+				) : (
+					<div
+						className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
+						onClick={handleClick}
+					>
+						JOIN TEAM
+					</div>
+				)
+				) : (
 				<div
 					className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
 					onClick={() => signIn()}
 				>
 					REGISTER NOW
 				</div>
-			)}
+				)}
+
 		</div>
 	);
 };
