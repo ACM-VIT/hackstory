@@ -71,6 +71,22 @@ const join = () => {
                     </form>
                 </div>
             </div>
+            <div className='z-10 font-bold flex-col py-4 px-14 border-solid border-black border-2 rounded-[2rem] text-black bg-[#FFF6E8] absolute top-[73%] left-[65%] '>
+              <div className="text-left flex flex-col leading-[2rem]">
+                TAGS
+              </div>
+              <div className=' flex flex-col'>
+                <div className='justify-around space-x-4 leading-[4rem] '>
+                <text className='bg-[#FFCCDE] rounded-xl p-2 '>Technology</text>
+                <text className='bg-[#A7A9BE] rounded-xl p-2'>Innovation</text>
+                <text className='bg-[#D0D5FF] rounded-xl p-2'>Programming</text>
+                </div>
+                <div className='space-x-4 text-center pb-2'>
+                <text className='bg-[#D0D5FF] rounded-xl p-2'>Hackathon</text>
+                <text className='bg-[#FFCCDE] rounded-xl p-2'>Finance</text>
+                </div>
+              </div>
+            </div>
         </>
     
   )
