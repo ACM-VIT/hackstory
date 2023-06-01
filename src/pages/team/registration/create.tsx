@@ -37,7 +37,8 @@ const create = () => {
     return (
         <>
             <Header />
-            <div className=' z-1 flex flex-col gap-y-12'>
+            <div className=''>
+            <div className=' md:z-1 flex flex-col gap-y-12'>
                 <div className={`bg-title text-black mr-10 max-w-[20rem] xl:ml-36 lg:ml-20 ml-10 mt-24 sm:pl-16 pl-4 py-4 rounded-[10px] font-bold text-xl ${manrope.className}`}>
                     Hey, Participant
                 </div>
@@ -71,21 +72,22 @@ const create = () => {
                     </form>
                 </div>
             </div>
-            <div className='z-10 font-bold flex-col py-4 px-14 border-solid border-black border-2 rounded-[2rem] text-black bg-[#FFF6E8] absolute top-[73%] left-[65%] '>
+            <div className='md:z-10 font-bold justify-around flex-col py-2 md:py-4 md:px-10 lg:px-14 border-solid border-black border-2 rounded-[2rem] text-black bg-[#FFF6E8] md:absolute lg:absolute md:top-[45%] lg:top-[73%] md:left-[45%] lg:left-[65%] '>
               <div className="text-left flex flex-col leading-[2rem]">
                 TAGS
               </div>
               <div className=' flex flex-col'>
-                <div className='justify-around space-x-4 leading-[4rem] '>
-                <text className='bg-[#FFCCDE] rounded-xl p-2 '>Technology</text>
-                <text className='bg-[#A7A9BE] rounded-xl p-2'>Innovation</text>
-                <text className='bg-[#D0D5FF] rounded-xl p-2'>Programming</text>
+                <div className='justify-around text-center space-x-2 md:space-x-4 leading-[4rem] '>
+                <text className='bg-[#FFCCDE] rounded-xl p-1 md:p-2 '>Technology</text>
+                <text className='bg-[#A7A9BE] rounded-xl p-1 md:p-2'>Innovation</text>
+                <text className='bg-[#D0D5FF] rounded-xl p-1 md:p-2'>Programming</text>
                 </div>
-                <div className='space-x-4 text-center pb-2'>
-                <text className='bg-[#D0D5FF] rounded-xl p-2'>Hackathon</text>
-                <text className='bg-[#FFCCDE] rounded-xl p-2'>Finance</text>
+                <div className='space-x-2 md:space-x-4 text-center justify-around pb-2'>
+                <text className='bg-[#D0D5FF] rounded-xl p-1 md:p-2'>Hackathon</text>
+                <text className='bg-[#FFCCDE] rounded-xl p-1 md:p-2'>Finance</text>
                 </div>
               </div>
+            </div>
             </div>
         </>
     
