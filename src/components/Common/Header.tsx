@@ -109,7 +109,7 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
-								href="#"
+								href="#prizes"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								PRIZES
@@ -120,7 +120,7 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
-								href="#"
+								href="#tracks"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								TRACKS
@@ -131,7 +131,7 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
-								href="#"
+								href="#timeline"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								TIMELINE
@@ -142,7 +142,7 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
-								href="#"
+								href="#about"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								ABOUT HACK
@@ -153,7 +153,7 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
-								href="#"
+								href="#partnership"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								SPONSORS
@@ -164,7 +164,7 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
-								href="#"
+								href="#clubs"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								ABOUT CLUBS
@@ -175,7 +175,7 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
-								href="#"
+								href="#faqs"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								FAQs
@@ -195,7 +195,7 @@ const Header = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="#prizes"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								PRIZES
@@ -203,7 +203,7 @@ const Header = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="#tracks"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								TRACKS
@@ -211,7 +211,7 @@ const Header = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="#timeline"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								TIMELINE
@@ -219,7 +219,7 @@ const Header = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="#about"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								ABOUT HACK
@@ -227,7 +227,7 @@ const Header = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="#partnership"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								SPONSORS
@@ -235,7 +235,7 @@ const Header = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="#clubs"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								ABOUT CLUBS
@@ -243,7 +243,7 @@ const Header = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="#faqs"
 								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
 							>
 								FAQs
