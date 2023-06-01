@@ -99,7 +99,7 @@ const Header = () => {
 						>
 							<Link
 								href="/"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								HOME
 							</Link>
@@ -110,7 +110,7 @@ const Header = () => {
 						>
 							<a
 								href="#prizes"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								PRIZES
 							</a>
@@ -121,7 +121,7 @@ const Header = () => {
 						>
 							<a
 								href="#tracks"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TRACKS
 							</a>
@@ -132,19 +132,29 @@ const Header = () => {
 						>
 							<a
 								href="#timeline"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TIMELINE
 							</a>
 						</motion.li>
-						
+						<motion.li
+							variants={liVariants}
+							whileTap={{ scale: 0.95 }}
+						>
+							<a
+								href="#about"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								ABOUT HACK
+							</a>
+						</motion.li>
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
 								href="#partnership"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								SPONSORS
 							</a>
@@ -155,7 +165,7 @@ const Header = () => {
 						>
 							<a
 								href="#clubs"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT CLUBS
 							</a>
@@ -166,7 +176,7 @@ const Header = () => {
 						>
 							<a
 								href="#faqs"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								FAQs
 							</a>
@@ -178,63 +188,63 @@ const Header = () => {
 						<li>
 							<Link
 								href="/"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								HOME
 							</Link>
 						</li>
 						<li>
 							<a
-								href="#prizes"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
-							>
-								PRIZES
-							</a>
-						</li>
-						<li>
-							<a
-								href="#tracks"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
-							>
-								TRACKS
-							</a>
-						</li>
-						<li>
-							<a
-								href="#timeline"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
-							>
-								TIMELINE
-							</a>
-						</li>
-						<li>
-							<a
 								href="#about"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT HACK
 							</a>
 						</li>
 						<li>
 							<a
-								href="#partnership"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
-							>
-								SPONSORS
-							</a>
-						</li>
-						<li>
-							<a
 								href="#clubs"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT CLUBS
 							</a>
 						</li>
 						<li>
 							<a
+								href="#timeline"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								TIMELINE
+							</a>
+						</li>
+						<li>
+							<a
+								href="#tracks"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								TRACKS
+							</a>
+						</li>
+						<li>
+							<a
+								href="#prizes"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								PRIZES
+							</a>
+						</li>
+						<li>
+							<a
+								href="#partnership"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								SPONSORS
+							</a>
+						</li>
+						<li>
+							<a
 								href="#faqs"
-								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								FAQs
 							</a>

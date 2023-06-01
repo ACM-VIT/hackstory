@@ -26,7 +26,7 @@ const Footer = () => {
             STAY UPDATED!
             </text>
             <div className="text-[#A7A9BE] flex md:text-xl text-base pt-8">
-              <a href="#" className={`text-black bg-[#FABF29] font-bold rounded-full text-center sm:px-6 sm:py-5 py-2 px-3 ${manrope.className}`}>JOIN DISCORD</a>
+              <a href="https://discord.gg/MSGMwkbFwt" className={`text-black bg-[#FABF29] font-bold rounded-full text-center sm:px-6 sm:py-5 py-2 px-3 ${manrope.className}`}>JOIN DISCORD</a>
             </div >
           </div>
 
