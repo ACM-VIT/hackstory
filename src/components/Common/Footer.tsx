@@ -11,13 +11,13 @@ const Footer = () => {
               VISIT
             </text>
             <div className={`text-[#A7A9BE] flex flex-col pt-8 text-left text-[1rem] font-semibold gap-1 ${manrope.className}`}>
-              <a href="#">PRIZES</a>
-              <a href="#">TRACKS</a>
-              <a href="#">TIMELINE</a>
-              <a href="#">ABOUT HACK</a>
-              <a href="#">SPONSORS</a>
-              <a href="#">ABOUT CLUBS</a>
-              <a href="#">FAQs</a>
+              <a href="#prizes">PRIZES</a>
+              <a href="#tracks">TRACKS</a>
+              <a href="#timeline">TIMELINE</a>
+              <a href="#about">ABOUT HACK</a>
+              <a href="#partnership">SPONSORS</a>
+              <a href="#clubs">ABOUT CLUBS</a>
+              <a href="#faqs">FAQs</a>
             </div >
         </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
             FOLLOW US ON
             </text>
             <div className={`flex flex-col text-left sm:text-right text-[1.rem] font-normal gap-1 pt-8 text-[#A7A9BE] hover:underline ${manrope.className}`}>
-            <a href="#">csivit.com</a>
+            <a href="https://csivit.com/">csivit.com</a>
             <a href="#">csivit.com</a>
             <a href="#">csivit.com</a>
             <a href="#">csivit.com</a>
