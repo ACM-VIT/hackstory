@@ -1,11 +1,21 @@
 import { Oswald } from "next/font/google";
 import React from "react";
 import { useState } from "react";
+import { motion, Variants } from "framer-motion";
 
-const oswald = Oswald({subsets:['latin']})
+const oswald = Oswald({ subsets: ["latin"] });
+
+const itemVariants: Variants = {
+	open: {
+		opacity: 1,
+		transition: { type: "spring", stiffness: 300, damping: 24 },
+	},
+	closed: { opacity: 0, transition: { duration: 0.2 } },
+};
 
 const FAQPage = () => {
 	const [activeIndex, setActiveIndex] = useState(null);
+	const [open, setOpen] = useState(false);
 
 	const faqs = [
 		{
@@ -42,34 +52,57 @@ const FAQPage = () => {
 	const toggleAccordion = (index: any) => {
 		if (activeIndex === index) {
 			setActiveIndex(null);
+			setOpen(false);
 		} else {
 			setActiveIndex(index);
+			setOpen(true);
 		}
 	};
 
 	return (
 		<div className="flex w-[100vw] items-center justify-center lg:py-20 lg:pb-8 lg:pl-8 ">
 			<div className="w-[80vw]">
-				<h1 className={`mb-4 text-center text-5xl font-bold text-[#FFF6E8]  max-lg:text-4xl ${oswald.className}`}>
+				<h1
+					className={`mb-4 text-center text-5xl font-bold text-[#FFF6E8]  max-lg:text-4xl ${oswald.className}`}
+				>
 					FREQUENTLY ASKED QUESTIONS
 				</h1>
 				<div className="mt-20 max-lg:mt-16">
 					{faqs.map((faq, index) => (
-						<div
+						<motion.div
+							initial={false}
+							animate={open ? "open" : "closed"}
 							key={index}
 							className="rounded border-b border-t border-gray-300 border-opacity-10 px-4 py-6"
 						>
-							<button
-								className="flex w-full justify-between focus:outline-none"
+							<motion.button
+								whileTap={{ scale: 0.97 }}
+								className="flex w-full items-center justify-between focus:outline-none"
 								onClick={() => toggleAccordion(index)}
 							>
-								<span className="text-left sm:text-lg text-base font-semibold pr-4 text-white">
+								<span className="pr-4 text-left text-base font-semibold text-white sm:text-lg">
 									{faq.question}
 								</span>
-								<span className="text-lg text-white">
-									{activeIndex === index ? "-" : "+"}
-								</span>
-							</button>
+								{/* <motion.span
+									key={index}
+									variants={{
+										open: { rotate: 180 },
+										closed: { rotate: 0 },
+									}}
+									transition={{ duration: 0.2 }}
+									style={{ originY: 0.55 }}
+									className="text-lg text-white"
+								>
+									<svg
+										fill="#A7A9BE"
+										width="15"
+										height="15"
+										viewBox="0 0 20 20"
+									>
+										<path d="M0 7 L 20 7 L 10 16" />
+									</svg>
+								</motion.span> */}
+							</motion.button>
 							{activeIndex === index && (
 								<div className={`mt-2 pt-2`}>
 									<p className="text-30px mt-4 text-white ">
@@ -77,7 +110,7 @@ const FAQPage = () => {
 									</p>
 								</div>
 							)}
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>
