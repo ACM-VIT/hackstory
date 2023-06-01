@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 
 const navVariants = {
@@ -95,7 +95,6 @@ const Header = () => {
 					>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<Link
@@ -107,7 +106,6 @@ const Header = () => {
 						</motion.li>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
@@ -119,7 +117,6 @@ const Header = () => {
 						</motion.li>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
@@ -131,7 +128,6 @@ const Header = () => {
 						</motion.li>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
@@ -143,7 +139,6 @@ const Header = () => {
 						</motion.li>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
@@ -155,7 +150,6 @@ const Header = () => {
 						</motion.li>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
@@ -167,7 +161,6 @@ const Header = () => {
 						</motion.li>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
@@ -179,7 +172,6 @@ const Header = () => {
 						</motion.li>
 						<motion.li
 							variants={liVariants}
-							whileHover={{ scale: 1.1 }}
 							whileTap={{ scale: 0.95 }}
 						>
 							<a
@@ -190,6 +182,74 @@ const Header = () => {
 							</a>
 						</motion.li>
 					</motion.ul>
+					<ul
+						className={`mt-4 flex flex-col items-center gap-y-4 max-lg:hidden lg:mt-0 lg:flex-row lg:space-x-12`}
+					>
+						<li>
+							<Link
+								href="/"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								HOME
+							</Link>
+						</li>
+						<li>
+							<a
+								href="#"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								PRIZES
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								TRACKS
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								TIMELINE
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								ABOUT HACK
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								SPONSORS
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								ABOUT CLUBS
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								className="text-l font-extrabold text-headerbutton hover:text-gray-900"
+							>
+								FAQs
+							</a>
+						</li>
+					</ul>
 				</nav>
 			</div>
 		</motion.div>
