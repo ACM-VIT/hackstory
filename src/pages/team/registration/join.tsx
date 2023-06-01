@@ -10,7 +10,7 @@ const manrope = Manrope({subsets: ['latin']})
 const oswald = Oswald({subsets:['latin']})
 
 
-const join = () => {
+const Join = () => {
     const [teamCode, setTeamCode] = useState("");
 
     const router = useRouter();
@@ -71,19 +71,19 @@ const join = () => {
                     </form>
                 </div>
             </div>
-            <div className='z-10 font-bold flex-col py-4 px-14 border-solid border-black border-2 rounded-[2rem] text-black bg-[#FFF6E8] absolute top-[73%] left-[65%] '>
+            <div className='md:z-10 mt-10 ml-10 absolute 2xl:left-[70%] 2xl:mt-[-5%] xl:left-[65%] xl:mt-[-5%] lg:left-[55%] lg:mt-[-5%] font-bold flex-col py-2 px-5 sm:py-4 sm:px-10 border-black border-2 rounded-[2rem] text-black bg-[#FFF6E8]  '>
               <div className="text-left flex flex-col leading-[2rem]">
                 TAGS
               </div>
               <div className=' flex flex-col'>
-                <div className='justify-around space-x-4 leading-[4rem] '>
-                <text className='bg-[#FFCCDE] rounded-xl p-2 '>Technology</text>
-                <text className='bg-[#A7A9BE] rounded-xl p-2'>Innovation</text>
-                <text className='bg-[#D0D5FF] rounded-xl p-2'>Programming</text>
+                <div className='justify-around text-center space-x-2 md:space-x-4 leading-[4rem] '>
+                  <text className='bg-[#FFCCDE] rounded-xl p-2 '>Technology</text>
+                  <text className='bg-[#A7A9BE] rounded-xl p-2'>Innovation</text>
+                  <text className='bg-[#D0D5FF] rounded-xl p-2'>Programming</text>
                 </div>
-                <div className='space-x-4 text-center pb-2'>
-                <text className='bg-[#D0D5FF] rounded-xl p-2'>Hackathon</text>
-                <text className='bg-[#FFCCDE] rounded-xl p-2'>Finance</text>
+                <div className='space-x-2 md:space-x-4 text-center justify-around pb-2'>
+                  <text className='bg-[#D0D5FF] rounded-xl p-2'>Hackathon</text>
+                  <text className='bg-[#FFCCDE] rounded-xl p-2'>Finance</text>
                 </div>
               </div>
             </div>
@@ -92,4 +92,4 @@ const join = () => {
   )
 }
 
-export default join
+export default Join
