@@ -2,6 +2,7 @@ import { Oswald } from "next/font/google";
 import React from "react";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
@@ -62,11 +63,22 @@ const FAQPage = () => {
 	return (
 		<div className="flex w-[100vw] items-center justify-center lg:py-20 lg:pb-8 lg:pl-8 ">
 			<div className="w-[80vw]">
-				<h1
-					className={`mb-4 text-center text-5xl font-bold text-[#FFF6E8]  max-lg:text-4xl ${oswald.className}`}
-				>
-					FREQUENTLY ASKED QUESTIONS
-				</h1>
+				<div>
+					<div className="absolute  left-[25vw] mt-[-10vh] max-lg:mt-0">
+						<Image
+							className="w-[140px] max-lg:w-[80px]"
+							src="/faq-doodle.svg"
+							width={10000}
+							height={10000}
+							alt="faq-doodle"
+						/>
+					</div>
+					<h1
+						className={`relative z-10 mb-4 text-center text-5xl font-bold text-[#FFF6E8]  max-lg:text-4xl ${oswald.className}`}
+					>
+						FREQUENTLY ASKED QUESTIONS
+					</h1>
+				</div>
 				<div className="mt-20 max-lg:mt-16">
 					{faqs.map((faq, index) => (
 						<motion.div

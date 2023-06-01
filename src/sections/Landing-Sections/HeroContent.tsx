@@ -42,25 +42,25 @@ const HeroContent = () => {
 		<div className="flex flex-col items-center justify-center gap-y-6 px-16  pt-36 max-md:pt-16">
 			<div className="flex flex-col gap-y-4">
 				<div
-					className={`text-timelineheading z-9 text-md font-bold md:text-xl lg:text-2xl ${manrope.className} text-tracks max-lg:text-center`}
+					className={`text-timelineheading text-md relative z-10 font-bold md:text-xl lg:text-2xl ${manrope.className} text-tracks max-lg:text-center`}
 				>
 					JUNE 5TH-7TH 2023
 				</div>
 
 				<div
-					className={`text-[40px] font-bold md:text-[86px] lg:text-[90px] ${alfaSlabOne.className} z-9 text-title max-lg:text-center`}
+					className={`relative z-10 text-[40px] font-bold md:text-[86px] lg:text-[90px] ${alfaSlabOne.className} z-9 text-title max-lg:text-center`}
 				>
 					HACK STORY
 				</div>
 				<motion.div
-					initial={{ opacity: 0, scale: 0.75 }}
+					initial={{ opacity: 0.1, scale: 0.75 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
 						duration: 3,
 						repeat: Infinity,
 						repeatType: "reverse",
 					}}
-					className="absolute left-[10vw] max-lg:mt-[5vh]"
+					className="absolute left-[15vw] max-lg:mt-[5vh]"
 				>
 					<Image
 						className="w-[150px] max-lg:w-[75px]"
