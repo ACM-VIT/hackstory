@@ -1,97 +1,117 @@
-import Header from '@/components/Common/Header'
+import Header from "@/components/Common/Header";
 import postHandler from "@/handlers/postHandler";
-import { Manrope,Oswald } from 'next/font/google'
-import { useRouter } from 'next/router'
-import { React,useState } from 'react'
+import { Manrope, Oswald } from "next/font/google";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
 import Toaster from "@/utils/toaster";
 import { DEV_BASE_URL } from "@/constants";
 
-const manrope = Manrope({subsets: ['latin']})
-const oswald = Oswald({subsets:['latin']})
-
+const manrope = Manrope({ subsets: ["latin"] });
+const oswald = Oswald({ subsets: ["latin"] });
 
 const Create = () => {
-    const [teamName, setTeamName] = useState("");
+	const [teamName, setTeamName] = useState("");
 
-    const router = useRouter();
+	const router = useRouter();
 
-  const handleCreate = async () => {
-    if (teamName.trim() === "") {
-      Toaster.error("Team name cannot be empty");
-      return;
-    }
+	const handleCreate = async () => {
+		if (teamName.trim() === "") {
+			Toaster.error("Team name cannot be empty");
+			return;
+		}
 
-    const toaster = Toaster.startLoad();
+		const toaster = Toaster.startLoad();
 
-    const URL = `${DEV_BASE_URL}/api/team/create`;
+		const URL = `${DEV_BASE_URL}/api/team/create`;
 
-    const res = await postHandler(URL, {
-      name: teamName,
-    });
+		const res = await postHandler(URL, {
+			name: teamName,
+		});
 
-    if (res.status === 1) {
-      Toaster.stopLoad(toaster, "Team Joined", 1);
-      router.push("/team");
-    } else Toaster.stopLoad(toaster, res.data.message, 0);
-  };
-    return (
-        <>
-            <Header />
-            <div className=''>
-            <div className=' md:z-1 flex flex-col gap-y-12'>
-                <div className={`bg-title text-black mr-10 max-w-[20rem] xl:ml-36 lg:ml-20 ml-10 mt-24 sm:pl-16 pl-4 py-4 rounded-[10px] font-bold text-xl ${manrope.className}`}>
-                    Hey, Participant
-                </div>
-                <div className='bg-title z-1 xl:ml-36 lg:ml-20 ml-10 mr-[20%] rounded-[20px] w-[80%]'>
-                    <div className="border-b border-yellow py-4 lg:px-20 md:px-12 text-center md:text-left  gap-y-4 font-bold flex md:flex-row flex-col justify-between items-center">
-                        <p className={`${oswald.className} text-[20px] px-2`}>WELCOME TO HACKSTORY REGISTRATION</p>
-                        <a onClick = {()=> {
-                            router.push("/team/registration")
-                        }}
-                        className={`${manrope.className} border-yellow border px-6 py-1 rounded-[30px] text-[16px] cursor-pointer max-w-[8rem]`}>CANCEL</a>
-                    </div>
-                    <form
-                    onSubmit={(el) => {
-                        el.preventDefault();
-                        handleCreate();
-                      }}
-                    >
-                        <div className={`sm:ml-16 ml-4 ${manrope.className} font-bold pt-[2rem] text-xl`}>
-                            Enter your team name
-                        </div>
-                        <input
-                            className={`sm:ml-16 ml-4  flex mt-4 w-3/5 rounded border-b-2 border-black bg-inherit px-3 py-3  text-gray-700 text-2xl focus:bg-inherit focus:outline-none ${manrope.className}`}
-                            type="text"
-                            value={teamName}
-                            onChange={(el) => setTeamName(el.target.value)}
-                            autoComplete="new-password"
-                        />
-                        <button className="my-8 focus:outline-none sm:ml-16 ml-4 bg-yellow text-center py-2 px-8 rounded-[30px]">
-                            Register
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div className='sm:block hidden md:z-10 mt-10 ml-10 absolute 2xl:left-[70%] 2xl:mt-[-5%] xl:left-[65%] xl:mt-[-5%] lg:left-[55%] lg:mt-[-5%] font-bold flex-col py-2 px-5 sm:py-4 sm:px-10 border-black border-2 rounded-[2rem] text-black bg-[#FFF6E8]  '>
-              <div className="text-left flex flex-col leading-[2rem]">
-                TAGS
-              </div>
-              <div className=' flex flex-col'>
-                <div className='justify-around text-center space-x-2 md:space-x-4 leading-[4rem] '>
-                  <text className='bg-[#FFCCDE] rounded-xl p-2 '>Technology</text>
-                  <text className='bg-[#A7A9BE] rounded-xl p-2'>Innovation</text>
-                  <text className='bg-[#D0D5FF] rounded-xl p-2'>Programming</text>
-                </div>
-                <div className='space-x-2 md:space-x-4 text-center justify-around pb-2'>
-                  <text className='bg-[#D0D5FF] rounded-xl p-2'>Hackathon</text>
-                  <text className='bg-[#FFCCDE] rounded-xl p-2'>Finance</text>
-                </div>
-              </div>
-            </div>
-            </div>
-        </>
-    
-  )
-}
+		if (res.status === 1) {
+			Toaster.stopLoad(toaster, "Team Joined", 1);
+			router.push("/team");
+		} else Toaster.stopLoad(toaster, res.data.message, 0);
+	};
+	return (
+		<>
+			<Header />
+			<div className="">
+				<div className=" md:z-1 flex flex-col gap-y-12">
+					<div
+						className={`ml-10 mr-10 mt-24 max-w-[20rem] rounded-[10px] bg-title py-4 pl-4 text-xl font-bold text-black sm:pl-16 lg:ml-20 xl:ml-36 ${manrope.className}`}
+					>
+						Hey, Participant
+					</div>
+					<div className="z-1 ml-10 mr-[20%] w-[80%] rounded-[20px] bg-title lg:ml-20 xl:ml-36">
+						<div className="flex flex-col items-center justify-between gap-y-4 border-b border-yellow  py-4 text-center font-bold md:flex-row md:px-12 md:text-left lg:px-20">
+							<p
+								className={`${oswald.className} px-2 text-[20px]`}
+							>
+								WELCOME TO HACKSTORY REGISTRATION
+							</p>
+							<a
+								onClick={() => {
+									router.push("/team/registration");
+								}}
+								className={`${manrope.className} max-w-[8rem] cursor-pointer rounded-[30px] border border-yellow px-6 py-1 text-[16px]`}
+							>
+								CANCEL
+							</a>
+						</div>
+						<form
+							onSubmit={(el) => {
+								el.preventDefault();
+								handleCreate();
+							}}
+						>
+							<div
+								className={`ml-4 sm:ml-16 ${manrope.className} pt-[2rem] text-xl font-bold`}
+							>
+								Enter your team name
+							</div>
+							<input
+								className={`ml-4 mt-4  flex w-3/5 rounded border-b-2 border-black bg-inherit px-3 py-3 text-2xl  text-gray-700 focus:bg-inherit focus:outline-none sm:ml-16 ${manrope.className}`}
+								type="text"
+								value={teamName}
+								onChange={(el) => setTeamName(el.target.value)}
+								autoComplete="new-password"
+							/>
+							<button className="my-8 ml-4 rounded-[30px] bg-yellow px-8 py-2 text-center focus:outline-none sm:ml-16">
+								Register
+							</button>
+						</form>
+					</div>
+				</div>
+				<div className="absolute ml-10 mt-10 hidden flex-col rounded-[2rem] border-2 border-black bg-[#FFF6E8] px-5 py-2 font-bold text-black sm:block sm:px-10 sm:py-4 md:z-10 lg:left-[55%] lg:mt-[-5%] xl:left-[65%] xl:mt-[-5%] 2xl:left-[70%] 2xl:mt-[-5%]  ">
+					<div className="flex flex-col text-left leading-[2rem]">
+						TAGS
+					</div>
+					<div className=" flex flex-col">
+						<div className="justify-around space-x-2 text-center leading-[4rem] md:space-x-4 ">
+							<text className="rounded-xl bg-[#FFCCDE] p-2 ">
+								Technology
+							</text>
+							<text className="rounded-xl bg-[#A7A9BE] p-2">
+								Innovation
+							</text>
+							<text className="rounded-xl bg-[#D0D5FF] p-2">
+								Programming
+							</text>
+						</div>
+						<div className="justify-around space-x-2 pb-2 text-center md:space-x-4">
+							<text className="rounded-xl bg-[#D0D5FF] p-2">
+								Hackathon
+							</text>
+							<text className="rounded-xl bg-[#FFCCDE] p-2">
+								Finance
+							</text>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+};
 
-export default Create
+export default Create;
