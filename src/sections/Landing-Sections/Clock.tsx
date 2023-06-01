@@ -1,6 +1,12 @@
-import React from "react";
-
+import { useRouter } from "next/router";
+import { useSession, signIn } from "next-auth/react";
+import { DEV_BASE_URL } from "@/constants";
+import getHandler from "@/handlers/getHandler";
+import { React, useState, useEffect } from "react";
 import Countdown, { CountdownRendererFn } from "react-countdown";
+import { Manrope } from "next/font/google";
+
+const manrope = Manrope({subsets:['latin']})
 
 const renderer: CountdownRendererFn = ({ days, hours, minutes }) => {
 	return (
@@ -10,7 +16,29 @@ const renderer: CountdownRendererFn = ({ days, hours, minutes }) => {
 	);
 };
 
-function Clock() {
+const Clock = () => {
+	const { data: session } = useSession();
+	const [isPartOfTeam, setIsPartOfTeam] = useState(false);
+
+	const router = useRouter();
+
+	useEffect(() => {
+		// just check if the isn't getting overloaded with the request of team check.
+		if (session) {
+			const URL = `${DEV_BASE_URL}/api/team/getTeamDetails`;
+			getHandler(URL).then((res) => {
+				if (res.statusCode == 200) {
+					setIsPartOfTeam(true);
+				}
+			});
+		}
+	}, [session]);
+
+	const handleClick = () => {
+		if (isPartOfTeam) router.push("/team");
+		else router.push("/team/registration");
+	};
+
 	const targetDate = new Date("2023-06-04 16:00:00");
 	return (
 		<div className="mb-[10vh] mt-[10vh] flex h-full items-center justify-center">
@@ -21,12 +49,36 @@ function Clock() {
 						HackStory
 					</p>
 					<div className="flex max-lg:justify-center">
-						<div
+						{/* <div
 							className={`mt-12 flex lg:h-16 lg:w-56 max-w-[15rem] cursor-pointer flex-row justify-center rounded-[30px] bg-yellow sm:px-8 sm:py-4 px-4 py-2 text-[18px] font-extrabold text-[#121212] max-lg:mt-6 lg:text-[20px]`}
 							onClick={() => console.log("test")}
 						>
 							REGISTER NOW
-						</div>
+						</div> */}
+						{session ? (
+							isPartOfTeam ? (
+								<div
+									className={`mt-12 flex lg:h-16 lg:w-56 max-w-[15rem] cursor-pointer flex-row justify-center rounded-[30px] bg-yellow sm:px-8 sm:py-4 px-4 py-2 text-[18px] font-bold text-[#121212] max-lg:mt-6 lg:text-[20px] ${manrope.className}`}
+									onClick={handleClick}
+								>
+									VIEW TEAM
+								</div>
+							) : (
+								<div
+									className={`mt-12 flex lg:h-16 lg:w-56 max-w-[15rem] cursor-pointer flex-row justify-center rounded-[30px] bg-yellow sm:px-8 sm:py-4 px-4 py-2 text-[18px] font-bold text-[#121212] max-lg:mt-6 lg:text-[20px] ${manrope.className}`}
+									onClick={handleClick}
+								>
+									JOIN TEAM
+								</div>
+							)
+						) : (
+							<div
+								className={`mt-12 flex lg:h-16 lg:w-56 max-w-[15rem] cursor-pointer flex-row justify-center rounded-[30px] bg-yellow sm:px-8 sm:py-4 px-4 py-2 text-[18px] font-bold text-[#121212] max-lg:mt-6 lg:text-[20px] ${manrope.className}`}
+								onClick={() => signIn()}
+							>
+								REGISTER NOW
+							</div>
+						)}
 					</div>
 					
 				</div>
