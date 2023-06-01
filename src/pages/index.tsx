@@ -18,16 +18,32 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <Header />
-      <HeroContent />
+      <div>
+        <HeroContent />
+      </div>
       <Marquee />
-      <About />
-      <Clubs />
-      <TimelineComponent />
-      <Marquee2 />
-      <TrackContent />
-      <Prizes />
+      <div id="about">
+        <About />
+      </div>
+      <div id="clubs">
+        <Clubs />
+      </div>
+      <div id="timeline">
+        <TimelineComponent />
+      </div>
+        <Marquee2 />
+      <div id="tracks">
+        <TrackContent />
+      </div>
+      <div id="prizes">
+        <Prizes />
+      </div>
+      <div  id="partnership"> 
       <Partnership />
-      <FAQs />
+      </div>
+      <div id="faqs">
+        <FAQs />
+      </div>
       <Clock/>
       <Footer />
     </div>
