@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import Toaster from "@/utils/toaster";
 import { DEV_BASE_URL } from "@/constants";
 import { Manrope } from "next/font/google";
-import { Modal,Box,Button } from "@mui/material";
 
 const manrope = Manrope({subsets:['latin']})
 
@@ -91,7 +90,10 @@ const Registration = () => {
         </div>
         <div className='mx-20 px-80'>
           <div className='flex justify-center mt-8 border border-white rounded-3xl pl-20 pr-20 pt-10 pb-20 border-opacity-10 ' >
-            <button 
+            <button
+              onClick={()=>{
+                router.push("/team/registration/join");
+              }} 
               className={`mt-12 flex cursor-pointer flex-row rounded-[30px] px-8 pt-4 text-white text-[12px] font-bold md:text-[15px] lg:text-[20px] border border-yellow ${manrope.className}`}>
                 JOIN A TEAM
             </button>
@@ -99,27 +101,14 @@ const Registration = () => {
             <div className="h-30 w-1 bg-gray-400 mx-4 mt-10"></div>
             <div className="w-20"></div>
             <button 
-              onClick={handleCreateTeamOpen}
+              onClick={()=>{
+                router.push("/team/registration/create");
+              }} 
               className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-bold md:text-[15px] lg:text-[20px] ${manrope.className}`}>
                 CREATE A TEAM
             </button>
           </div>
         </div>
-        <Modal
-          open={createTeamOpen}
-          onClose={handleCreateTeamClose}
-          aria-labelledby="child-modal-title"
-          aria-describedby="child-modal-description"
-        >
-          <Box sx={{ ...style, width: 200, display: 'flex' }}>
-            <Button onClick={handleCreateTeamClose}>X</Button>
-            <h2 id="child-modal-title">Text in a child modal</h2>
-            <p id="child-modal-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
-            
-          </Box>
-        </Modal>
     </div>
   );
 };
