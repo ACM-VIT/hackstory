@@ -83,33 +83,38 @@ const Registration = () => {
   };
 
   return (
-    <div className=" pt-40 px-8">
-      <div className="flex flex-col items-center pb-20">
-        <h1 className=" text-white text-5xl font-bold text-center pb-2"> <span className="pb-8 block"><span className="text-yellow">HACK YOUR WAY</span> THROUGH A WORLD,<br/></span>
-          <span className="text-white">WHERE INNOVATION WRITES YOUR</span><span className="text-yellow"> NEXT CHAPTER</span></h1>
+    <div className="flex flex-col h-contain mt-[10%] gap-y-12">
+      <div className="flex flex-col">
+        <h1 className="text-white lg:text-5xl text-3xl font-bold sm:text-center text-left pb-2 px-12">
+          <span className="pb-8 block">
+            <span className="text-yellow">HACK YOUR WAY{" "}</span>
+            THROUGH A WORLD,
+          </span>
+          <span className="text-white">WHERE INNOVATION WRITES YOUR</span>
+          <span className="text-yellow"> NEXT CHAPTER</span>
+        </h1>
+      </div>
+      <div className="mx-[25%]">
+        <div className="flex md:flex-row flex-col items-center justify-center border border-white rounded-3xl gap-x-16 gap-y-8 py-20 border-opacity-10">
+          <button
+            onClick={() => {
+              router.push("/team/registration/join");
+            }}
+            className="flex cursor-pointer flex-row px-8 py-4 rounded-[30px] text-white text-[15px] lg:text-[20px] border border-yellow">
+            JOIN A TEAM
+          </button>
+          <div className="hidden md:block h-8 sm:h-12 md:h-16 w-1 bg-gray-400"></div>
+          <button
+            onClick={() => {
+              router.push("/team/registration/create");
+            }}
+            className="flex align-center cursor-pointer px-8 py-4 rounded-[30px] bg-yellow text-[12px] sm:text-[15px] lg:text-[20px]">
+            <p>CREATE A TEAM</p>
+          </button>
         </div>
-        <div className='mx-20 px-80'>
-          <div className='flex justify-center mt-8 border border-white rounded-3xl pl-20 pr-20 pt-10 pb-20 border-opacity-10 ' >
-            <button
-              onClick={()=>{
-                router.push("/team/registration/join");
-              }} 
-              className={`mt-12 flex cursor-pointer flex-row rounded-[30px] px-8 pt-4 text-white text-[12px] font-bold md:text-[15px] lg:text-[20px] border border-yellow ${manrope.className}`}>
-                JOIN A TEAM
-            </button>
-            <div className="w-20 "></div>
-            <div className="h-30 w-1 bg-gray-400 mx-4 mt-10"></div>
-            <div className="w-20"></div>
-            <button 
-              onClick={()=>{
-                router.push("/team/registration/create");
-              }} 
-              className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-bold md:text-[15px] lg:text-[20px] ${manrope.className}`}>
-                CREATE A TEAM
-            </button>
-          </div>
-        </div>
+      </div>
     </div>
+
   );
 };
 

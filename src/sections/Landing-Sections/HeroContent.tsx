@@ -32,7 +32,7 @@ const HeroContent = () => {
 
 	const handleClick = () => {
 		if (isPartOfTeam) router.push("/team");
-		else router.push("/team/join");
+		else router.push("/team/registration");
 	};
 
 	return (

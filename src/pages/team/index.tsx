@@ -25,7 +25,7 @@ const Index = () => {
       .then((res) => {
         if (res.statusCode == 400) {
           Toaster.error("You haven't joined any team yet.");
-          router.push("/team/join");
+          router.push("/team/registration");
         } else {
           setTeam(res.data);
           setLoading(false);
