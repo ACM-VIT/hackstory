@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
+import { NextPage } from 'next';
 
-const SubmitProject = () => {
+interface SubmitProjectState {
+  projectName: string;
+  selectedFile: File | null;
+  domain: string;
+}
+
+const SubmitProject: NextPage = () => {
   const [projectName, setProjectName] = useState("");
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [domain, setDomain] = useState("");
-  
+
   // Domain set as tags for testing.
-  const data = [
+  const data: string[] = [
     "Technology",
     "Innovation",
     "Programming",
@@ -14,8 +21,10 @@ const SubmitProject = () => {
     "Finance"
   ];
 
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files.length > 0) {
+      setSelectedFile(event.target.files[0]);
+    }
   };
 
   return (
@@ -30,16 +39,6 @@ const SubmitProject = () => {
             className='text-black'
             value={projectName}
             onChange={(e) => setProjectName(e.target.value)}
-            type='text'
-            autoComplete='new-password'
-          />
-        </div>
-        <div>
-          <p>Project Name</p>
-          <input
-            className='text-black'
-            value={projectName}
-            onChange={(e1) => setProjectName(e1.target.value)}
             type='text'
             autoComplete='new-password'
           />
