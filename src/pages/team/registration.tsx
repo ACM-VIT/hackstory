@@ -12,7 +12,7 @@ const Join = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const URL = `${process.env.NEXTAUTH_URL}/api/team/getTeamDetails`
+    const URL = `${process.env.NEXT_PUBLIC_API_URL}/api/team/getTeamDetails`
     getHandler(URL)
       .then((res) => {
         if (res.statusCode == 200) {
