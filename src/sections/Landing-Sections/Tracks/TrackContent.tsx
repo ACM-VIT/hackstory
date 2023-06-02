@@ -13,7 +13,7 @@ interface Track {
 const TrackContent = () => {
   const router = useRouter();
   const tracks: Track[] = [
-    { name: "FINTECH", data:{a:"Word Game", b:"BIG DATA", c:"SANDBOX", d:"REGTECH"} },
+    { name: "FINTECH", data:{a:"COMMERCE", b:"BIG DATA", c:"SANDBOX", d:"REGTECH"} },
     { name: "OPEN INNOVATION" , data:{a:"GAMIFICATION",b:"VISIONARY",c:"ENGAGING",d:"IMMERSIVE"}},
     { name: "HEALTH TECH", data:{a:"SOCIAL CAUSES",b:"UNREST",c:"BIAS",d:"DATASETS"} },
     { name: "MACHINE LEARNING" ,data:{a:"REVOLUTION",b:"INSPIRATION",c:"CREATION",d:"IMAGINATION"}},
