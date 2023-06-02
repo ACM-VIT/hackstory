@@ -21,32 +21,39 @@ const FAQPage = () => {
 	const faqs = [
 		{
 			question: "Who can participate in the HackStory Hackathon?",
-			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet mauris commodo quis imperdiet massa. Id donec ultrices tincidunt arcu non sodales neque sodales.",
+			answer: "Anyone and everyone on campus (sorry, fourth years) is welcome to participate regardless of their experience level. There is no registration fee, the event is absolutely free.",
 		},
 		{
-			question: "How will the  winners be selected? ",
-			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.",
+			question: "Is there a registration fee? ",
+			answer: "No, the event is absolutely free.",
 		},
 		{
-			question: "What are the hackathon dates?",
-			answer: "tortor id aliquet",
+			question: "Do I need prior coding experience to participate",
+			answer: "No, this is a fresher-friendly event and an opportunity for any tech, design and management enthusiast to learn and explore different domains.",
 		},
 		{
-			question: "How are winners contacted and paid the prizes??",
-			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet mauris commodo quis imperdiet massa.",
+			question: "How do I form a team?",
+			answer: "You can partner with your friends. If your friends ditch you like ours do, find teammates on our discord server and hack away.",
 		},
 		{
-			question: "Can I submit a previously created project?",
-			answer: "egestas dui id ornare",
+			question: "How long is the hackathon?",
+			answer: " HackStory ’23 is a 56 hour hackathon. Enjoy the company of your laptop, your friends and of course, us. Don’t worry, we do have plenty planned to keep you entertained.",
 		},
 		{
-			question: "Can I submit a previously created project?",
-			answer: "egestas dui id ornare",
+			question: "What should I bring to the hackathon?",
+			answer: "Your laptop, teammates and perhaps some coffee. Also, the narcissism of a winner.",
 		},
 		{
-			question:
-				"Are we allowed to form teams with our friends and colleagues?",
-			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			question:"What is the event flow of the hackathon?",
+			answer: "Head over to the timeline section for more details.",
+		},
+		{
+			question:"Whom should I contact for doubts and queries?",
+			answer: "Use the discord server to get in touch with our team for any queries.",
+		},
+		{
+			question:"When and where is the hack?",
+			answer: "HackStory’23 will be conducted from 4th June-6th June starting at 4 PM at Anna Auditorium.",
 		},
 	];
 
