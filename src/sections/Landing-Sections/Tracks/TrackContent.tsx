@@ -6,8 +6,16 @@ import TrackButtons from "./TrackButtons";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
+interface Data{
+  a: string;
+  b: string;
+  c: string;
+  d: string;
+}
+
 interface Track {
   name: string;
+  data: Data;
 }
 
 const TrackContent = () => {
