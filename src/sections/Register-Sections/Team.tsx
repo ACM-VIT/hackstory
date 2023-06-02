@@ -54,7 +54,7 @@ const Registration = () => {
 
 		const toaster = Toaster.startLoad();
 
-		const URL = `${DEV_BASE_URL}/api/team/create`;
+		const URL = `${process.env.NEXTAUTH_URL}/api/team/create`;
 
 		const res = await postHandler(URL, {
 			name: teamName,
@@ -74,7 +74,7 @@ const Registration = () => {
 
 		const toaster = Toaster.startLoad();
 
-		const URL = `${DEV_BASE_URL}/api/team/join`;
+		const URL = `${process.env.NEXTAUTH_URL}/api/team/join`;
 
 		const res = await postHandler(URL, {
 			teamCode: teamCode,

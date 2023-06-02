@@ -24,7 +24,7 @@ const HeroContent = () => {
 	useEffect(() => {
 		// just check if the isn't getting overloaded with the request of team check.
 		if (session) {
-			const URL = `${DEV_BASE_URL}/api/team/getTeamDetails`;
+			const URL = `${process.env.NEXTAUTH_URL}/api/team/getTeamDetails`;
 			getHandler(URL).then((res) => {
 				if (res.statusCode == 200) {
 					setIsPartOfTeam(true);

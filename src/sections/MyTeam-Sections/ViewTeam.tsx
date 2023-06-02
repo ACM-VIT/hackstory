@@ -26,7 +26,7 @@ const ViewTeam = ({ team }: Props) => {
 
   const handleLeave = async () => {
     const toaster = Toaster.startLoad("Leaving the Team.");
-    const URL = `${DEV_BASE_URL}/api/team/leave`;
+    const URL = `${process.env.NEXTAUTH_URL}/api/team/leave`;
     const res = await getHandler(URL);
     if (res.statusCode === 200) {
       Toaster.stopLoad(toaster, "Successfully left the Team", 1);
