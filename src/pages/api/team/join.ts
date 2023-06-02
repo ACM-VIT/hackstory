@@ -55,7 +55,7 @@ export default async function joinhandler(
         });
       }
 
-      if (team.members.length >= 3) {
+      if (team.members.length >= 4) {
         return res.status(400).json({
           message: "Team is full",
         });

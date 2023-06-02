@@ -149,6 +149,14 @@ const TrackContent = () => {
             </motion.div>
           ))}
         </div>
+        <div className="text-left">
+          <div className="rounded border-b border-t border-gray-300 border-opacity-10 px-4 py-6">
+            <button className={`flex w-full items-center justify-between focus:outline-none`}>
+              <span className={`pr-4 text-left text-lg font-semibold text-yellow sm:text-xl ${oswald.className}`}>OPEN INNOVATION</span>
+            </button>
+            <p className={`mr-36 pt-4 text-[#FFF6E8] ${manrope.className}`}>Let your creativity take over with Open Innovation. With no constraint on industry or technology, create the product of your choice in the domain of your choice. Feel free to solve any real-world problem that you feel needs addressing.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

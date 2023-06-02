@@ -72,9 +72,7 @@ export const TrackDrop = ({ title, answer }: Props) => {
           )}
         </motion.div>
       </div>
-	  <div>
-		OPEN INNOVATION
-	  </div>
+	  
     </div>	
   );
 };
