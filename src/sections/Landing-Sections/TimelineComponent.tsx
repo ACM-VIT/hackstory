@@ -130,24 +130,22 @@ const TimelineComponent = () => {
 						className="h-full w-full p-2 md:pl-16"
 					>
 						<h1 className="text-bold py-2 text-left text-2xl font-bold text-[#A7A9BE]">
-							Workshop Name
+							OPENING CEREMONY
 						</h1>
 						<div className="flex flex-col sm:flex-row sm:items-center">
 							<p className="text-left text-base text-[#E8E8EE] sm:mr-2">
-								June 5th 2023
+								June 4th 2023
 							</p>
 							<span className="hidden text-4xl text-[#E8E8EE] md:block">
 								|
 							</span>
 							<p className="text-left text-base text-[#E8E8EE] sm:ml-2">
-								4:00 pm - 7:00 pm
+								4:00 pm onwards
 							</p>
 						</div>
 
 						<p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+						Welcome to HackStory. Meet your competitors, roll up your sleeves and get ready to come up with revolutionising ideas.
 						</p>
 					</motion.div>
 				</motion.div>
@@ -162,7 +160,7 @@ const TimelineComponent = () => {
 						className="h-full w-full p-2 md:px-16"
 					>
 						<h1 className="text-bold py-2 text-right text-2xl font-bold text-[#A7A9BE]">
-							Workshop Name
+							REVIEW-1
 						</h1>
 						<div className="flex flex-col justify-end sm:flex-row sm:items-center">
 							<p className="text-right text-base text-[#E8E8EE] sm:mr-2">
@@ -172,13 +170,11 @@ const TimelineComponent = () => {
 								|
 							</span>
 							<p className="text-right text-base text-[#E8E8EE] sm:ml-2">
-								4:00 pm - 7:00 pm
+								10:00 am onwards
 							</p>
 						</div>
 						<p className="pt-5 text-right text-xs font-medium text-[#E8E8EE] sm:text-base">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+						Choose a track and start ideating, we’ll come by to take a look at your innovative ideas.
 						</p>
 					</motion.div>
 				</motion.div>
@@ -353,7 +349,7 @@ const TimelineComponent = () => {
 						className="h-full w-full p-2 md:pl-16"
 					>
 						<h1 className="text-bold py-2 text-left text-2xl font-bold text-[#A7A9BE]">
-							Workshop Name
+							UNLOCKING FINANCIAL SUCCESS
 						</h1>
 						<div className="flex flex-col sm:flex-row sm:items-center">
 							<p className="text-left text-base text-[#E8E8EE] sm:mr-2">
@@ -363,14 +359,12 @@ const TimelineComponent = () => {
 								|
 							</span>
 							<p className="text-left text-base text-[#E8E8EE] sm:ml-2">
-								4:00 pm - 7:00 pm
+								12:00 pm onwards
 							</p>
 						</div>
 
 						<p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+						Financial schemes seems daunting? Having monetary troubles? Bulls and Bears will make it easier for you.
 						</p>
 					</motion.div>
 				</motion.div>
@@ -385,7 +379,7 @@ const TimelineComponent = () => {
 						className="h-full w-full p-2 md:px-16"
 					>
 						<h1 className="text-bold py-2 text-right text-2xl font-bold text-[#A7A9BE]">
-							Workshop Name
+							REVIEW-2
 						</h1>
 						<div className="flex flex-col justify-end sm:flex-row sm:items-center">
 							<p className="text-right text-base text-[#E8E8EE] sm:mr-2">
@@ -395,13 +389,11 @@ const TimelineComponent = () => {
 								|
 							</span>
 							<p className="text-right text-base text-[#E8E8EE] sm:ml-2">
-								4:00 pm - 7:00 pm
+								6:00 pm onwards
 							</p>
 						</div>
 						<p className="pt-5 text-right text-xs font-medium text-[#E8E8EE] sm:text-base">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+						Is your coding game on? In this review we’ll check the uniqueness, individuality and progress of your project.
 						</p>
 					</motion.div>
 				</motion.div>
@@ -576,24 +568,22 @@ const TimelineComponent = () => {
 						className="h-full w-full p-2 md:pl-16"
 					>
 						<h1 className="text-bold py-2 text-left text-2xl font-bold text-[#A7A9BE]">
-							Workshop Name
+							FROM IDEAS TO INFLUENCE
 						</h1>
 						<div className="flex flex-col sm:flex-row sm:items-center">
 							<p className="text-left text-base text-[#E8E8EE] sm:mr-2">
-								June 5th 2023
+								June 6th 2023
 							</p>
 							<span className="hidden text-4xl text-[#E8E8EE] md:block">
 								|
 							</span>
 							<p className="text-left text-base text-[#E8E8EE] sm:ml-2">
-								4:00 pm - 7:00 pm
+								11:00 am onwards
 							</p>
 						</div>
 
 						<p className="pt-5 text-left text-xs font-medium text-[#E8E8EE] sm:text-base">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+						Have a groundbreaking product or a startup idea but don’t know how to go ahead with it? Learn it from our experienced speakers.
 						</p>
 					</motion.div>
 				</motion.div>
@@ -608,23 +598,21 @@ const TimelineComponent = () => {
 						className="h-full w-full p-2 md:px-16"
 					>
 						<h1 className="text-bold py-2 text-right text-2xl font-bold text-[#A7A9BE]">
-							Workshop Name
+							REVIEW-3
 						</h1>
 						<div className="flex flex-col justify-end sm:flex-row sm:items-center">
 							<p className="text-right text-base text-[#E8E8EE] sm:mr-2">
-								June 5th 2023
+								June 6th 2023
 							</p>
 							<span className="hidden text-4xl text-[#E8E8EE] md:block">
 								|
 							</span>
 							<p className="text-right text-base text-[#E8E8EE] sm:ml-2">
-								4:00 pm - 7:00 pm
+								12:00 pm onwards
 							</p>
 						</div>
 						<p className="pt-5 text-right text-xs font-medium text-[#E8E8EE] sm:text-base">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+						Only the top 10 teams will advance to the final showdown.
 						</p>
 					</motion.div>
 				</motion.div>
