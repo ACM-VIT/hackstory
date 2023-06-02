@@ -112,7 +112,7 @@ const Clubs = () => {
 						<ClubDrop
 							title="ASSOCIATION OF COMPUTING MACHINERY"
 							num={4}
-							text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo praesentium nulla ea accusamus atque voluptatem necessitatibus magni modi ducimus? Dolore."
+							text="ACM-VIT, one of the most reputed and distinguished technical chapter in VIT, Vellore has been working with vision and determination since it’s inception in 2009, with the aspirations of advancement of computer science as a science and a profession. We are not just an organization, we are a family, united by one cause, working towards making technology more accessible much like our parent organization, ACM."
 							open={key4}
 						/>
 					</div>
