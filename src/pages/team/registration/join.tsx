@@ -2,9 +2,10 @@ import Header from "@/components/Common/Header";
 import postHandler from "@/handlers/postHandler";
 import { Manrope, Oswald } from "next/font/google";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Toaster from "@/utils/toaster";
 import { DEV_BASE_URL } from "@/constants";
+import getHandler from "@/handlers/getHandler";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const oswald = Oswald({ subsets: ["latin"] });
@@ -13,6 +14,21 @@ const Join = () => {
 	const [teamCode, setTeamCode] = useState("");
 
 	const router = useRouter();
+
+	useEffect(() => {
+		const URL = `${DEV_BASE_URL}/api/team/getTeamDetails`
+		getHandler(URL)
+		  .then((res) => {
+			if (res.statusCode == 200) {
+			  Toaster.error("You are already a part of a team.");
+			  router.push("/team");
+			}
+		  })
+		  .catch((err) => {
+			Toaster.error("Internal Server Error");
+			console.log(err);
+		  });
+	  }, []);
 
 	const handleJoin = async () => {
 		if (teamCode.trim() === "") {
