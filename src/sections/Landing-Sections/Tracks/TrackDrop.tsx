@@ -45,7 +45,7 @@ export const TrackDrop = ({ title, answer }: Props) => {
             <button className={`flex w-full items-center justify-between focus:outline-none ${manrope.className}`}>
               <span className="pr-4 text-left text-lg font-semibold text-white sm:text-xl">{title}</span>
             </button>
-            <p className={`mr-20 pt-4 text-[#FFF6E8] ${manrope.className}`} dangerouslySetInnerHTML={{ __html: answer }}></p>
+            <p className={`md:mr-20 pt-4 text-[#FFF6E8] ${manrope.className}`} dangerouslySetInnerHTML={{ __html: answer }}></p>
           </div>
         </div>
       </div>

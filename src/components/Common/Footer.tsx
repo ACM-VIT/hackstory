@@ -34,11 +34,11 @@ const Footer = () => {
             <text className={`text-white font-bold text-[1.5rem] lg:text-[2rem] gap-6 ${oswald.className}`}>
             FOLLOW US ON
             </text>
-            <div className={`flex flex-col text-left sm:text-right text-[1.rem] font-normal gap-1 pt-8 text-[#A7A9BE] hover:underline ${manrope.className}`}>
-            <a href="https://csivit.com/">csivit.com</a>
-            <a href="#">csivit.com</a>
-            <a href="#">csivit.com</a>
-            <a href="#">csivit.com</a>
+            <div className={`flex flex-col text-left sm:text-right text-[1rem] font-semibold gap-1 pt-8 text-[#A7A9BE]  ${manrope.className}`}>
+            <a className="hover:underline" href="https://instagram.com/csivitu">CSI VIT</a>
+            <a className="hover:underline" href="https://instagram.com/vitdebsoc">DEBSOC VIT</a>
+            <a className="hover:underline" href="https://instagram.com/bullsandbears_vit">BULLS AND BEARS VIT</a>
+            <a className="hover:underline" href="https://instagram.com/acmvit">ACM VIT</a>
             </div >
           </div>
       </div> 

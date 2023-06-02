@@ -102,25 +102,17 @@ const FAQPage = () => {
 								<span className="pr-4 text-left text-base font-semibold text-white sm:text-lg">
 									{faq.question}
 								</span>
-								{/* <motion.span
-									key={index}
+								<motion.span
 									variants={{
 										open: { rotate: 180 },
 										closed: { rotate: 0 },
 									}}
 									transition={{ duration: 0.2 }}
 									style={{ originY: 0.55 }}
-									className="text-lg text-white"
+									className="sm:text-2xl text-lg text-white"
 								>
-									<svg
-										fill="#A7A9BE"
-										width="15"
-										height="15"
-										viewBox="0 0 20 20"
-									>
-										<path d="M0 7 L 20 7 L 10 16" />
-									</svg>
-								</motion.span> */}
+									{activeIndex === index ? "-" : "+"}
+								</motion.span>
 							</motion.button>
 							{activeIndex === index && (
 								<div className={`mt-2 pt-2`}>

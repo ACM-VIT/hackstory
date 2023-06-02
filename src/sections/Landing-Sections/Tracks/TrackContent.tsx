@@ -110,7 +110,7 @@ const TrackContent = () => {
                 onClick={() => toggleAccordion(index)}
                 className="flex w-full items-center justify-between  focus:outline-none"
               >
-                <div className="text-left  font-bold  flex flex-col gap-y-4 pr-16 sm:pr-36">
+                <div className="text-left  font-bold  flex flex-col gap-y-4 pr-12 sm:pr-36">
                   <div>
                     <p className={`text-3xl lg:text-2xl text-yellow ${oswald.className}`}>{track.name}</p>
                     <p className={`text-lg text-[#A7A9BE] ${manrope.className}`}>{track.description}</p>
@@ -127,14 +127,14 @@ const TrackContent = () => {
                   className="text-lg text-white"
                 >
                   {trackOpenState[index] ? (
-                    <svg fill="#A7A9BE" width="20" height="20" viewBox="0 0 20 20" style={{ transform: 'rotate(135deg)' }}>
-                    <path d="M0 7 L 20 7 L 10 13" />
-                  </svg>
+                    <p className="sm:text-[45px] text-[20pxx] rotate-[135deg]">
+                      -
+                    </p>
                   
                   ) : (
-                    <svg fill="#A7A9BE" width="20" height="20" viewBox="0 0 20 20">
-                      <path d="M0 7 L 20 7 L 10 13" />
-                    </svg>
+                    <p className="sm:text-[45px] text-[20px]"> 
+                      +
+                    </p>
                   )}
                 </motion.span>
               </motion.button>
@@ -152,9 +152,9 @@ const TrackContent = () => {
         <div className="text-left">
           <div className="rounded border-b border-t border-gray-300 border-opacity-10 px-4 py-6">
             <button className={`flex w-full items-center justify-between focus:outline-none`}>
-              <span className={`pr-4 text-left text-lg font-semibold text-yellow sm:text-xl ${oswald.className}`}>OPEN INNOVATION</span>
+              <span className={`pr-4 text-left text-3xl font-semibold text-yellow lg:text-2xl ${oswald.className}`}>OPEN INNOVATION</span>
             </button>
-            <p className={`mr-36 pt-4 text-[#FFF6E8] ${manrope.className}`}>Let your creativity take over with Open Innovation. With no constraint on industry or technology, create the product of your choice in the domain of your choice. Feel free to solve any real-world problem that you feel needs addressing.</p>
+            <p className={`md:mr-36 text-[#A7A9BE] text-[18px] font-extrabold ${manrope.className}`}>Let your creativity take over with Open Innovation. With no constraint on industry or technology, create the product of your choice in the domain of your choice. Feel free to solve any real-world problem that you feel needs addressing.</p>
           </div>
         </div>
       </div>

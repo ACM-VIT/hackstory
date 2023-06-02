@@ -113,78 +113,78 @@ const Header = () => {
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
-							<a
+							<Link
 								href="#prizes"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								PRIZES
-							</a>
+							</Link>
 						</motion.li>
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
-							<a
-								href="#tracks"
+							<Link
+								href="/#tracks"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TRACKS
-							</a>
+							</Link>
 						</motion.li>
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
-							<a
-								href="#timeline"
+							<Link
+								href="/#timeline"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TIMELINE
-							</a>
+							</Link>
 						</motion.li>
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
-							<a
-								href="#about"
+							<Link
+								href="/#about"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT HACK
-							</a>
+							</Link>
 						</motion.li>
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
-							<a
-								href="#partnership"
+							<Link
+								href="/#partnership"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								SPONSORS
-							</a>
+							</Link>
 						</motion.li>
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
-							<a
-								href="#clubs"
+							<Link
+								href="/#clubs"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT CLUBS
-							</a>
+							</Link>
 						</motion.li>
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
 						>
-							<a
-								href="#faqs"
+							<Link
+								href="/#faqs"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								FAQs
-							</a>
+							</Link>
 						</motion.li>
 					</motion.ul>
 					<ul
@@ -192,60 +192,60 @@ const Header = () => {
 					>
 						<Image className="xl:mr-48 cursor-pointer" onClick={()=>router.push("/")} src="/logo.svg" alt="HS" width={50} height={50}/>
 						<li>
-							<a
-								href="#about"
+							<Link
+								href="/#about"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT HACK
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#clubs"
+							<Link
+								href="/#clubs"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT CLUBS
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#timeline"
+							<Link
+								href="/#timeline"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TIMELINE
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#tracks"
+							<Link
+								href="/#tracks"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TRACKS
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#prizes"
+							<Link
+								href="/#prizes"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								PRIZES
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#partnership"
+							<Link
+								href="/#partnership"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								SPONSORS
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#faqs"
+							<Link
+								href="/#faqs"
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								FAQs
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</nav>
