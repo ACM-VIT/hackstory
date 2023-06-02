@@ -92,12 +92,13 @@ const FAQPage = () => {
 							initial={false}
 							animate={open ? "open" : "closed"}
 							key={index}
+							onClick={() => toggleAccordion(index)}
 							className="rounded border-b border-t border-gray-300 border-opacity-10 px-4 py-6"
 						>
 							<motion.button
 								whileTap={{ scale: 0.97 }}
 								className="flex w-full items-center justify-between focus:outline-none"
-								onClick={() => toggleAccordion(index)}
+								
 							>
 								<span className="pr-4 text-left text-base font-semibold text-white sm:text-lg">
 									{faq.question}
@@ -114,13 +115,13 @@ const FAQPage = () => {
 									{activeIndex === index ? "-" : "+"}
 								</motion.span>
 							</motion.button>
-							{activeIndex === index && (
-								<div className={`mt-2 pt-2`}>
-									<p className="text-30px mt-4 text-white ">
-										{faq.answer}
-									</p>
-								</div>
-							)}
+								{activeIndex === index && (
+									<div className={`mt-2 pt-2`}>
+										<p className="text-30px mt-4 text-white ">
+											{faq.answer}
+										</p>
+									</div>
+								)}
 						</motion.div>
 					))}
 				</div>

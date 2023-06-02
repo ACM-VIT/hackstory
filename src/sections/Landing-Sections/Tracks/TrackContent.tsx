@@ -100,6 +100,7 @@ const TrackContent = () => {
         <div className="">
           {tracks.map((track, index) => (
             <motion.div
+              onClick={() => toggleAccordion(index)} 
               initial={false}
               animate={trackOpenState[index] ? "open" : "closed"}
               key={index}
@@ -107,7 +108,6 @@ const TrackContent = () => {
             >
               <motion.button
                 whileTap={{ scale: 0.97 }}
-                onClick={() => toggleAccordion(index)}
                 className="flex w-full items-center justify-between  focus:outline-none"
               >
                 <div className="text-left  font-bold  flex flex-col gap-y-4 pr-12 sm:pr-36">
