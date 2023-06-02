@@ -94,7 +94,7 @@ const HeroContent = () => {
 							VIEW TEAM
 						</div>
 						<div
-							className={`flex cursor-pointer flex-row rounded-[30px] bg-[#FFCCDE] px-12 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
+							className={`flex cursor-pointer flex-row rounded-[30px] bg-[#FFCCDE] hidden px-12 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
 							onClick={handleRSVP}
 						>
 							RSVP

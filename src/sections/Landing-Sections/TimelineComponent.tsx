@@ -708,6 +708,7 @@ const TimelineComponent = () => {
 				<div className="col-span-4 h-full w-full">
 					<div className="flex justify-end pt-24 sm:w-full sm:pt-0 md:pl-28 lg:pl-56"></div>
 				</div>
+				
 			</div>
 		</>
 	);

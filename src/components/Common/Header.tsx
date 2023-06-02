@@ -1,6 +1,9 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
+import { useRouter } from "next/router";
+
 
 const navVariants = {
 	open: {
@@ -39,6 +42,8 @@ const Path = (props: any) => (
 );
 
 const Header = () => {
+	const router = useRouter();
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const handleMenuToggle = () => {
@@ -185,14 +190,7 @@ const Header = () => {
 					<ul
 						className={`mt-4 flex flex-col items-center gap-y-4 max-lg:hidden lg:mt-0 lg:flex-row lg:space-x-12`}
 					>
-						<li>
-							<Link
-								href="/"
-								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
-							>
-								HOME
-							</Link>
-						</li>
+						<Image className="xl:mr-48 cursor-pointer" onClick={()=>router.push("/")} src="/logo.svg" alt="HS" width={50} height={50}/>
 						<li>
 							<a
 								href="#about"
