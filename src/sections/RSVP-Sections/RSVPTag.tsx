@@ -12,13 +12,13 @@ const RSVPTag = () => {
             className="focus:shadow-outline w-[1/3] rounded bg-purple-500 px-20 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none"
             type="button"
           >
-            Yes i&apos;ll be there :{`)`}
+            {"Yes I'll be there :)"}
           </button>
           <button
             className="focus:shadow-outline w-[1/3] rounded bg-purple-500 px-20 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none"
             type="button"
           >
-            Nope won&apos;t make it :{`(`}
+            {"Nope won't be able to make it :("}
           </button>
         </div>
       </div>

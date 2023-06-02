@@ -38,6 +38,10 @@ const HeroContent = () => {
 		else router.push("/team/registration");
 	};
 
+	const handleRSVP = () => {
+		if (isPartOfTeam) router.push("/team/rsvp");
+	}
+
 	return (
 		<div className="flex flex-col items-center justify-center gap-y-6 px-16  pt-36 max-md:pt-16">
 			<div className="flex flex-col gap-y-4">
@@ -82,12 +86,21 @@ const HeroContent = () => {
 
 			{session ? (
 				isPartOfTeam ? (
-					<div
-						className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
-						onClick={handleClick}
-					>
-						VIEW TEAM
+					<div className="mt-12 flex sm:flex-row flex-col gap-x-8 gap-y-4">
+						<div
+							className={`flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
+							onClick={handleClick}
+						>
+							VIEW TEAM
+						</div>
+						<div
+							className={`flex cursor-pointer flex-row rounded-[30px] bg-[#FFCCDE] px-12 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
+							onClick={handleRSVP}
+						>
+							RSVP
+						</div>
 					</div>
+					
 				) : (
 					<div
 						className={`mt-12 flex cursor-pointer flex-row rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-extrabold md:text-[15px] lg:text-[20px] ${manrope.className}`}
