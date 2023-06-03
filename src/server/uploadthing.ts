@@ -2,6 +2,7 @@ import { createUploadthing, type FileRouter } from "uploadthing/next-legacy";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./auth";
 import { NextApiRequest, NextApiResponse } from "next";
+import { prisma } from "./db";
 
 const f = createUploadthing();
 
@@ -19,8 +20,13 @@ export const fileUploadRouter = {
       };
     })
     .onUploadComplete(async ({ metadata, file }) => {
-      console.log(metadata);
-      console.log(file);
+      const { userId } = metadata;
+
+      const user = await prisma.user.findUnique({
+        where: {
+          id: userId,
+        },
+      });
     }),
 } satisfies FileRouter;
 
