@@ -127,14 +127,20 @@ const TrackContent = () => {
                   className="text-lg text-white"
                 >
                   {trackOpenState[index] ? (
-                    <p className="sm:text-[45px] text-[20pxx] rotate-[135deg]">
-                      -
-                    </p>
+                    <div onClick={toggleAccordion}>
+                      <p className="sm:text-[45px] text-[20pxx] rotate-[135deg]">
+                        -
+                      </p>
+                    </div>
+                    
                   
                   ) : (
-                    <p className="sm:text-[45px] text-[20px]"> 
-                      +
-                    </p>
+                    <div onClick={toggleAccordion}>
+                      <p className="sm:text-[45px] text-[20px]"> 
+                        +
+                      </p>
+                    </div>
+                    
                   )}
                 </motion.span>
               </motion.button>
