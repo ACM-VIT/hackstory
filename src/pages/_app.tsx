@@ -4,6 +4,8 @@ import { SessionProvider } from "next-auth/react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Head from "next/head"; // Import the Head component
+
 import "@/styles/globals.css";
 
 const MyApp: AppType<{ session: Session | null }> = ({
@@ -12,6 +14,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
+      <Head>
+        <title>HackStory</title> {/* Update the title to "HackStory" */}
+      </Head>
       <ToastContainer />
       <Component {...pageProps} />
     </SessionProvider>
