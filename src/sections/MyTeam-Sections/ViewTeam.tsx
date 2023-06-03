@@ -35,6 +35,11 @@ const ViewTeam = ({ team }: Props) => {
       Toaster.stopLoad(toaster, res.data.message, 0);
     }
   };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(team.code);
+    Toaster.success("Code copied to clipboard!");
+  };
   
 
   return (
@@ -75,6 +80,16 @@ const ViewTeam = ({ team }: Props) => {
           <div className={`pr-10  py-4 ${oswald.className} sm:text-2xl text-xl flex sm:flex-row flex-col gap-1`}>
             <p>{"Team Code :"}</p>
             <p>{team.code}</p>
+            <button className={`sm:ml-8  max-w-[2.5rem] py-1 flex justify-center rounded-[30px]`} onClick={copyToClipboard}>
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M3 16V4C3 2.89543 3.89543 2 5 2H15M9 22H18C19.1046 22 20 21.1046 20 20V8C20 6.89543 19.1046 6 18 6H9C7.89543 6 7 6.89543 7 8V20C7 21.1046 7.89543 22 9 22Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                </g>
+              </svg>
+            </button>
+
           </div>
           <div>
             <a 

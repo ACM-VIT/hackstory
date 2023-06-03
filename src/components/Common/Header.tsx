@@ -54,7 +54,7 @@ const Header = () => {
 		<motion.div
 			initial={false}
 			animate={isMenuOpen ? "open" : "closed"}
-			className="mx-auto border-[#2E2E2E] px-8 py-10 lg:border-b-[1px]"
+			className="mx-auto border-[#2E2E2E] px-8 py-5 lg:border-b-[1px]"
 		>
 			<div className="flex flex-col justify-center lg:flex-row lg:items-center">
 				<div className="">
@@ -104,6 +104,7 @@ const Header = () => {
 						>
 							<Link
 								href="/"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								HOME
@@ -114,40 +115,8 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<Link
-								href="#prizes"
-								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
-							>
-								PRIZES
-							</Link>
-						</motion.li>
-						<motion.li
-							variants={liVariants}
-							whileTap={{ scale: 0.95 }}
-						>
-							<Link
-								href="/#tracks"
-								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
-							>
-								TRACKS
-							</Link>
-						</motion.li>
-						<motion.li
-							variants={liVariants}
-							whileTap={{ scale: 0.95 }}
-						>
-							<Link
-								href="/#timeline"
-								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
-							>
-								TIMELINE
-							</Link>
-						</motion.li>
-						<motion.li
-							variants={liVariants}
-							whileTap={{ scale: 0.95 }}
-						>
-							<Link
 								href="/#about"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT HACK
@@ -158,18 +127,8 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<Link
-								href="/#partnership"
-								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
-							>
-								SPONSORS
-							</Link>
-						</motion.li>
-						<motion.li
-							variants={liVariants}
-							whileTap={{ scale: 0.95 }}
-						>
-							<Link
 								href="/#clubs"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT CLUBS
@@ -180,7 +139,57 @@ const Header = () => {
 							whileTap={{ scale: 0.95 }}
 						>
 							<Link
+								href="/#timeline"
+								scroll={false}
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								TIMELINE
+							</Link>
+						</motion.li>
+						<motion.li
+							variants={liVariants}
+							whileTap={{ scale: 0.95 }}
+						>
+							<Link
+								href="/#tracks"
+								scroll={false}
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								TRACKS
+							</Link>
+						</motion.li>
+						<motion.li
+							variants={liVariants}
+							whileTap={{ scale: 0.95 }}
+						>
+							<Link
+								href="/#prizes"
+								scroll={false}
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								PRIZES
+							</Link>
+						</motion.li>
+						<motion.li
+							variants={liVariants}
+							whileTap={{ scale: 0.95 }}
+						>
+							<Link
+								href="/#partnership"
+								scroll={false}
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								SPONSORS
+							</Link>
+						</motion.li>
+						
+						<motion.li
+							variants={liVariants}
+							whileTap={{ scale: 0.95 }}
+						>
+							<Link
 								href="/#faqs"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								FAQs
@@ -194,6 +203,7 @@ const Header = () => {
 						<li>
 							<Link
 								href="/#about"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT HACK
@@ -202,6 +212,7 @@ const Header = () => {
 						<li>
 							<Link
 								href="/#clubs"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								ABOUT CLUBS
@@ -210,6 +221,7 @@ const Header = () => {
 						<li>
 							<Link
 								href="/#timeline"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TIMELINE
@@ -218,6 +230,7 @@ const Header = () => {
 						<li>
 							<Link
 								href="/#tracks"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								TRACKS
@@ -226,6 +239,7 @@ const Header = () => {
 						<li>
 							<Link
 								href="/#prizes"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								PRIZES
@@ -234,6 +248,7 @@ const Header = () => {
 						<li>
 							<Link
 								href="/#partnership"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								SPONSORS
@@ -242,6 +257,7 @@ const Header = () => {
 						<li>
 							<Link
 								href="/#faqs"
+								scroll={false}
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								FAQs

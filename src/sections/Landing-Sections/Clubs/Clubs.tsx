@@ -44,7 +44,7 @@ const Clubs = () => {
 		<div className="mb-[25vh] mt-[25vh] flex  justify-center">
 			<div className="container flex w-[80vw] justify-between gap-[5vw] text-center max-lg:flex-col max-lg:gap-[5vh]">
 				<div
-					className={`max-w-[60vw] self-center justify-self-center text-center lg:max-w-[35vw] lg:self-start lg:justify-self-start`}
+					className={`max-w-[90vw] self-center justify-self-center text-center lg:max-w-[35vw] lg:self-start lg:justify-self-start`}
 				>
 					<div className=" flex justify-center  text-center text-[#FFF6E8]">
 						<h1 className={`text-left sm:text-4xl text-3xl font-semibold leading-[3.5rem] ${oswald.className}`}>

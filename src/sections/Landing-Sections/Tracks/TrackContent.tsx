@@ -127,14 +127,16 @@ const TrackContent = () => {
                   className="text-lg text-white"
                 >
                   {trackOpenState[index] ? (
-                    <p className="sm:text-[45px] text-[20pxx] rotate-[135deg]">
-                      -
-                    </p>
+                      <p className="sm:text-[45px] text-[20pxx] rotate-[135deg]">
+                        -
+                      </p>
+                    
                   
                   ) : (
-                    <p className="sm:text-[45px] text-[20px]"> 
-                      +
-                    </p>
+                      <p className="sm:text-[45px] text-[20px]"> 
+                        +
+                      </p>
+                    
                   )}
                 </motion.span>
               </motion.button>

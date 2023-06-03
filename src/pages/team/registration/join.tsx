@@ -55,11 +55,11 @@ const Join = () => {
 			<div className="">
 				<div className=" md:z-1 flex flex-col gap-y-12">
 					<div
-						className={`ml-10 mr-10 mt-24 max-w-[20rem] rounded-[10px] bg-title py-4 pl-4 text-xl font-bold text-black sm:pl-16 lg:ml-20 xl:ml-36 ${manrope.className}`}
+						className={`ml-10 mr-10 mt-24 max-w-[20rem] rounded-[10px] bg-title py-4 pl-4 text-xl font-bold text-black sm:pl-16 lg:ml-20 xl:ml-20 ${manrope.className}`}
 					>
 						Hey, Participant
 					</div>
-					<div className="z-1 ml-10 mr-[20%] w-[80%] rounded-[20px] bg-title lg:ml-20 xl:ml-36">
+					<div className="z-1 ml-10 mr-[20%] w-[80%] rounded-[20px] bg-title lg:ml-20 xl:ml-20">
 						<div className="flex flex-col items-center justify-between gap-y-4 border-b border-yellow  py-4 text-center font-bold md:flex-row md:px-12 md:text-left lg:px-20">
 							<p
 								className={`${oswald.className} px-2 text-[20px]`}
@@ -99,7 +99,7 @@ const Join = () => {
 						</form>
 					</div>
 				</div>
-				<div className="absolute ml-10 mt-10 hidden flex-col rounded-[2rem] border-2 border-black bg-[#FFF6E8] px-5 py-2 font-bold text-black sm:block sm:px-10 sm:py-4 md:z-10 lg:left-[55%] lg:mt-[-5%] xl:left-[65%] xl:mt-[-5%] 2xl:left-[70%] 2xl:mt-[-5%]  ">
+				<div className="absolute ml-10 mt-10 hidden flex-col rounded-[2rem] border-2 border-black bg-[#FFF6E8] px-5 py-2 font-bold text-black sm:block sm:px-10 sm:py-4 md:z-10 lg:left-[55%] lg:mt-[-5%] xl:left-[60%] xl:mt-[-5%] 2xl:left-[65%] 2xl:mt-[-5%]  ">
 					<div className="flex flex-col text-left leading-[2rem]">
 						TAGS
 					</div>
