@@ -24,14 +24,25 @@ model Team {
   Submission Submission[]
 }
 
+model SubmittedFile {
+  id           String      @id @default(cuid())
+  fileName     String
+  fileUrl      String
+  Submission   Submission? @relation(fields: [submissionId], references: [id])
+  submissionId String?
+
+  @@index([submissionId])
+}
+
 model Submission {
-  id          String   @id @default(cuid())
+  id          String          @id @default(cuid())
   submittedAt DateTime
   projectLink String
-  status      Round    @default(ROUND_1)
+  status      Round           @default(ROUND_1)
   feedback    String?
-  team        Team     @relation(fields: [teamId], references: [id])
+  team        Team            @relation(fields: [teamId], references: [id])
   teamId      String
+  files       SubmittedFile[]
 
   @@index([teamId])
 }
