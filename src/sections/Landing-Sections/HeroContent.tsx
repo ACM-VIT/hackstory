@@ -8,6 +8,8 @@ import { Alfa_Slab_One, Manrope } from "next/font/google";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { lookup } from "dns";
+import Toaster from "@/utils/toaster";
+
 
 const manrope = Manrope({ subsets: ["latin"] });
 const alfaSlabOne = Alfa_Slab_One({
@@ -34,8 +36,15 @@ const HeroContent = () => {
 	}, [session]);
 
 	const handleClick = () => {
-		if (isPartOfTeam) router.push("/team");
-		else router.push("/team/registration");
+		const toaster = Toaster.startLoad("Loading..."); 
+		if (isPartOfTeam){
+			Toaster.stopLoad(toaster, "Loading...", 1);
+			router.push("/team");
+		}
+		else {
+			Toaster.stopLoad(toaster, "Loading...", 1);
+			router.push("/team/registration");
+		}
 	};
 
 	const handleRSVP = () => {
