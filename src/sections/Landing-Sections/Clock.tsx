@@ -55,7 +55,7 @@ const Clock = () => {
 						>
 							REGISTER NOW
 						</div> */}
-						{session ? (
+						{/* {session ? (
 							isPartOfTeam ? (
 								<div
 									className={`mt-12 flex max-w-[15rem] cursor-pointer flex-row justify-center rounded-[30px] bg-yellow px-4 py-2 text-[18px] font-bold text-[#121212] max-lg:mt-6 sm:px-8 sm:py-4 lg:h-16 lg:w-56 lg:text-[20px] ${manrope.className}`}
@@ -78,7 +78,7 @@ const Clock = () => {
 							>
 								REGISTER NOW
 							</div>
-						)}
+						)} */}
 					</div>
 				</div>
 				<div className="items-center justify-center rounded-2xl border border-[#A7A9BE] p-6 text-center text-xl font-bold text-[#A7A9BE] sm:text-2xl  lg:p-12">
