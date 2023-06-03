@@ -71,7 +71,7 @@ const FAQPage = () => {
 		<div className="flex w-[100vw] items-center justify-center lg:py-20 lg:pb-8 lg:pl-8 ">
 			<div className="w-[80vw]">
 				<div>
-					<div className="absolute  left-[25vw] mt-[-10vh] max-lg:mt-0">
+					{/* <div className="absolute  left-[25vw] mt-[-10vh] max-lg:mt-0">
 						<Image
 							className="w-[140px] max-lg:w-[80px]"
 							src="/faq-doodle.svg"
@@ -79,7 +79,7 @@ const FAQPage = () => {
 							height={10000}
 							alt="faq-doodle"
 						/>
-					</div>
+					</div> */}
 					<h1
 						className={`relative z-10 mb-4 text-center text-5xl font-bold text-[#FFF6E8]  max-lg:text-4xl ${oswald.className}`}
 					>

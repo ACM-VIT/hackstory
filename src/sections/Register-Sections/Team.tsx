@@ -109,7 +109,7 @@ const Registration = () => {
 				whileInView="onscreen"
 				viewport={{ once: true }}
 			>
-				<div className="h-contain flex scale-75 flex-col gap-y-12 lg:h-[83vh] z-10">
+				<div className="h-contain relative z-10 flex scale-75 flex-col gap-y-12 lg:h-[83vh]">
 					<div className="flex flex-col">
 						<h1
 							className={`px-12 pb-2 text-left text-3xl font-bold text-white sm:text-center lg:text-5xl ${oswald.className}`}
@@ -126,11 +126,11 @@ const Registration = () => {
 							<span className="text-yellow"> NEXT CHAPTER</span>
 						</h1>
 					</div>
-					<div className="xl:mx-[25%] md:mx-[15%] mx-[10%]">
+					<div className="mx-[10%] md:mx-[15%] xl:mx-[25%]">
 						<div className="flex flex-col items-center justify-center gap-x-16 gap-y-8 rounded-3xl border border-white border-opacity-10 py-20 md:flex-row">
 							<button
 								onClick={() => {
-									router.push("/team/registration/join")
+									router.push("/team/registration/join");
 								}}
 								className={`flex cursor-pointer flex-row rounded-[30px] border border-yellow px-8 py-4 text-[15px] font-bold text-white lg:text-[20px] ${manrope.className}`}
 							>
@@ -138,8 +138,8 @@ const Registration = () => {
 							</button>
 							<div className="hidden h-8 w-1 bg-gray-400 sm:h-12 md:block md:h-16"></div>
 							<button
-								onClick={()=>{
-									router.push("/team/registration/create")
+								onClick={() => {
+									router.push("/team/registration/create");
 								}}
 								className={`align-center flex cursor-pointer rounded-[30px] bg-yellow px-8 py-4 text-[15px] font-bold sm:text-[15px] lg:text-[20px] ${manrope.className}`}
 							>
@@ -150,7 +150,7 @@ const Registration = () => {
 				</div>
 				<motion.div
 					variants={rocketVariants}
-					className="absolute bottom-0 left-0 hidden sm:block"
+					className="absolute bottom-0 left-0 "
 				>
 					<Image
 						className="w-[340px]"
