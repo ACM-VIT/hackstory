@@ -54,7 +54,7 @@ const Header = () => {
 		<motion.div
 			initial={false}
 			animate={isMenuOpen ? "open" : "closed"}
-			className="mx-auto border-[#2E2E2E] px-8 py-10 lg:border-b-[1px]"
+			className="mx-auto border-[#2E2E2E] px-8 py-5 lg:border-b-[1px]"
 		>
 			<div className="flex flex-col justify-center lg:flex-row lg:items-center">
 				<div className="">
