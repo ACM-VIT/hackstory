@@ -37,7 +37,7 @@ const About = () => {
 					Join us at HackStory ‘23, where innovation takes center
 					stage. Get ready to apply your talents to solve real-world
 					problems and provide innovative solutions. Computer Society
-					Of India (CSI), Association of Computing Machinery (ACM),
+					Of India (CSI), Association for Computing Machinery (ACM),
 					Debate Society and Bulls and Bears (BnB) have come together,
 					bringing their own niche to present to you the hackathon of
 					the year. With tracks ranging from FinTech to ML in social
