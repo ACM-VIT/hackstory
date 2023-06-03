@@ -48,7 +48,7 @@ const HeroContent = () => {
 				<div
 					className={`text-timelineheading text-md relative z-10 font-bold md:text-xl lg:text-2xl ${manrope.className} text-tracks max-lg:text-center`}
 				>
-					JUNE 5TH-7TH 2023
+					JUNE 4TH-6TH 2023
 				</div>
 
 				<div
