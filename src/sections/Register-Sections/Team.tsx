@@ -44,8 +44,6 @@ const Registration = () => {
 		setCreateTeamOpen(false);
 	};
 
-	const router = useRouter();
-
 	const handleCreate = async () => {
 		if (teamName.trim() === "") {
 			Toaster.error("Team name cannot be empty");
@@ -85,6 +83,8 @@ const Registration = () => {
 			router.push("/team");
 		} else Toaster.stopLoad(toaster, res.data.message, 0);
 	};
+
+	const router = useRouter();
 
 	const rocketVariants: Variants = {
 		offscreen: {
@@ -130,7 +130,7 @@ const Registration = () => {
 						<div className="flex flex-col items-center justify-center gap-x-16 gap-y-8 rounded-3xl border border-white border-opacity-10 py-20 md:flex-row">
 							<button
 								onClick={() => {
-									router.push("/team/registration/join");
+									router.push("/team/registration/join")
 								}}
 								className={`flex cursor-pointer flex-row rounded-[30px] border border-yellow px-8 py-4 text-[15px] font-bold text-white lg:text-[20px] ${manrope.className}`}
 							>
@@ -138,8 +138,8 @@ const Registration = () => {
 							</button>
 							<div className="hidden h-8 w-1 bg-gray-400 sm:h-12 md:block md:h-16"></div>
 							<button
-								onClick={() => {
-									router.push("/team/registration/create");
+								onClick={()=>{
+									router.push("/team/registration/create")
 								}}
 								className={`align-center flex cursor-pointer rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-bold sm:text-[15px] lg:text-[20px] ${manrope.className}`}
 							>
