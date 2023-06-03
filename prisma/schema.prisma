@@ -17,11 +17,11 @@ datasource db {
 }
 
 model Team {
-  id         String       @id @default(cuid())
-  name       String       @unique
+  id         String      @id @default(cuid())
+  name       String      @unique
   members    User[]
-  code       String       @unique
-  Submission Submission[]
+  code       String      @unique
+  submission Submission?
 }
 
 model SubmittedFile {
@@ -36,18 +36,19 @@ model SubmittedFile {
 
 model Submission {
   id          String          @id @default(cuid())
-  submittedAt DateTime
+  submittedAt DateTime        @default(now())
   projectLink String
-  status      Round           @default(ROUND_1)
+  description String
+  status      Round           @default(ROUND_0)
   feedback    String?
-  team        Team            @relation(fields: [teamId], references: [id])
-  teamId      String
   files       SubmittedFile[]
-
-  @@index([teamId])
+  empty       Boolean         @default(true)
+  team        Team            @relation(fields: [teamId], references: [id])
+  teamId      String          @unique
 }
 
 enum Round {
+  ROUND_0
   ROUND_1
   ROUND_2
   ROUND_3
@@ -90,6 +91,7 @@ model User {
   emailVerified DateTime?
   image         String?
   leader        Boolean   @default(false)
+  pullingUp     Boolean   @default(false)
   accounts      Account[]
   sessions      Session[]
   Team          Team?     @relation(fields: [teamId], references: [id])

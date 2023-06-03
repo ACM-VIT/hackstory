@@ -27,6 +27,22 @@ export const fileUploadRouter = {
           id: userId,
         },
       });
+
+      if (!user?.teamId) return;
+
+      await prisma.submission.update({
+        where: {
+          teamId: user.teamId,
+        },
+        data: {
+          files: {
+            create: {
+              fileUrl: file.url,
+              fileName: file.name,
+            },
+          },
+        },
+      });
     }),
 } satisfies FileRouter;
 
