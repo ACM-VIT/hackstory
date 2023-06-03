@@ -42,11 +42,20 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
               code: teamCode,
             },
           });
-          const updatedUser = await prisma.user.update({
+          await prisma.user.update({
             where: { id: userId },
             data: { leader: true, teamId: newTeam.id },
           });
-          console.log(updatedUser);
+
+          // Create an empty submission for the team
+          await prisma.submission.create({
+            data: {
+              teamId: newTeam.id,
+              description: "",
+              projectLink: "",
+            },
+          });
+
           return res.status(200).send(newTeam);
         }
       } else {
