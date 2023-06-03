@@ -29,13 +29,60 @@ const Registration = () => {
 	const [teamName, setTeamName] = useState("");
 	const [teamCode, setTeamCode] = useState("");
 
-	const handleCreateButton = () => {
-		router.push("/team/registration/create");
-	}
+	const [createTeamOpen, setCreateTeamOpen] = useState(false);
+	const handleCreateTeamOpen = () => {
+		setCreateTeamOpen(true);
+	};
+	const handleCreateTeamClose = () => {
+		setCreateTeamOpen(false);
+	};
+	const [joinTeamOpen, setJoinTeamOpen] = useState(false);
+	const handleJoinTeamOpen = () => {
+		setCreateTeamOpen(true);
+	};
+	const handleJoinTeamClose = () => {
+		setCreateTeamOpen(false);
+	};
 
-	const handleJoinButton = () => {
-		router.push("/team/registration/join");
-	}
+	const handleCreate = async () => {
+		if (teamName.trim() === "") {
+			Toaster.error("Team name cannot be empty");
+			return;
+		}
+
+		const toaster = Toaster.startLoad();
+
+		const URL = `${process.env.NEXT_PUBLIC_API_URL}/api/team/create`;
+
+		const res = await postHandler(URL, {
+			name: teamName,
+		});
+
+		if (res.status === 1) {
+			Toaster.stopLoad(toaster, "Team Joined", 1);
+			router.push("/team");
+		} else Toaster.stopLoad(toaster, res.data.message, 0);
+	};
+
+	const handleJoin = async () => {
+		if (teamCode.trim() === "") {
+			Toaster.error("Team code cannot be empty");
+			return;
+		}
+
+		const toaster = Toaster.startLoad();
+
+		const URL = `${process.env.NEXT_PUBLIC_API_URL}/api/team/join`;
+
+		const res = await postHandler(URL, {
+			teamCode: teamCode,
+		});
+
+		if (res.status === 1) {
+			Toaster.stopLoad(toaster, "Team Joined", 1);
+			router.push("/team");
+		} else Toaster.stopLoad(toaster, res.data.message, 0);
+	};
 
 	const router = useRouter();
 
@@ -83,7 +130,7 @@ const Registration = () => {
 						<div className="flex flex-col items-center justify-center gap-x-16 gap-y-8 rounded-3xl border border-white border-opacity-10 py-20 md:flex-row">
 							<button
 								onClick={() => {
-									handleJoinButton()
+									router.push("/team/registration/join")
 								}}
 								className={`flex cursor-pointer flex-row rounded-[30px] border border-yellow px-8 py-4 text-[15px] font-bold text-white lg:text-[20px] ${manrope.className}`}
 							>
@@ -92,7 +139,7 @@ const Registration = () => {
 							<div className="hidden h-8 w-1 bg-gray-400 sm:h-12 md:block md:h-16"></div>
 							<button
 								onClick={()=>{
-									handleCreateButton()
+									router.push("/team/registration/create")
 								}}
 								className={`align-center flex cursor-pointer rounded-[30px] bg-yellow px-8 py-4 text-[12px] font-bold sm:text-[15px] lg:text-[20px] ${manrope.className}`}
 							>
