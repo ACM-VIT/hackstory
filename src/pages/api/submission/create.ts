@@ -5,8 +5,10 @@ import { prisma } from "@/server/db";
 
 interface ExtendedNextApiRequest extends NextApiRequest {
   body: {
+    projectName: string;
     projectLink: string;
     description: string;
+    otherLinks: string;
   };
 }
 
@@ -17,7 +19,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const session = await getServerSession(req, res, authOptions);
 
-  const { projectLink, description } = req.body;
+  const { projectLink, description, projectName, otherLinks } = req.body;
 
   if (!session) {
     return res.status(401).json({ message: "Unauthorized" });
@@ -47,6 +49,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       projectLink,
       description,
       empty: false,
+      projectName,
+      otherLinks,
     },
   });
 
