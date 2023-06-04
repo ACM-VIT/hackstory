@@ -93,7 +93,7 @@ const HeroContent = () => {
 				chapter!
 			</div>
 
-			{/* {session ? (
+			{session ? (
 				isPartOfTeam ? (
 					<div className="mt-12 flex sm:flex-row flex-col gap-x-8 gap-y-4">
 						<div
@@ -125,7 +125,7 @@ const HeroContent = () => {
 				>
 					REGISTER NOW
 				</div>
-			)} */}
+			)}
 		</div>
 	);
 };
