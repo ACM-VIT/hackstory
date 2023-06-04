@@ -43,7 +43,7 @@ model Submission {
   feedback    String?
   files       SubmittedFile[]
   empty       Boolean         @default(true)
-  team        Team            @relation(fields: [teamId], references: [id])
+  team        Team            @relation(fields: [teamId], references: [id], onDelete: Cascade)
   teamId      String          @unique
 }
 
