@@ -37,7 +37,9 @@ model SubmittedFile {
 model Submission {
   id          String          @id @default(cuid())
   submittedAt DateTime        @default(now())
-  projectLink String
+  projectName String @default("")
+  projectLink String @default("")
+  otherLinks String @default("")
   description String
   status      Round           @default(ROUND_0)
   feedback    String?
