@@ -44,7 +44,7 @@ const ViewTeam = ({ team }: Props) => {
 
   return (
     <>
-      <div className="flex flex-col h-contain mt-[10%] gap-y-12">
+      <div className="flex flex-col h-contain mt-[10%]  gap-y-12">
         <div className="flex flex-col">
           <h1 className={`text-white lg:text-5xl text-3xl font-bold sm:text-center text-left pb-2 px-12 ${oswald.className}`}>
             <span className="pb-8 block">
@@ -56,10 +56,10 @@ const ViewTeam = ({ team }: Props) => {
           </h1>
         </div>
       </div>
-      <div className="bg-white mt-24 rounded-[5px] mx-[10%] py-8 flex md:flex-row flex-col justify-around">
+      <div className="bg-white mt-24 rounded-[5px] sm:mx-[10%] mx-[4%] py-8 flex md:flex-row flex-col justify-around">
         <div className={`px-10 py-4 ${oswald.className} text-3xl flex flex-col `}>
           <div className="flex gap-x-2">
-            <p>Team -</p> 
+            <p className="whitespace-nowrap">Team -</p> 
             <span className="text-logo">{team.name}</span>
           </div>
           <div className={`py-4 ${oswald.className} sm:text-2xl text-xl flex-col gap-4`}>
@@ -78,7 +78,7 @@ const ViewTeam = ({ team }: Props) => {
         </div>
         <div className="flex flex-col sm:py-6 gap-y-2 px-10 md:px-0">
           <div className={`pr-10  py-4 ${oswald.className} sm:text-2xl text-xl flex sm:flex-row flex-col gap-1`}>
-            <p>{"Team Code :"}</p>
+            <p className="whitespace-nowrap">{"Team Code :"}</p>
             <p>{team.code}</p>
             <button className={`sm:ml-8  max-w-[2.5rem] py-1 flex justify-center rounded-[30px]`} onClick={copyToClipboard}>
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
