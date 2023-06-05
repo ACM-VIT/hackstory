@@ -4,7 +4,6 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-
 const navVariants = {
 	open: {
 		transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -96,7 +95,7 @@ const Header = () => {
 				>
 					<motion.ul
 						variants={navVariants}
-						className={`mt-4 flex flex-col items-center gap-y-4 lg:mt-0 lg:flex-row lg:hidden lg:space-x-12`}
+						className={`mt-4 flex flex-col items-center gap-y-4 lg:mt-0 lg:hidden lg:flex-row lg:space-x-0`}
 					>
 						<motion.li
 							variants={liVariants}
@@ -182,7 +181,7 @@ const Header = () => {
 								SPONSORS
 							</Link>
 						</motion.li>
-						
+
 						<motion.li
 							variants={liVariants}
 							whileTap={{ scale: 0.95 }}
@@ -195,11 +194,30 @@ const Header = () => {
 								FAQs
 							</Link>
 						</motion.li>
+						<motion.li
+							variants={liVariants}
+							whileTap={{ scale: 0.95 }}
+						>
+							<Link
+								href="/play"
+								scroll={false}
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								PLAY
+							</Link>
+						</motion.li>
 					</motion.ul>
 					<ul
-						className={`mt-4 flex flex-col items-center gap-y-4 max-lg:hidden lg:mt-0 lg:flex-row lg:space-x-12`}
+						className={`mt-4 flex flex-col items-center gap-y-4 max-lg:hidden lg:mt-0 lg:flex-row lg:space-x-[3vw]`}
 					>
-						<Image className="xl:mr-48 cursor-pointer" onClick={()=>router.push("/")} src="/logo.svg" alt="HS" width={50} height={50}/>
+						<Image
+							className="cursor-pointer xl:mr-48"
+							onClick={() => router.push("/")}
+							src="/logo.svg"
+							alt="HS"
+							width={50}
+							height={50}
+						/>
 						<li>
 							<Link
 								href="/#about"
@@ -261,6 +279,15 @@ const Header = () => {
 								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
 							>
 								FAQs
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/play"
+								scroll={false}
+								className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
+							>
+								PLAY
 							</Link>
 						</li>
 					</ul>
