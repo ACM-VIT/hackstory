@@ -265,7 +265,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/#submission"
+                href="/submission"
                 scroll={false}
                 className="text-l font-extrabold text-headerbutton hover:text-[#FFCCDE]"
               >
